@@ -333,7 +333,7 @@ class overfit_example():
         self.X_mapped_scaled, self.X_mu, self.X_sigma  = zscore_normalize_features(self.X_mapped)
 
         #linear_model = LinearRegression()
-        linear_model = Ridge(alpha=self.lambda_, normalize=True, max_iter=10000)
+        linear_model = Ridge(alpha=self.lambda_, max_iter=10000)
         linear_model.fit(self.X_mapped_scaled, self.y )
         self.w = linear_model.coef_.reshape(-1,)
         self.b = linear_model.intercept_
@@ -355,13 +355,16 @@ class overfit_example():
         # create and fit the model using our mapped_X feature set.
         self.X_mapped, _ =  map_feature(self.X[:, 0], self.X[:, 1], self.degree)
         self.X_mapped_scaled, self.X_mu, self.X_sigma  = zscore_normalize_features(self.X_mapped)
-        if not self.regularize or self.lambda_ == 0:
-            lr = LogisticRegression(penalty='none', max_iter=10000)
+        
+        if self.lambda_ == 0:
+            # Newer sklearn uses penalty=None to disable regularization
+            lr = LogisticRegression(penalty=None, max_iter=10000)
         else:
             C = 1/self.lambda_
-            lr = LogisticRegression(C=C, max_iter=10000)
-
-        lr.fit(self.X_mapped_scaled,self.y)
+            # Use 'l2' which is the default, but explicit for clarity
+            lr = LogisticRegression(C=C, penalty='l2', max_iter=10000)
+            
+        lr.fit(self.X_mapped_scaled, self.y)
         #print(lr.score(self.X_mapped_scaled, self.y))
         self.w = lr.coef_.reshape(-1,)
         self.b = lr.intercept_
