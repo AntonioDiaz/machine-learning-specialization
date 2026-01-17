@@ -74,7 +74,7 @@ def plt_linear(X_train, Y_train, prediction_tf, prediction_np):
 def plt_logistic(X_train, Y_train, model, set_w, set_b, pos, neg):
     fig,ax = plt.subplots(1,2,figsize=(16,4))
 
-    layerf= lambda x : model.predict(x)
+    layerf= lambda x : model.predict(x, verbose=0)
     plt_prob_1d(ax[0], layerf)
 
     ax[0].scatter(X_train[pos], Y_train[pos], marker='x', s=80, c = 'red', label="y=1")
