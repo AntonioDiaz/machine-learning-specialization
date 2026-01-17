@@ -1,21 +1,17 @@
-# Notes for Coursera: Machine Learning Specialization
+<h1> Notes for Coursera: Machine Learning Specialization </h1>
 
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-
-<!-- code_chunk_output -->
-
-- [Notes for Coursera: Machine Learning Specialization](#notes-for-coursera-machine-learning-specialization)
-  - [Links](#links)
-  - [Supervised Machine Learning: Regression and Classification](#supervised-machine-learning-regression-and-classification)
-    - [Week 1: Introduction to Machine Learning](#week-1-introduction-to-machine-learning)
-    - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
-    - [Week 3: Classification](#week-3-classification)
-
-<!-- /code_chunk_output -->
+- [Links](#links)
+- [01 - Supervised Machine Learning: Regression and Classification](#01---supervised-machine-learning-regression-and-classification)
+  - [Week 1: Introduction to Machine Learning](#week-1-introduction-to-machine-learning)
+  - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
+  - [Week 3: Classification](#week-3-classification)
+- [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
+- [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
 
 
-
+<hr>
+|
 
 ## Links
 * Coursera  
@@ -29,7 +25,8 @@ https://www.deeplearning.ai/courses/machine-learning-specialization/
 
 
 
-## Supervised Machine Learning: Regression and Classification
+## 01 - Supervised Machine Learning: Regression and Classification
+
 ### Week 1: Introduction to Machine Learning
 * Define machine learning
 * Define supervised learning
@@ -49,3 +46,9 @@ https://www.deeplearning.ai/courses/machine-learning-specialization/
 * Use logistic regression for binary classification
 * Implement logistic regression for binary classification
 * Address overfitting using regularization, to improve model performance
+
+## 02 - Advanced Learning Algorithms
+
+
+
+## 03 - Unsupervised Learning, Recommenders, Reinforcement Learning
