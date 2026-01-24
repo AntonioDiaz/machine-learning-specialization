@@ -49,10 +49,14 @@ https://www.deeplearning.ai/courses/machine-learning-specialization/
 * Address overfitting using regularization, to improve model performance
 
 ## 02 - Advanced Learning Algorithms
+
+https://www.coursera.org/learn/advanced-learning-algorithms/home/info
+
 ### Week 1: Neural networks
+
 This week, you'll learn about neural networks and how to use them for classification tasks. You'll use the TensorFlow framework to build a neural network with just a few lines of code. Then, dive deeper by learning how to code up your own neural network in Python, "from scratch". Optionally, you can learn more about how neural network computations are implemented efficiently using parallel processing (vectorization).
 
-Learning Objectives
+__Learning Objectives__
 * Get familiar with the diagram and components of a neural network
 * Understand the concept of a "layer" in a neural network
 * Understand how neural networks learn new features.
@@ -65,8 +69,24 @@ Learning Objectives
 
 ### Week 2: Neural network training
 
+This week, you'll learn how to train your model in `TensorFlow`, and also learn about other important activation functions (besides the sigmoid function), and where to use each type in a neural network. You'll also learn how to go beyond binary classification to `multiclass classification` (3 or more categories). Multiclass classification will introduce you to a new activation function and a new loss function. Optionally, you can also learn about the difference between multiclass classification and multi-label classification. You'll learn about the `Adam optimizer`, and why it's an improvement upon regular gradient descent for neural network training. Finally, you will get a brief introduction to other layer types besides the one you've seen thus far.
+
+__Learning Objectives__
+* Train a neural network on data using TensorFlow
+* Understand the difference between various activation functions (sigmoid, ReLU, and linear)
+* Understand which activation functions to use for which type of layer
+* Understand why we need non-linear activation functions
+* Understand multiclass classification
+* Calculate the softmax activation for implementing multiclass classification
+* Use the categorical cross entropy loss function for multiclass classification
+* Use the recommended method for implementing multiclass classification in code
+* (Optional): Explain the difference between multi-label and multiclass classification
+
+
 ### Week 3: Advide for applying machine learning
 
 ### Week 4: Decision trees
 
 ## 03 - Unsupervised Learning, Recommenders, Reinforcement Learning
+
+https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning?specialization=machine-learning-introduction
