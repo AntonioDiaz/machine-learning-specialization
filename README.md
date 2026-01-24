@@ -53,12 +53,14 @@ $$f_{w,b}(x^{(i)}) = wx^{(i)} + b$$
 $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 
 * `Gradient Descent`  
+  
 $$
 \begin{align*} \text{repeat}&\text{ until convergence:} \; \lbrace \newline
 \;  w &= w -  \alpha \frac{\partial J(w,b)}{\partial w} \; \newline 
  b &= b -  \alpha \frac{\partial J(w,b)}{\partial b}  \newline \rbrace
 \end{align*}
 $$
+
 Where:
 $$
 \begin{aligned}
