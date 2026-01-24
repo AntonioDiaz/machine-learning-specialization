@@ -56,12 +56,12 @@ $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 
 * `Gradient Descent`  
   
-$$\begin{aligned} \text{repeat}&\text{ until convergence:} \; \lbrace \newline
-\;  w &= w -  \alpha \frac{\partial J(w,b)}{\partial w} \; \newline 
- b &= b -  \alpha \frac{\partial J(w,b)}{\partial b}  \newline \rbrace
+$$\begin{aligned} \text{repeat}&\text{ until convergence: } \lbrace \newline
+ w &= w -  \alpha \frac{\partial J(w,b)}{\partial w} \newline 
+ b &= b -  \alpha \frac{\partial J(w,b)}{\partial b} \newline \rbrace
 \end{aligned}$$
 
-$$\begin{aligned} \text{where} \newline
+$$\begin{aligned} \text{where:} \newline
 \frac{\partial J(w,b)}{\partial w}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})x^{(i)} \\
   \frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \\
 \end{aligned}$$
