@@ -8,13 +8,21 @@ Contents
     - [Labs](#labs)
   - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
     - [Notes](#notes-1)
+    - [Labs](#labs-1)
   - [Week 3: Classification](#week-3-classification)
     - [Notes](#notes-2)
+    - [Labs](#labs-2)
 - [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
   - [Week 1: Neural networks](#week-1-neural-networks)
+    - [Notes](#notes-3)
+    - [Labs](#labs-3)
   - [Week 2: Neural network training](#week-2-neural-network-training)
   - [Week 3: Advide for applying machine learning](#week-3-advide-for-applying-machine-learning)
+    - [Notes](#notes-4)
+    - [Labs](#labs-4)
   - [Week 4: Decision trees](#week-4-decision-trees)
+    - [Notes](#notes-5)
+    - [Labs](#labs-5)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
 <hr>
 
@@ -76,9 +84,9 @@ $$\frac{\partial J(w,b)}{\partial w}$$
 
 #### Labs
 * [Lab 01](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab01_Python_Jupyter_Soln.ipynb): Jupyter notebook introduction. 
-* Lab 02: Linear regression for one variable. 
-* Lab 03: Cost function for linear regression with one variable. 
-* Lab 04: Gradient Descent. 
+* [Lab 02](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab02_Model_Representation_Soln.ipynb): Linear regression for one variable. 
+* [Lab 03](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab03_Cost_function_Soln.ipynb): Cost function for linear regression with one variable. 
+* [Lab 04](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab04_Gradient_Descent_Soln.ipynb): Gradient Descent. 
   
 ### Week 2: Regression with multiple input variables
 * Use vectorization to implement multiple linear regression
@@ -88,12 +96,23 @@ $$\frac{\partial J(w,b)}{\partial w}$$
 #### Notes 
 todo
 
+#### Labs
+* Lab 01: Python, NumPy and Vectorization
+* Lab 02: Multiple Variable Linear Regression
+* Lab 03: Feature scaling and Learning Rate (Multi-variable)
+* Lab 04: Feature Engineering and Polynomial Regression
+* Lab 05: Linear Regression using Scikit-Learn, Gradient Descent
+* Lab 06: Linear Regression using Scikit-Learn, Linear Regression using a close form solution
+
 ### Week 3: Classification
 * Use logistic regression for binary classification
 * Implement logistic regression for binary classification
 * Address overfitting using regularization, to improve model performance
 
 #### Notes 
+todo
+
+#### Labs
 todo
 
 ## 02 - Advanced Learning Algorithms
@@ -115,6 +134,14 @@ __Learning Objectives__
 * Build a neural network in regular Python code (from scratch) to make predictions.
 * (Optional): Learn how neural networks use parallel processing (vectorization) to make computations faster.
 
+#### Notes
+todo
+
+#### Labs
+* [Lab 01](02_advanced_learning_algorithms/01_week/C2_W1_Lab01_Neurons_and_Layers.ipynb): Neurons and Layers, introduction to Tensorflow and Keras.
+* [Lab 02](02_advanced_learning_algorithms/01_week/C2_W1_Lab02_CoffeeRoasting_TF.ipynb): Simple Neural Network with Tensorflow, coffee roasting example.
+* [Lab 03](02_advanced_learning_algorithms/01_week/C2_W1_Lab03_CoffeeRoasting_Numpy.ipynb): Simple Neural Network with Numpy, coffee roasting example.
+
 ### Week 2: Neural network training
 
 This week, you'll learn how to train your model in `TensorFlow`, and also learn about other important `activation functions` (besides the sigmoid function), and where to use each type in a neural network. You'll also learn how to go beyond binary classification to `multiclass classification` (3 or more categories). Multiclass classification will introduce you to a new activation function and a new loss function. Optionally, you can also learn about the difference between multiclass classification and multi-label classification. You'll learn about the `Adam optimizer`, and why it's an improvement upon regular gradient descent for neural network training. Finally, you will get a brief introduction to other layer types besides the one you've seen thus far.
@@ -133,7 +160,21 @@ __Learning Objectives__
 
 ### Week 3: Advide for applying machine learning
 
+#### Notes
+todo
+
+#### Labs
+todo
+
+
 ### Week 4: Decision trees
+
+#### Notes
+todo
+
+#### Labs
+todo
+
 
 ## 03 - Unsupervised Learning, Recommenders, Reinforcement Learning
 
