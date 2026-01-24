@@ -179,6 +179,13 @@ __Learning Objectives__
   * Sigmoid
   * ReLU: Rectified Linear Unit
 
+* Choosing Activation
+  * __Output Layer__: depends on the response we are waiting.
+    * `sigmoid`: for binary classification, $y=1/0$
+    * `linear`: for regression, $y = +/-$
+    * `ReLU`: for regression, $y>=0$ 
+  * __Hidden Layers__: ReLU
+
 #### Labs
 todo
 
