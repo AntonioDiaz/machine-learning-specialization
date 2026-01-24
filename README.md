@@ -4,6 +4,7 @@ Contents
 - [Links](#links)
 - [01 - Supervised Machine Learning: Regression and Classification](#01---supervised-machine-learning-regression-and-classification)
   - [Week 1: Introduction to Machine Learning](#week-1-introduction-to-machine-learning)
+    - [Notes](#notes)
   - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
   - [Week 3: Classification](#week-3-classification)
 - [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
@@ -42,6 +43,30 @@ https://www.coursera.org/learn/machine-learning/home/info
 * Implement and visualize a cost function
 * Implement gradient descent
 * Optimize a regression model using gradient descent
+
+
+#### Notes
+* `Linear Regression Model`
+$$f_{w,b}(x^{(i)}) = wx^{(i)} + b$$
+<br>
+* `Cost function`
+$$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
+<br>
+* `Gradient Descent`
+$$
+\begin{align*} \text{repeat}&\text{ until convergence:} \; \lbrace \newline
+\;  w &= w -  \alpha \frac{\partial J(w,b)}{\partial w} \; \newline 
+ b &= b -  \alpha \frac{\partial J(w,b)}{\partial b}  \newline \rbrace
+\end{align*}
+$$
+Where:
+$$
+\begin{aligned}
+\frac{\partial J(w,b)}{\partial w}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})x^{(i)} \\
+  \frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \\
+\end{aligned}
+$$
+
 
 ### Week 2: Regression with multiple input variables
 * Use vectorization to implement multiple linear regression
