@@ -84,6 +84,7 @@ $$\begin{aligned} \text{where:} \newline
 * `Learning rate`   __$\alpha$__  
 
 * `Derivative term for` __$\omega$__  
+
 $$\frac{\partial J(w,b)}{\partial w}$$  
 
 #### Labs
@@ -181,7 +182,7 @@ __Learning Objectives__
   * Sigmoid
 
 
-  * ReLU: Rectified Linear Unit
+  * ReLU: Rectified Linear Unit  
   $\begin{aligned} 
   &a = \max(0,z) && \text{\# ReLU function} 
   \end{aligned}$
