@@ -180,14 +180,9 @@ __Learning Objectives__
 * Activation functions
   * Linear Activation Function
   * Sigmoid
+  * **ReLU: Rectified Linear Unit** $a = \max(0,z)$
 
-
-  * ReLU: Rectified Linear Unit  
-$\begin{aligned} 
-&a = \max(0,z) 
-\end{aligned}$
-
-  <img width="1306" src="https://github.com/user-attachments/assets/243a44bc-2707-4b56-ba0a-3dc8e1bf58d0" />
+  <img width="1000" src="https://github.com/user-attachments/assets/243a44bc-2707-4b56-ba0a-3dc8e1bf58d0" />
 
 * Choosing Activation
   * __Output Layer__: depends on the response we are waiting.
@@ -195,6 +190,8 @@ $\begin{aligned}
     * `linear`: for regression, $y = +/-$
     * `ReLU`: for regression, $y>=0$ 
   * __Hidden Layers__: ReLU
+
+* Softmax for multiple classification.
 
 #### Labs
 * [Lab 01](02_advanced_learning_algorithms/02_week/C2_W2_lab01_Relu.ipynb): ReLU activation
