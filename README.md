@@ -112,8 +112,8 @@ todo
 * Address overfitting using regularization, to improve model performance
 
 #### Notes 
-* `sigmoid function`
-* 
+* `sigmoid function` todo
+* todo
 
 #### Labs
 * Lab 01: classification
@@ -169,7 +169,15 @@ __Learning Objectives__
 * (Optional): Explain the difference between multi-label and multiclass classification
 
 #### Notes
-todo
+* Model training steps
+  1. Create the model
+  2. Loss and cont functions
+  3. Gradient Descent
+
+* Activation functions
+  * Linear Activation Function
+  * Sigmoid
+  * ReLU: Rectified Linear Unit
 
 #### Labs
 todo
