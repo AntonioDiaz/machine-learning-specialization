@@ -48,10 +48,10 @@ https://www.coursera.org/learn/machine-learning/home/info
 #### Notes
 * `Linear Regression Model`
 $$f_{w,b}(x^{(i)}) = wx^{(i)} + b$$
-<br>
+
 * `Cost function`
 $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
-<br>
+
 * `Gradient Descent`
 $$
 \begin{align*} \text{repeat}&\text{ until convergence:} \; \lbrace \newline
