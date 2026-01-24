@@ -17,16 +17,21 @@ Contents
 ## Links
 * Coursera  
 https://www.coursera.org/specializations/machine-learning-introduction
+
 * Forum  
 https://community.deeplearning.ai/c/course-q-a/generative-ai-for-software-development/478
+
 * DeepLearningAI  
 https://www.deeplearning.ai/courses/machine-learning-specialization/
+
 * Cool repositories  
   https://github.com/pmulard/machine-learning-specialization-andrew-ng
 
 
 
 ## 01 - Supervised Machine Learning: Regression and Classification
+
+https://www.coursera.org/learn/machine-learning/home/info
 
 ### Week 1: Introduction to Machine Learning
 * Define machine learning
@@ -69,7 +74,7 @@ __Learning Objectives__
 
 ### Week 2: Neural network training
 
-This week, you'll learn how to train your model in `TensorFlow`, and also learn about other important activation functions (besides the sigmoid function), and where to use each type in a neural network. You'll also learn how to go beyond binary classification to `multiclass classification` (3 or more categories). Multiclass classification will introduce you to a new activation function and a new loss function. Optionally, you can also learn about the difference between multiclass classification and multi-label classification. You'll learn about the `Adam optimizer`, and why it's an improvement upon regular gradient descent for neural network training. Finally, you will get a brief introduction to other layer types besides the one you've seen thus far.
+This week, you'll learn how to train your model in `TensorFlow`, and also learn about other important `activation functions` (besides the sigmoid function), and where to use each type in a neural network. You'll also learn how to go beyond binary classification to `multiclass classification` (3 or more categories). Multiclass classification will introduce you to a new activation function and a new loss function. Optionally, you can also learn about the difference between multiclass classification and multi-label classification. You'll learn about the `Adam optimizer`, and why it's an improvement upon regular gradient descent for neural network training. Finally, you will get a brief introduction to other layer types besides the one you've seen thus far.
 
 __Learning Objectives__
 * Train a neural network on data using TensorFlow
