@@ -66,6 +66,10 @@ $$\begin{aligned} \text{where:} \newline
   \frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \\
 \end{aligned}$$
 
+* `Learning rate`  -> $\alpha$  
+
+* `Derivative term for` $\omega$ 
+$$\frac{\partial J(w,b)}{\partial w}$$  
 
 ### Week 2: Regression with multiple input variables
 * Use vectorization to implement multiple linear regression
