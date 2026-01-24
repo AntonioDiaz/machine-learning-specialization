@@ -183,9 +183,9 @@ __Learning Objectives__
 
 
   * ReLU: Rectified Linear Unit  
-  $\begin{aligned} 
-  &a = \max(0,z) && \text{\# ReLU function} 
-  \end{aligned}$
+$\begin{aligned} 
+&a = \max(0,z) 
+\end{aligned}$
 
   <img width="1306" src="https://github.com/user-attachments/assets/243a44bc-2707-4b56-ba0a-3dc8e1bf58d0" />
 
