@@ -5,8 +5,11 @@ Contents
 - [01 - Supervised Machine Learning: Regression and Classification](#01---supervised-machine-learning-regression-and-classification)
   - [Week 1: Introduction to Machine Learning](#week-1-introduction-to-machine-learning)
     - [Notes](#notes)
+    - [Labs](#labs)
   - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
+    - [Notes](#notes-1)
   - [Week 3: Classification](#week-3-classification)
+    - [Notes](#notes-2)
 - [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
   - [Week 1: Neural networks](#week-1-neural-networks)
   - [Week 2: Neural network training](#week-2-neural-network-training)
@@ -54,7 +57,7 @@ $$f_{w,b}(x^{(i)}) = wx^{(i)} + b$$
   
 $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 
-* `Gradient Descent`  
+* `Gradient Descent`: optimizing w and b  
   
 $$\begin{aligned} \text{repeat}&\text{ until convergence: } \lbrace \newline
  w &= w -  \alpha \frac{\partial J(w,b)}{\partial w} \newline 
@@ -66,20 +69,32 @@ $$\begin{aligned} \text{where:} \newline
   \frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \\
 \end{aligned}$$
 
-* `Learning rate`  -> $\alpha$  
+* `Learning rate`   __$\alpha$__  
 
-* `Derivative term for` $\omega$ 
+* `Derivative term for` __$\omega$__ 
 $$\frac{\partial J(w,b)}{\partial w}$$  
 
+#### Labs
+* [Lab 01](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab01_Python_Jupyter_Soln.ipynb): Jupyter notebook introduction. 
+* Lab 02: Linear regression for one variable. 
+* Lab 03: Cost function for linear regression with one variable. 
+* Lab 04: Gradient Descent. 
+  
 ### Week 2: Regression with multiple input variables
 * Use vectorization to implement multiple linear regression
 * Use feature scaling, feature engineering, and polynomial regression to * improve model training
 * Implement linear regression in code
 
+#### Notes 
+todo
+
 ### Week 3: Classification
 * Use logistic regression for binary classification
 * Implement logistic regression for binary classification
 * Address overfitting using regularization, to improve model performance
+
+#### Notes 
+todo
 
 ## 02 - Advanced Learning Algorithms
 
