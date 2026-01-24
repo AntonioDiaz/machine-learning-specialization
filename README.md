@@ -187,7 +187,7 @@ __Learning Objectives__
   * __Hidden Layers__: ReLU
 
 #### Labs
-todo
+* [Lab 01](02_advanced_learning_algorithms/02_week/C2_W2_lab01_Relu.ipynb): ReLU activation
 
 ### Week 3: Advice for applying machine learning
 
