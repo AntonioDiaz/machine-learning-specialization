@@ -17,12 +17,14 @@ Contents
     - [Notes](#notes-3)
     - [Labs](#labs-3)
   - [Week 2: Neural network training](#week-2-neural-network-training)
-  - [Week 3: Advide for applying machine learning](#week-3-advide-for-applying-machine-learning)
     - [Notes](#notes-4)
     - [Labs](#labs-4)
-  - [Week 4: Decision trees](#week-4-decision-trees)
+  - [Week 3: Advice for applying machine learning](#week-3-advice-for-applying-machine-learning)
     - [Notes](#notes-5)
     - [Labs](#labs-5)
+  - [Week 4: Decision trees](#week-4-decision-trees)
+    - [Notes](#notes-6)
+    - [Labs](#labs-6)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
 <hr>
 
@@ -61,7 +63,7 @@ https://www.coursera.org/learn/machine-learning/home/info
   
 $$f_{w,b}(x^{(i)}) = wx^{(i)} + b$$
 
-* `Cost function`  
+* `Squared Error Cost function`  
   
 $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 
@@ -110,10 +112,19 @@ todo
 * Address overfitting using regularization, to improve model performance
 
 #### Notes 
-todo
+* `sigmoid function`
+* 
 
 #### Labs
-todo
+* Lab 01: classification
+* Lab 02: Logistic Regression
+* Lab 03: Logistic Regression and Decision Boundary
+* Lab 04: Logistic Regression and Logistic Loss
+* Lab 05: Cost Function for Logistic Regression
+* Lab 06: Gradient Descent for Logisic Regression
+* Lab 07: Logistic Regression using Scikit-Learn
+* Lab 08: Overfitting
+* Lab 09: Regularized Cost and Gradient
 
 ## 02 - Advanced Learning Algorithms
 
@@ -157,8 +168,13 @@ __Learning Objectives__
 * Use the recommended method for implementing multiclass classification in code
 * (Optional): Explain the difference between multi-label and multiclass classification
 
+#### Notes
+todo
 
-### Week 3: Advide for applying machine learning
+#### Labs
+todo
+
+### Week 3: Advice for applying machine learning
 
 #### Notes
 todo
