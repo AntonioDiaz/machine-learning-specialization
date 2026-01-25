@@ -198,7 +198,7 @@ __Learning Objectives__
 
 #### Labs
 * [Lab 01](02_advanced_learning_algorithms/02_week/C2_W2_lab01_Relu.ipynb): ReLU activation
-* Lab 02
+* [Lab 02](02_advanced_learning_algorithms/02_week/C2_W2_lab02_SoftMax.ipynb): Softmax function
 
 ### Week 3: Advice for applying machine learning
 
