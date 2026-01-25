@@ -182,7 +182,8 @@ __Learning Objectives__
   * Sigmoid
   * **ReLU: Rectified Linear Unit** $a = \max(0,z)$
 
-  <img width="1000" src="https://github.com/user-attachments/assets/243a44bc-2707-4b56-ba0a-3dc8e1bf58d0" />
+
+<img width="1000" src="https://github.com/user-attachments/assets/243a44bc-2707-4b56-ba0a-3dc8e1bf58d0" />
 
 * Choosing Activation
   * __Output Layer__: depends on the response we are waiting.
@@ -193,8 +194,11 @@ __Learning Objectives__
 
 * Softmax for multiple classification.
 
+* Multilab classification.
+
 #### Labs
 * [Lab 01](02_advanced_learning_algorithms/02_week/C2_W2_lab01_Relu.ipynb): ReLU activation
+* Lab 02
 
 ### Week 3: Advice for applying machine learning
 
