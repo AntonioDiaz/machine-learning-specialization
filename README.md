@@ -181,8 +181,6 @@ __Learning Objectives__
   * Linear Activation Function
   * Sigmoid
   * **ReLU: Rectified Linear Unit** $a = \max(0,z)$
-
-
 <img width="1000" src="https://github.com/user-attachments/assets/243a44bc-2707-4b56-ba0a-3dc8e1bf58d0" />
 
 * Choosing Activation
@@ -196,9 +194,15 @@ __Learning Objectives__
 
 * Multilab classification.
 
+* Adam Algorithm: Adaptive Moment estimation
+  
+* Convolutional layer and Convonutional Neural Network
+
+
 #### Labs
 * [Lab 01](02_advanced_learning_algorithms/02_week/C2_W2_lab01_Relu.ipynb): ReLU activation
 * [Lab 02](02_advanced_learning_algorithms/02_week/C2_W2_lab02_SoftMax.ipynb): Softmax function
+* [Lab 03](02_advanced_learning_algorithms/02_week/C2_W2_lab03_Multiclass_TF.ipynb): Neural Network for multi-class classification
 
 ### Week 3: Advice for applying machine learning
 
