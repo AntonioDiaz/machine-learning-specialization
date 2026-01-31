@@ -223,7 +223,9 @@ __Learning Objectives__
 * Measure precision and recall to work with skewed (imbalanced) datasets
 
 #### Notes
-todo
+* Training data set
+* Bias
+* Variance
 
 #### Labs
 * Lab 01: [model evaluation and selection](02_advanced_learning_algorithms/03_week/C2W3_Lab_01_Model_Evaluation_and_Selection.ipynb)
