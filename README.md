@@ -206,7 +206,7 @@ __Learning Objectives__
 
 ### Week 3: Advice for applying machine learning
 
-This week you'll learn best practices for training and evaluating your learning algorithms to improve performance. This will cover a wide range of useful advice about the machine learning lifecycle, tuning your model, and also improving your training data.
+This week you'll learn best practices for training and evaluating your learning algorithms to improve performance. This will cover a wide range of useful advice about the machine learning lifecycle, tuning your model, and also improving your training data 
 
 __Learning Objectives__
 * Evaluate and then modify your learning algorithm or data to improve your model's performance
@@ -226,7 +226,8 @@ __Learning Objectives__
 todo
 
 #### Labs
-todo
+* Lab 01
+* Lab 02
 
 
 ### Week 4: Decision trees
