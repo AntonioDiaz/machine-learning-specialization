@@ -227,7 +227,7 @@ todo
 
 #### Labs
 * Lab 01: [model evaluation and selection](02_advanced_learning_algorithms/03_week/C2W3_Lab_01_Model_Evaluation_and_Selection.ipynb)
-* Lab 02: d[iagnosing bias and variance](02_advanced_learning_algorithms/03_week/C2W3_Lab_02_Diagnosing_Bias_and_Variance.ipynb)
+* Lab 02: [diagnosing bias and variance](02_advanced_learning_algorithms/03_week/C2W3_Lab_02_Diagnosing_Bias_and_Variance.ipynb)
 
 
 ### Week 4: Decision trees
