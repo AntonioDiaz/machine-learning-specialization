@@ -57,7 +57,6 @@ https://www.coursera.org/learn/machine-learning/home/info
 * Implement gradient descent
 * Optimize a regression model using gradient descent
 
-
 #### Notes
 * `Linear Regression Model`  
   
@@ -102,12 +101,12 @@ $$\frac{\partial J(w,b)}{\partial w}$$
 todo
 
 #### Labs
-* Lab 01: Python, NumPy and Vectorization
-* Lab 02: Multiple Variable Linear Regression
-* Lab 03: Feature scaling and Learning Rate (Multi-variable)
-* Lab 04: Feature Engineering and Polynomial Regression
-* Lab 05: Linear Regression using Scikit-Learn, Gradient Descent
-* Lab 06: Linear Regression using Scikit-Learn, Linear Regression using a close form solution
+* [Lab 01](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab01_Python_Numpy_Vectorization_Soln.ipynb): Python, NumPy and Vectorization
+* [Lab 02](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab02_Multiple_Variable_Soln.ipynb): Multiple Variable Linear Regression
+* [Lab 03](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb): Feature scaling and Learning Rate (Multi-variable)
+* [Lab 04](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab04_FeatEng_PolyReg_Soln.ipynb): Feature Engineering and Polynomial Regression
+* [Lab 05](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab05_Sklearn_GD_Soln.ipynb): Linear Regression using Scikit-Learn, Gradient Descent
+* [Lab 06](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab06_Sklearn_Normal_Soln.ipynb): Linear Regression using Scikit-Learn, Linear Regression using a close form solution
 
 ### Week 3: Classification
 * Use logistic regression for binary classification
@@ -119,15 +118,15 @@ todo
 * todo
 
 #### Labs
-* Lab 01: classification
-* Lab 02: Logistic Regression
-* Lab 03: Logistic Regression and Decision Boundary
-* Lab 04: Logistic Regression and Logistic Loss
-* Lab 05: Cost Function for Logistic Regression
-* Lab 06: Gradient Descent for Logisic Regression
-* Lab 07: Logistic Regression using Scikit-Learn
-* Lab 08: Overfitting
-* Lab 09: Regularized Cost and Gradient
+* [Lab 01](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab01_Classification_Soln.ipynb): classification
+* [Lab 02](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab02_Sigmoid_function_Soln.ipynb): Logistic Regression
+* [Lab 03](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb): Logistic Regression and Decision Boundary
+* [Lab 04](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab04_LogisticLoss_Soln.ipynb): Logistic Regression and Logistic Loss
+* [Lab 05](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab05_Cost_Function_Soln.ipynb): Cost Function for Logistic Regression
+* [Lab 06](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab06_Gradient_Descent_Soln.ipynb): Gradient Descent for Logisic Regression
+* [Lab 07](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab07_Scikit_Learn_Soln.ipynb): Logistic Regression using Scikit-Learn
+* [Lab 08](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab08_Overfitting_Soln.ipynb): Overfitting
+* [Lab 09](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab09_Regularization_Soln.ipynb): Regularized Cost and Gradient
 
 ## 02 - Advanced Learning Algorithms
 
