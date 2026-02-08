@@ -26,6 +26,8 @@ Contents
     - [Notes](#notes-6)
     - [Labs](#labs-6)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
+
+
 <hr>
 
 ## Links
@@ -48,6 +50,9 @@ https://www.deeplearning.ai/courses/machine-learning-specialization/
 https://www.coursera.org/learn/machine-learning/home/info
 
 ### Week 1: Introduction to Machine Learning
+>Welcome to the Machine Learning Specialization! You're joining millions of others who have taken either this or the original course, which led to the founding of Coursera, and has helped millions of other learners, like you, take a look at the exciting world of machine learning!
+
+__Learning Objectives__
 * Define machine learning
 * Define supervised learning
 * Define unsupervised learning
@@ -93,6 +98,10 @@ $$\frac{\partial J(w,b)}{\partial w}$$
 * [Lab 04](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab04_Gradient_Descent_Soln.ipynb): Gradient Descent. 
   
 ### Week 2: Regression with multiple input variables
+
+>This week, you'll extend linear regression to handle multiple input features. You'll also learn some methods for improving your model's training and performance, such as vectorization, feature scaling, feature engineering and polynomial regression. At the end of the week, you'll get to practice implementing linear regression in code.
+
+__Learning Objectives__
 * Use vectorization to implement multiple linear regression
 * Use feature scaling, feature engineering, and polynomial regression to * improve model training
 * Implement linear regression in code
@@ -109,6 +118,9 @@ todo
 * [Lab 06](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab06_Sklearn_Normal_Soln.ipynb): Linear Regression using Scikit-Learn, Linear Regression using a close form solution
 
 ### Week 3: Classification
+>This week, you'll learn the other type of supervised learning, classification. You'll learn how to predict categories using the logistic regression model. You'll learn about the problem of overfitting, and how to handle this problem with a method...
+
+__Learning Objectives__
 * Use logistic regression for binary classification
 * Implement logistic regression for binary classification
 * Address overfitting using regularization, to improve model performance
@@ -134,7 +146,7 @@ https://www.coursera.org/learn/advanced-learning-algorithms/home/info
 
 ### Week 1: Neural networks
 
-This week, you'll learn about neural networks and how to use them for classification tasks. You'll use the TensorFlow framework to build a neural network with just a few lines of code. Then, dive deeper by learning how to code up your own neural network in Python, "from scratch". Optionally, you can learn more about how neural network computations are implemented efficiently using parallel processing (vectorization).
+>This week, you'll learn about neural networks and how to use them for classification tasks. You'll use the TensorFlow framework to build a neural network with just a few lines of code. Then, dive deeper by learning how to code up your own neural network in Python, "from scratch". Optionally, you can learn more about how neural network computations are implemented efficiently using parallel processing (vectorization).
 
 __Learning Objectives__
 * Get familiar with the diagram and components of a neural network
@@ -232,6 +244,14 @@ __Learning Objectives__
 
 
 ### Week 4: Decision trees
+>This week, you'll learn about a practical and very commonly used learning algorithm the decision tree. You'll also learn about variations of the decision tree, including random forests and boosted trees (XGBoost).
+
+__Learning Objectives__
+* See what a decision tree looks like and how it can be used to make predictions
+* Learn how a decision tree learns from training data
+* Learn the "impurity" metric "entropy" and how it's used when building a decision tree
+* Learn how to use multiple trees, "tree ensembles" such as random forests and boosted trees
+* Learn when to use decision trees or neural networks
 
 #### Notes
 todo
