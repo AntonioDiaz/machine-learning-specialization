@@ -258,7 +258,8 @@ TODO
 * 
 
 #### Labs
-todo
+* [Lab 01](02_advanced_learning_algorithms/04_week/C2_W4_Lab_01_Decision_Trees.ipynb): Decision Trees
+* [Lab 02](02_advanced_learning_algorithms/04_week/C2_W4_Lab_02_Tree_Ensemble.ipynb): Treen Ensemble
 
 
 ## 03 - Unsupervised Learning, Recommenders, Reinforcement Learning
