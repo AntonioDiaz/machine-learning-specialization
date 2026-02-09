@@ -253,7 +253,7 @@ __Learning Objectives__
 #### Notes
 * Entropy as measure of impurity. 
   
-<img width="964" height="830" alt="Image" src="https://github.com/user-attachments/assets/8b3677aa-b31e-4bf1-b9c5-c96443269cb0" />
+<img width="400" alt="Image" src="https://github.com/user-attachments/assets/8b3677aa-b31e-4bf1-b9c5-c96443269cb0" />
 
 $$H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$$   
 
@@ -261,11 +261,11 @@ $$H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$$
   
 $$\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^\text{left}\right) + w^{\text{right}}H\left(p_1^\text{right}\right)\right)$$
 
-<img width="2570" height="1258" alt="Image" src="https://github.com/user-attachments/assets/a6e09fdc-a793-4365-b753-8b25db262a6b" />
+<img width="2610" alt="Image" src="https://github.com/user-attachments/assets/376f662b-1c8c-4d06-b42e-930b7646cb83" />
 
 * One Hot Encoding: when a feature can take more than two possible values. One Hot because only one feature is selected.  
 
-<img width="2500" height="396" alt="Image" src="https://github.com/user-attachments/assets/1a703253-6786-46a0-9319-d32c2651d583" />
+<img width="2500" alt="Image" src="https://github.com/user-attachments/assets/1a703253-6786-46a0-9319-d32c2651d583" />
 
 #### Labs
 * [Lab 01](02_advanced_learning_algorithms/04_week/C2_W4_Lab_01_Decision_Trees.ipynb): Decision Trees
