@@ -145,7 +145,6 @@ __Learning Objectives__
 https://www.coursera.org/learn/advanced-learning-algorithms/home/info
 
 ### Week 1: Neural networks
-
 >This week, you'll learn about neural networks and how to use them for classification tasks. You'll use the TensorFlow framework to build a neural network with just a few lines of code. Then, dive deeper by learning how to code up your own neural network in Python, "from scratch". Optionally, you can learn more about how neural network computations are implemented efficiently using parallel processing (vectorization).
 
 __Learning Objectives__
@@ -168,8 +167,7 @@ todo
 * [Lab 03](02_advanced_learning_algorithms/01_week/C2_W1_Lab03_CoffeeRoasting_Numpy.ipynb): Simple Neural Network with Numpy, coffee roasting example.
 
 ### Week 2: Neural network training
-
-This week, you'll learn how to train your model in `TensorFlow`, and also learn about other important `activation functions` (besides the sigmoid function), and where to use each type in a neural network. You'll also learn how to go beyond binary classification to `multiclass classification` (3 or more categories). Multiclass classification will introduce you to a new activation function and a new loss function. Optionally, you can also learn about the difference between multiclass classification and multi-label classification. You'll learn about the `Adam optimizer`, and why it's an improvement upon regular gradient descent for neural network training. Finally, you will get a brief introduction to other layer types besides the one you've seen thus far.
+>This week, you'll learn how to train your model in `TensorFlow`, and also learn about other important `activation functions` (besides the sigmoid function), and where to use each type in a neural network. You'll also learn how to go beyond binary classification to `multiclass classification` (3 or more categories). Multiclass classification will introduce you to a new activation function and a new loss function. Optionally, you can also learn about the difference between multiclass classification and multi-label classification. You'll learn about the `Adam optimizer`, and why it's an improvement upon regular gradient descent for neural network training. Finally, you will get a brief introduction to other layer types besides the one you've seen thus far.
 
 __Learning Objectives__
 * Train a neural network on data using TensorFlow
@@ -216,8 +214,7 @@ __Learning Objectives__
 * [Lab 03](02_advanced_learning_algorithms/02_week/C2_W2_lab03_Multiclass_TF.ipynb): Neural Network for multi-class classification
 
 ### Week 3: Advice for applying machine learning
-
-This week you'll learn best practices for training and evaluating your learning algorithms to improve performance. This will cover a wide range of useful advice about the machine learning lifecycle, tuning your model, and also improving your training data 
+>This week you'll learn best practices for training and evaluating your learning algorithms to improve performance. This will cover a wide range of useful advice about the machine learning lifecycle, tuning your model, and also improving your training data 
 
 __Learning Objectives__
 * Evaluate and then modify your learning algorithm or data to improve your model's performance
@@ -254,7 +251,11 @@ __Learning Objectives__
 * Learn when to use decision trees or neural networks
 
 #### Notes
-todo
+* Entropy function 
+TODO
+* Information Gain or reduction of entropy
+TODO
+* 
 
 #### Labs
 todo
