@@ -255,7 +255,7 @@ __Learning Objectives__
 $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
   
 <img width="400" alt="Image" src="https://github.com/user-attachments/assets/8b3677aa-b31e-4bf1-b9c5-c96443269cb0" />
-
+&nbsp;
   
 * __Information Gain__ or reduction of entropy, use to choose a feature to split
   
