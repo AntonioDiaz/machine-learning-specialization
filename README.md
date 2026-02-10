@@ -254,10 +254,6 @@ __Learning Objectives__
 * __Entropy__ as measure of impurity.  
 $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
 <img width="400" alt="Image" src="https://github.com/user-attachments/assets/8b3677aa-b31e-4bf1-b9c5-c96443269cb0" />
-
-
-&nbsp;
-
 &nbsp;
 
 * __Information Gain__ or reduction of entropy, use to choose a feature to split
@@ -265,20 +261,23 @@ $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
 $\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^\text{left}\right) + w^{\text{right}}H\left(p_1^\text{right}\right)\right)$
 
 <img width="2610" alt="Image" src="https://github.com/user-attachments/assets/376f662b-1c8c-4d06-b42e-930b7646cb83" />
+&nbsp;
+
 
 * __One Hot Encoding__  
 solution when a feature can take more than two possible values. One Hot because only one feature is selected.  
 
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/1a703253-6786-46a0-9319-d32c2651d583" />
-  
+&nbsp;
   
 * __Continue Value features__
 <img width="1244" height="547" alt="Image" src="https://github.com/user-attachments/assets/eda27b66-63b2-44ce-97bf-ac11e5ab53f2" />
-  
+&nbsp;
 
 * __Tree Ensemble__  
 using branch of decision trees instead only one, the final decision is taken by mayority of each tree.  
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/a2998729-de96-4888-82fc-b4f09a4cef31" />
+&nbsp;
 
 
 * __Sampling with replacement__  
