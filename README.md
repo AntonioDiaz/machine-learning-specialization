@@ -268,12 +268,12 @@ $\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^\
 solution when a feature can take more than two possible values. One Hot because only one feature is selected.  
 
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/1a703253-6786-46a0-9319-d32c2651d583" />
-
-
+  
+  
 * __Continue Value features__
 <img width="1244" height="547" alt="Image" src="https://github.com/user-attachments/assets/eda27b66-63b2-44ce-97bf-ac11e5ab53f2" />
-
-
+  
+  
 * __Tree Ensemble__  
 using branch of decision trees instead only one, the final decision is taken by mayority of each tree.  
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/a2998729-de96-4888-82fc-b4f09a4cef31" />
