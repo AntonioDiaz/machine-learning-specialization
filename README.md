@@ -268,13 +268,18 @@ $$\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/1a703253-6786-46a0-9319-d32c2651d583" />
 
 * Continue Value features
+<img width="1244" height="547" alt="Image" src="https://github.com/user-attachments/assets/eda27b66-63b2-44ce-97bf-ac11e5ab53f2" />
 
 * Tree Ensemble: using branch of decision trees instead only one, the final decision is taken by mayority of each tree.  
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/a2998729-de96-4888-82fc-b4f09a4cef31" />
 
-* Sampling with replacement
+* Sampling with replacement: the idea is to build a new training set, similar from the original.
 
- 
+* Random Forest Alghoritm: alghoritm to build tree ensemble.
+Idea: when choosing a feature to use split, if $n$ features are available, pick a `random` subset of features $(k < n)$ and allow the algorithm to only choose from that subset of features. Usually $k = \sqrt{n}$.
+
+* XGBoost: Boosted trees, where each tree is trained to correct the errors of the previous tree. The final decision is taken by weighted mayority of each tree.
+
 
 #### Labs
 * [Lab 01](02_advanced_learning_algorithms/04_week/C2_W4_Lab_01_Decision_Trees.ipynb): Decision Trees
