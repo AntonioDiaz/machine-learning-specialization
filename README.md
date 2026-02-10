@@ -258,6 +258,12 @@ $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
 
   
 
+
+
+
+
+
+
 * __Information Gain__ or reduction of entropy, use to choose a feature to split
   
 $\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^\text{left}\right) + w^{\text{right}}H\left(p_1^\text{right}\right)\right)$
