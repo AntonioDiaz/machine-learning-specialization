@@ -256,6 +256,7 @@ $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
   
 <img width="400" alt="Image" src="https://github.com/user-attachments/assets/8b3677aa-b31e-4bf1-b9c5-c96443269cb0" />
 
+  
 
 * __Information Gain__ or reduction of entropy, use to choose a feature to split
   
@@ -268,21 +269,25 @@ solution when a feature can take more than two possible values. One Hot because 
 
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/1a703253-6786-46a0-9319-d32c2651d583" />
 
+
 * __Continue Value features__
 <img width="1244" height="547" alt="Image" src="https://github.com/user-attachments/assets/eda27b66-63b2-44ce-97bf-ac11e5ab53f2" />
+
 
 * __Tree Ensemble__  
 using branch of decision trees instead only one, the final decision is taken by mayority of each tree.  
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/a2998729-de96-4888-82fc-b4f09a4cef31" />
 
+
 * __Sampling with replacement__  
 the idea is to build a new training set, similar from the original.
+
 
 * __Random Forest Algorithm__   
 algorithm to build tree ensemble.
 Idea: when choosing a feature to use split, if $n$ features are available, pick a `random` subset of features $(k < n)$ and allow the algorithm to only choose from that subset of features. Usually $k = \sqrt{n}$.
 
-* __XGBoost__   
+* __XGBoost__   (eXtreme Gradient Boosting)
 Boosted trees, where each tree is trained to correct the errors of the previous tree. The final decision is taken by weighted mayority of each tree.
 
 
