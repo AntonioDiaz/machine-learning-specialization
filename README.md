@@ -255,13 +255,14 @@ __Learning Objectives__
 $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
   
 <img width="400" alt="Image" src="https://github.com/user-attachments/assets/8b3677aa-b31e-4bf1-b9c5-c96443269cb0" />
-<br>
 <br>  
+
 * __Information Gain__ or reduction of entropy, use to choose a feature to split
   
 $\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^\text{left}\right) + w^{\text{right}}H\left(p_1^\text{right}\right)\right)$
 
 <img width="2610" alt="Image" src="https://github.com/user-attachments/assets/376f662b-1c8c-4d06-b42e-930b7646cb83" />
+<br>
 
 * __One Hot Encoding__  
 solution when a feature can take more than two possible values. One Hot because only one feature is selected.  
