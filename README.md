@@ -269,6 +269,13 @@ $$\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^
 
 * Continue Value features
 
+* Tree Ensemble: using branch of decision trees instead only one, the final decision is taken by mayority of each tree.  
+<img width="2500" alt="Image" src="https://github.com/user-attachments/assets/a2998729-de96-4888-82fc-b4f09a4cef31" />
+
+* Sampling with replacement
+
+ 
+
 #### Labs
 * [Lab 01](02_advanced_learning_algorithms/04_week/C2_W4_Lab_01_Decision_Trees.ipynb): Decision Trees
 * [Lab 02](02_advanced_learning_algorithms/04_week/C2_W4_Lab_02_Tree_Ensemble.ipynb): Treen Ensemble
