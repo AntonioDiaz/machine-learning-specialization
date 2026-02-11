@@ -258,28 +258,24 @@ $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
 
 
 &nbsp;
-
-
-
-
-
-
 * __Information Gain__ or reduction of entropy, use to choose a feature to split
   
 $\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^\text{left}\right) + w^{\text{right}}H\left(p_1^\text{right}\right)\right)$
 
 <img width="2610" alt="Image" src="https://github.com/user-attachments/assets/376f662b-1c8c-4d06-b42e-930b7646cb83" />
+
 &nbsp;
-
-
 * __One Hot Encoding__  
 solution when a feature can take more than two possible values. One Hot because only one feature is selected.  
 
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/1a703253-6786-46a0-9319-d32c2651d583" />
+
+
 &nbsp;
   
 * __Continue Value features__
 <img width="1244" height="547" alt="Image" src="https://github.com/user-attachments/assets/eda27b66-63b2-44ce-97bf-ac11e5ab53f2" />
+
 &nbsp;
 
 * __Tree Ensemble__  
