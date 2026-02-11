@@ -24,7 +24,6 @@ Contents
     - [Labs](#labs-5)
   - [Week 4: Decision trees](#week-4-decision-trees)
     - [Notes](#notes-6)
-- [](#)
     - [Labs](#labs-6)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
 
@@ -255,6 +254,7 @@ __Learning Objectives__
 * __Entropy__ as measure of impurity.  
 $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
 <img width="400" alt="Image" src="https://github.com/user-attachments/assets/8b3677aa-b31e-4bf1-b9c5-c96443269cb0" />  
+
 -
 
 
