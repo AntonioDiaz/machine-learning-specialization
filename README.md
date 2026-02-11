@@ -294,6 +294,8 @@ Boosted trees, where each tree is trained to correct the errors of the previous 
 
 #### Labs
 * [Lab 01](02_advanced_learning_algorithms/04_week/C2_W4_Lab_01_Decision_Trees.ipynb): Decision Trees
+In this notebook you will visualize how a decision tree is split using information gain.
+
 * [Lab 02](02_advanced_learning_algorithms/04_week/C2_W4_Lab_02_Tree_Ensemble.ipynb): Treen Ensemble
 
 
