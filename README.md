@@ -331,12 +331,23 @@ __Learning Objectives__
 * Implement the function that finds the closest centroids to each point in k-means
 
 #### Notes
-* Unsupervised learning: learning from data that is not labeled.
+* __Unsupervised learning__ learning from data that is not labeled.
   
-* Clustering: grouping data points into clusters of similar examples.
+* __Clustering__ grouping data points into clusters of similar examples.
   
-* K-means clustering: an algorithm for clustering data points into K clusters. The algorithm iteratively assigns each data point to the closest cluster centroid and then updates the centroids based on the mean of the assigned points.
+* __K-means clustering__  
+Algorithm for clustering data points into K clusters. The algorithm iteratively assigns each data point to the closest cluster centroid and then updates the centroids based on the mean of the assigned points.
+* Steps of K-means clustering:
+  * First, randomly initialize K centroids.
+  * Then, repeat the following steps until convergence:
+    * Step 1: Assigng each point to its closest centroid to form K clusters.
+    * Step 2: Recommpute the centroids.
+<br>
+<img width="2370" alt="Image" src="https://github.com/user-attachments/assets/2891c95d-9e63-42cd-b919-2635ef7b32c2" />
+&nbsp;
 
+<img width="2320" alt="Image" src="https://github.com/user-attachments/assets/8b21adf1-1603-4cbd-98da-03946260caae" />
+&nbsp;
 
 #### Labs
 
