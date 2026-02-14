@@ -26,6 +26,15 @@ Contents
     - [Notes](#notes-6)
     - [Labs](#labs-6)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
+  - [Week 1: Unsupervised learning](#week-1-unsupervised-learning)
+    - [Notes](#notes-7)
+    - [Labs](#labs-7)
+  - [Week 2: Recommender systems](#week-2-recommender-systems)
+    - [Notes](#notes-8)
+    - [Labs](#labs-8)
+  - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
+    - [Notes](#notes-9)
+    - [Labs](#labs-9)
 
 
 <hr>
@@ -305,4 +314,42 @@ In this notebook you will visualize how a decision tree is split using informati
 
 ## 03 - Unsupervised Learning, Recommenders, Reinforcement Learning
 
-https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning?specialization=machine-learning-introduction
+https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning/home/welcome
+
+
+### Week 1: Unsupervised learning
+> This week, you will learn two key unsupervised learning algorithms: clustering and anomaly detection
+
+__Learning Objectives__
+* Implement the k-means clustering algorithm
+* Implement the k-means optimization objective
+* Initialize the k-means algorithm
+* Choose the number of clusters for the k-means algorithm
+* Implement an anomaly detection system
+* Decide when to use supervised learning vs. anomaly detection
+* Implement the centroid update function in k-means
+* Implement the function that finds the closest centroids to each point in k-means
+
+#### Notes
+* Unsupervised learning: learning from data that is not labeled.
+  
+* Clustering: grouping data points into clusters of similar examples.
+  
+* K-means clustering: an algorithm for clustering data points into K clusters. The algorithm iteratively assigns each data point to the closest cluster centroid and then updates the centroids based on the mean of the assigned points.
+
+
+#### Labs
+
+### Week 2: Recommender systems
+__Learning Objectives__
+
+#### Notes
+
+#### Labs
+
+### Week 3 Reinforcement Learning
+__Learning Objectives__
+
+#### Notes
+
+#### Labs
