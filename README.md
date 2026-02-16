@@ -336,8 +336,10 @@ __Learning Objectives__
 * __Clustering__ grouping data points into clusters of similar examples.
   
 * __K-means clustering__  
+  
 Algorithm for clustering data points into K clusters. The algorithm iteratively assigns each data point to the closest cluster centroid and then updates the centroids based on the mean of the assigned points.  
-K-means clustering algorithm:
+
+K-means clustering algorithm:  
   * Randomly initialize K centroids.
   * Then, repeat the following steps until convergence:
     * Step 1: Assigng each point to its closest centroid to form K clusters.
@@ -347,6 +349,12 @@ K-means clustering algorithm:
 
 <img width="2320" alt="Image" src="https://github.com/user-attachments/assets/8b21adf1-1603-4cbd-98da-03946260caae" />
 &nbsp;
+
+* __K_means algorighm__
+<img width="2338" height="1182" alt="Image" src="https://github.com/user-attachments/assets/67f4f7c0-967e-45e2-b67f-bb5d96b8d8b5" />
+&nbsp;
+
+
 
 #### Labs
 
