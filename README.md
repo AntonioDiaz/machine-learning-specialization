@@ -357,7 +357,7 @@ K-means clustering algorithm:
 * __K-means optimization objective__
   * The K-means algorithm is trying to minimize the following cost function, also called `distortion`:
 $J(c^{(1)}, \ldots, c^{(m)}, \mu_1, \ldots, \mu_K) = \frac{1}{m} \sum_{i=1}^m ||x^{(i)} - \mu_{c^{(i)}}||^2$
-<img width="2330" alt="Image" src="https://github.com/user-attachments/assets/cd1c9f5d-577d-423c-b602-a70103c44fe9" />
+<img width="2316" alt="Image" src="https://github.com/user-attachments/assets/c48efe10-2eea-4cb7-bde7-8ad645a65462" />
 &nbsp;
 
 * __Initialization of K-means__
