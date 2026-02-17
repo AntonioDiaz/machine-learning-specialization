@@ -350,9 +350,18 @@ K-means clustering algorithm:
 <img width="2320" alt="Image" src="https://github.com/user-attachments/assets/8b21adf1-1603-4cbd-98da-03946260caae" />
 &nbsp;
 
-* __K_means algorighm__
-<img width="2338" height="1182" alt="Image" src="https://github.com/user-attachments/assets/67f4f7c0-967e-45e2-b67f-bb5d96b8d8b5" />
+* __K_means algorithm__
+<img width="2338" alt="Image" src="https://github.com/user-attachments/assets/67f4f7c0-967e-45e2-b67f-bb5d96b8d8b5" />
 &nbsp;
+
+* __K-means optimization objective__
+  * The K-means algorithm is trying to minimize the following cost function, also called `distortion`:
+$J(c^{(1)}, \ldots, c^{(m)}, \mu_1, \ldots, \mu_K) = \frac{1}{m} \sum_{i=1}^m ||x^{(i)} - \mu_{c^{(i)}}||^2$
+<img width="2330" alt="Image" src="https://github.com/user-attachments/assets/cd1c9f5d-577d-423c-b602-a70103c44fe9" />
+&nbsp;
+
+* __Initialization of K-means__
+  * Random initialization: randomly select K data points as initial centroids.
 
 
 
