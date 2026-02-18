@@ -363,9 +363,12 @@ $J(c^{(1)}, \ldots, c^{(m)}, \mu_1, \ldots, \mu_K) = \frac{1}{m} \sum_{i=1}^m ||
 * __Initialization of K-means__
   * Random initialization: randomly select K data points as initial centroids.
 
+* __Choosing the number of clusters K__
+  * Elbow method: plot the cost function J as a function of K and look for an "elbow" in the graph where the cost starts to decrease more slowly.
 
 
 #### Labs
+* Lab 01: [K-means clustering](03_unsupervised_learning/01_week/C3_W1_KMeans_Assignment.ipynb)
 
 ### Week 2: Recommender systems
 __Learning Objectives__
