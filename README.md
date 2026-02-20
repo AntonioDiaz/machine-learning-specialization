@@ -366,6 +366,14 @@ $J(c^{(1)}, \ldots, c^{(m)}, \mu_1, \ldots, \mu_K) = \frac{1}{m} \sum_{i=1}^m ||
 * __Choosing the number of clusters K__
   * Elbow method: plot the cost function J as a function of K and look for an "elbow" in the graph where the cost starts to decrease more slowly.
 
+* __Anomaly detection__  
+Identifying data points that are significantly different from the majority of the data. This can be useful for tasks such as fraud detection, network security, and quality control.
+
+* __Density estimation__  
+A common approach to anomaly detection is to estimate the probability density function of the data and then flag data points that have a low probability as anomalies.
+
+* __Gaussian distribution__
+<img width="2354" alt="Image" src="https://github.com/user-attachments/assets/909f8ae5-9707-4a04-a682-b0487bfd8a41" />
 
 #### Labs
 * Lab 01: [K-means clustering](03_unsupervised_learning/01_week/C3_W1_KMeans_Assignment.ipynb)
