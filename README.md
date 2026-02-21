@@ -382,6 +382,12 @@ A common approach to anomaly detection is to estimate the probability density fu
   * Flag $x$ as an anomaly if $p(x) < \epsilon$, where $\epsilon$ is a threshold that you can choose based on your desired false positive rate.  
 <img width="2344" alt="Image" src="https://github.com/user-attachments/assets/1b8e293c-eefc-4060-845b-8789328e20cf" />
 &nbsp;
+* __Anomaly detection algorithm with multiple features__
+  * Estimate the parameters $\mu$ and $\Sigma$ of the multivariate Gaussian distribution using the training data.
+  * For a new data point $x$, compute the probability density function $p(x)$ using the estimated parameters.
+  * Flag $x$ as an anomaly if $p(x) < \epsilon$, where $\epsilon$ is a threshold that you can choose based on your desired false positive rate.
+<img width="2318" alt="Image" src="https://github.com/user-attachments/assets/c62f2aa9-7850-4af3-be2e-48fc9ee5a643" />
+
 
 #### Labs
 * Lab 01: [K-means clustering](03_unsupervised_learning/01_week/C3_W1_KMeans_Assignment.ipynb)
