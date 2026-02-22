@@ -400,6 +400,15 @@ A common approach to anomaly detection is to estimate the probability density fu
     * 2 anomalies out of 10_000 data points.   
 <img width="1985" alt="Image" src="https://github.com/user-attachments/assets/fa15aba9-5168-4f82-86f4-efd24d44b8d3" />
 
+* __Anomaly detection vs supervised learning__
+Anomaly detection is used when you have very few examples of the anomaly (positive class) and many examples of the normal data (negative class). In contrast, supervised learning is used when you have a balanced dataset with enough examples of both classes. 
+<img width="1916" alt="Image" src="https://github.com/user-attachments/assets/d4968fc7-55d4-4282-9bb5-2a803b1a1f38" />
+&nbsp;
+
+* __Choosing Features for anomaly detection__
+  * The choice of features is crucial for the performance of an anomaly detection system. You should choose features that are relevant to the problem and that can help distinguish between normal and anomalous data points. For example, in the case of aircraft engine failure, you might choose features such as temperature, pressure, and vibration.
+
+  
 
 
 #### Labs
