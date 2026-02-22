@@ -395,6 +395,10 @@ A common approach to anomaly detection is to estimate the probability density fu
   * Use the training set to estimate the parameters of the Gaussian distribution.
   * Use the cross-validation set to select the threshold $\epsilon$ that gives you the desired false positive rate.
   * Use the test set to evaluate the performance of your anomaly detection system.
+  * Example of dataset for anomaly detection of aircraft engine failure: there are 2 situations:
+    * 20 anomalies out of 10_000 data points
+    * 2 anomalies out of 10_000 data points.   
+<img width="1985" alt="Image" src="https://github.com/user-attachments/assets/fa15aba9-5168-4f82-86f4-efd24d44b8d3" />
 
 
 
