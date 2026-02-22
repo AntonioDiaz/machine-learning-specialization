@@ -415,7 +415,7 @@ Anomaly detection is used when you have very few examples of the anomaly (positi
 
 #### Labs
 * Lab 01: [K-means clustering](03_unsupervised_learning/01_week/C3_W1_KMeans_Assignment.ipynb)
-* Lab 02: Anomaly detection
+* Lab 02: [Anomaly detection](03_unsupervised_learning/01_week/utils_Anomaly_Detection.py)
 ### Week 2: Recommender systems
 __Learning Objectives__
 
