@@ -28,6 +28,8 @@ Contents
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
   - [Week 1: Unsupervised learning](#week-1-unsupervised-learning)
     - [Notes](#notes-7)
+    - [K-means clustering](#k-means-clustering)
+    - [Anomaly detection](#anomaly-detection)
     - [Labs](#labs-7)
   - [Week 2: Recommender systems](#week-2-recommender-systems)
     - [Notes](#notes-8)
@@ -335,7 +337,7 @@ __Learning Objectives__
   
 * __Clustering__ grouping data points into clusters of similar examples.
   
-* __K-means clustering__  
+#### K-means clustering  
   
 Algorithm for clustering data points into K clusters. The algorithm iteratively assigns each data point to the closest cluster centroid and then updates the centroids based on the mean of the assigned points.  
 
@@ -366,7 +368,7 @@ $J(c^{(1)}, \ldots, c^{(m)}, \mu_1, \ldots, \mu_K) = \frac{1}{m} \sum_{i=1}^m ||
 * __Choosing the number of clusters K__
   * Elbow method: plot the cost function J as a function of K and look for an "elbow" in the graph where the cost starts to decrease more slowly.
 
-* __Anomaly detection__  
+#### Anomaly detection  
 Identifying data points that are significantly different from the majority of the data. This can be useful for tasks such as fraud detection, network security, and quality control.
 
 * __Density estimation__  
@@ -384,7 +386,7 @@ A common approach to anomaly detection is to estimate the probability density fu
 &nbsp;
 
 * __Anomaly detection algorithm with multiple features__
-  * Estimate the parameters $\mu$ and $\Sigma$ of the multivariate Gaussian distribution using the training data.
+  * Estimate the parameters $\mu$ and $\sigma^2$ of the multivariate Gaussian distribution using the training data. 
   * For a new data point $x$, compute the probability density function $p(x)$ using the estimated parameters.
   * Flag $x$ as an anomaly if $p(x) < \epsilon$, where $\epsilon$ is a threshold that you can choose based on your desired false positive rate.
 <img width="2318" alt="Image" src="https://github.com/user-attachments/assets/c62f2aa9-7850-4af3-be2e-48fc9ee5a643" />
@@ -413,7 +415,7 @@ Anomaly detection is used when you have very few examples of the anomaly (positi
 
 #### Labs
 * Lab 01: [K-means clustering](03_unsupervised_learning/01_week/C3_W1_KMeans_Assignment.ipynb)
-
+* Lab 02: Anomaly detection
 ### Week 2: Recommender systems
 __Learning Objectives__
 
