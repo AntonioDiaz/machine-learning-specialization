@@ -32,10 +32,10 @@ Contents
     - [Anomaly detection](#anomaly-detection)
     - [Labs](#labs-7)
   - [Week 2: Recommender systems](#week-2-recommender-systems)
-    - [Notes](#notes-8)
+    - [Notes Colaborative filtering recommender systems](#notes-colaborative-filtering-recommender-systems)
     - [Labs](#labs-8)
   - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
-    - [Notes](#notes-9)
+    - [Notes](#notes-8)
     - [Labs](#labs-9)
 
 
@@ -410,16 +410,33 @@ Anomaly detection is used when you have very few examples of the anomaly (positi
 * __Choosing Features for anomaly detection__
   * The choice of features is crucial for the performance of an anomaly detection system. You should choose features that are relevant to the problem and that can help distinguish between normal and anomalous data points. For example, in the case of aircraft engine failure, you might choose features such as temperature, pressure, and vibration.
 
-  
-
 
 #### Labs
 * Lab 01: [K-means clustering](03_unsupervised_learning/01_week/C3_W1_KMeans_Assignment.ipynb)
 * Lab 02: [Anomaly detection](03_unsupervised_learning/01_week/C3_W1_Anomaly_Detection.ipynb)
-### Week 2: Recommender systems
-__Learning Objectives__
 
-#### Notes
+### Week 2: Recommender systems
+
+__Learning Objectives__
+* Implement collaborative filtering recommender systems in TensorFlow
+* Implement deep learning content based filtering using a neural network in TensorFlow
+* Understand ethical considerations in building recommender systems
+
+
+#### Notes Colaborative filtering recommender systems
+* __Collaborative filtering__  
+is a method of making recommendations based on the preferences of similar users. The idea is to find users who have similar preferences and then recommend items that those similar users have liked.  
+<img width="1970" alt="Image" src="https://github.com/user-attachments/assets/580d8f3b-926d-43ea-a1fc-b5c2d1165853" />
+
+* __Cost function for collaborative filtering__
+To learn parameters w and b for collaborative filtering, we can use the following cost function
+
+<img width="1994" alt="Image" src="https://github.com/user-attachments/assets/39fc439e-d423-49e2-8abb-94e8ec4eeb9c" />
+&nbsp;
+
+* Cost function for collaborative filtering with regularization for all users
+<img width="1992" height="903" alt="Image" src="https://github.com/user-attachments/assets/88e5be2b-5d03-40f2-8940-95ca658313d1" />
+
 
 #### Labs
 
