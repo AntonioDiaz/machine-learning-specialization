@@ -427,15 +427,20 @@ __Learning Objectives__
 * __Collaborative filtering__  
 is a method of making recommendations based on the preferences of similar users. The idea is to find users who have similar preferences and then recommend items that those similar users have liked.  
 <img width="1970" alt="Image" src="https://github.com/user-attachments/assets/580d8f3b-926d-43ea-a1fc-b5c2d1165853" />
+&nbsp;
+
 
 * __Cost function for collaborative filtering__
 To learn parameters w and b for collaborative filtering, we can use the following cost function
-
 <img width="1994" alt="Image" src="https://github.com/user-attachments/assets/39fc439e-d423-49e2-8abb-94e8ec4eeb9c" />
 &nbsp;
 
-* Cost function for collaborative filtering with regularization for all users
-<img width="1992" height="903" alt="Image" src="https://github.com/user-attachments/assets/88e5be2b-5d03-40f2-8940-95ca658313d1" />
+
+* Cost function for collaborative filtering with regularization for __all users__
+<img width="1992" alt="Image" src="https://github.com/user-attachments/assets/88e5be2b-5d03-40f2-8940-95ca658313d1" />
+&nbsp;
+
+* Colaborative filtering algorithm
 
 
 #### Labs
