@@ -32,7 +32,7 @@ Contents
     - [Anomaly detection](#anomaly-detection)
     - [Labs](#labs-7)
   - [Week 2: Recommender systems](#week-2-recommender-systems)
-    - [Notes Colaborative filtering recommender systems](#notes-colaborative-filtering-recommender-systems)
+    - [Colaborative filtering recommender systems](#colaborative-filtering-recommender-systems)
     - [Labs](#labs-8)
   - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
     - [Notes](#notes-8)
@@ -423,25 +423,28 @@ __Learning Objectives__
 * Understand ethical considerations in building recommender systems
 
 
-#### Notes Colaborative filtering recommender systems
+#### Colaborative filtering recommender systems
 * __Collaborative filtering__  
 is a method of making recommendations based on the preferences of similar users. The idea is to find users who have similar preferences and then recommend items that those similar users have liked.  
 <img width="1970" alt="Image" src="https://github.com/user-attachments/assets/580d8f3b-926d-43ea-a1fc-b5c2d1165853" />
 &nbsp;
 
 
-* __Cost function for collaborative filtering__
+* __Cost function for collaborative filtering__  
 To learn parameters w and b for collaborative filtering, we can use the following cost function
 <img width="1994" alt="Image" src="https://github.com/user-attachments/assets/39fc439e-d423-49e2-8abb-94e8ec4eeb9c" />
 &nbsp;
 
 
-* Cost function for collaborative filtering with regularization for __all users__
+* Function to learn parameters w and b for collaborative filtering
 <img width="1992" alt="Image" src="https://github.com/user-attachments/assets/88e5be2b-5d03-40f2-8940-95ca658313d1" />
 &nbsp;
 
-* Colaborative filtering algorithm
+* Function to learn features x for collaborative filtering
+<img width="2392" alt="Image" src="https://github.com/user-attachments/assets/12d2c7f0-0535-4464-90c4-7404a0725a9e" />
 
+* Gradient descent for collaborative filtering
+  
 
 #### Labs
 
