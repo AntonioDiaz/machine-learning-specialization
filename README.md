@@ -449,8 +449,14 @@ To learn parameters w and b for collaborative filtering, we can use the followin
 
 * __Binary labels__: favs, likes and clicks   
   * Previously, we have been working with ratings as labels, which are continuous values. However, in many cases, we only have binary labels, such as whether a user liked an item or not. In this case, we can use a different cost function that is more appropriate for binary labels.
-  * Cost function for binary labels:   
+
+* __Cost function for binary labels__   
   $$J(w,b) = -\frac{1}{m} \sum_{i=1}^m \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$$
+  Where $f_{w,b}(x^{(i)})$ is the predicted probability that user $i$ will like item $j$, and $y^{(i)}$ is the actual label (1 if the user liked the item, 0 otherwise). This cost function is known as the __binary cross-entropy loss__.
+  $f_{w,b}(x^{(i)})$ can be calculated using the sigmoid function, which maps the output of the linear model to a value between 0 and 1, representing the predicted probability of the user liking the item.
+  $$f_{w,b}(x^{(i)}) = \sigma(w^T x^{(i)} + b) = \frac{1}{1 + e^{-(w^T x^{(i)} + b)}}$$
+
+<img width="1576" alt="Image" src="https://github.com/user-attachments/assets/a6ebcd20-9cb5-480a-987a-00ceef2fb92c" />
 
 #### Mean normalization for collaborative filtering
   
