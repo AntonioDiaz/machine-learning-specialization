@@ -484,11 +484,13 @@ To improve the performance of collaborative filtering, we can apply mean normali
 <img width="1982" alt="Image" src="https://github.com/user-attachments/assets/805af192-f9bd-4262-b296-ee1c983ae229" />
 &nbsp;
 
-* Auto Diff in TensorFlow: automatically compute derivative for gradient descent.  
+* __Auto Diff__ in TensorFlow: automatically compute derivative for gradient descent.  
 <img width="1986" alt="Image" src="https://github.com/user-attachments/assets/2623b0a5-a71e-466d-8f48-1c98a9183efc" />
 
 
 #### Labs
+* Lab 01: [Collaborative Filtering Recommender Systems](03_unsupervised_learning/02_week/C3_W2_Collaborative_RecSys_Assignment.ipynb)
+
 
 ### Week 3 Reinforcement Learning
 __Learning Objectives__
