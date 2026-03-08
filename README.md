@@ -443,6 +443,10 @@ To learn parameters w and b for collaborative filtering, we can use the followin
 <img width="2392" alt="Image" src="https://github.com/user-attachments/assets/12d2c7f0-0535-4464-90c4-7404a0725a9e" />
 &nbsp;
 
+* Function to learn both parameters w and b (users on the example), and features x (movies) for collaborative filtering  
+<img width="2006" alt="Image" src="https://github.com/user-attachments/assets/20ed170c-3ce2-4054-affa-0c68fc708425" />
+&nbsp;
+
 * __Gradient descent__ for collaborative filtering  
 <img width="1458" alt="Image" src="https://github.com/user-attachments/assets/127e838e-3688-44f7-94ee-7c3b93ace7d3" />
 &nbsp;
@@ -451,6 +455,7 @@ To learn parameters w and b for collaborative filtering, we can use the followin
   * Previously, we have been working with ratings as labels, which are continuous values. However, in many cases, we only have binary labels, such as whether a user liked an item or not. In this case, we can use a different cost function that is more appropriate for binary labels.
 
 * __Cost function for binary labels__   
+
   $$J(w,b) = -\frac{1}{m} \sum_{i=1}^m \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$$  
 
   * Where $f_{w,b}(x^{(i)})$ is the predicted probability that user $i$ will like item $j$, and $y^{(i)}$ is the actual label (1 if the user liked the item, 0 otherwise). This cost function is known as the __binary cross-entropy loss__.  
@@ -461,7 +466,8 @@ To learn parameters w and b for collaborative filtering, we can use the followin
 <img width="1576" alt="Image" src="https://github.com/user-attachments/assets/a6ebcd20-9cb5-480a-987a-00ceef2fb92c" />
 
 #### Mean normalization for collaborative filtering
-  
+* __Mean normalization__  
+To improve the performance of collaborative filtering, we can apply mean normalization to the ratings. This involves subtracting the mean rating for each item from the ratings before training the model. This helps to account for differences in user preferences and can lead to better recommendations.  
 
 #### Labs
 
