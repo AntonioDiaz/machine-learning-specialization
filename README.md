@@ -480,9 +480,12 @@ To improve the performance of collaborative filtering, we can apply mean normali
 #### TensorFlow implementation of collaborative filtering
 * In TensorFlow, we can implement collaborative filtering using the Keras API. We can define a model that takes the user and item features as input and outputs the predicted rating. We can then compile the model with the appropriate loss function (e.g., binary cross-entropy for binary labels) and optimizer (e.g., Adam), and train the model on the training data. After training, we can use the model to make predictions for new user-item pairs and generate recommendations based on those predictions.
 
-* Gradient decent reminder  
+* Gradient decent reminder from previous weeks:  
 <img width="1982" alt="Image" src="https://github.com/user-attachments/assets/805af192-f9bd-4262-b296-ee1c983ae229" />
-* 
+
+* Auto Diff in TensorFlow: automatically compute derivative for gradient descent.  
+<img width="1986" alt="Image" src="https://github.com/user-attachments/assets/2623b0a5-a71e-466d-8f48-1c98a9183efc" />
+
 
 #### Labs
 
