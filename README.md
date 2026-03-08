@@ -439,7 +439,11 @@ To learn parameters w and b for collaborative filtering, we can use the followin
 <img width="1992" alt="Image" src="https://github.com/user-attachments/assets/88e5be2b-5d03-40f2-8940-95ca658313d1" />
 &nbsp;
 
-* Function to learn features x for collaborative filtering
+* Function to learn features x for collaborative filtering, where x represents the features of the items (e.g., movies) that users interact with. In collaborative filtering, we want to learn both the parameters w and b for the users, as well as the features x for the items. 
+* The cost function for learning features x can be defined as follows  
+$$J(x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2 + \frac{\lambda}{2} \sum_{j=1}^n ||x^{(j)}||^2$$
+where m is the number of users, n is the number of items, $f_{w,b}(x^{(i)})$ is the predicted rating for user i and item j, $y^{(i,j)}$ is the actual rating given by user i for movie j, and $\lambda$ is a regularization parameter to prevent overfitting. The first term in the cost function measures the difference between the predicted ratings and the actual ratings, while the second term adds a regularization penalty to prevent overfitting by encouraging smaller feature values.  
+
 <img width="2392" alt="Image" src="https://github.com/user-attachments/assets/12d2c7f0-0535-4464-90c4-7404a0725a9e" />
 &nbsp;
 
@@ -468,6 +472,8 @@ To learn parameters w and b for collaborative filtering, we can use the followin
 #### Mean normalization for collaborative filtering
 * __Mean normalization__  
 To improve the performance of collaborative filtering, we can apply mean normalization to the ratings. This involves subtracting the mean rating for each item from the ratings before training the model. This helps to account for differences in user preferences and can lead to better recommendations.  
+* Normalization by rows (users) or by columns (items), when new customer is added uses normalization by rows (example below) when added new movie use normalization by columns.  
+<img width="1976" alt="Image" src="https://github.com/user-attachments/assets/419a6f25-ded4-4305-a782-e76ae12b1b09" />
 
 #### Labs
 
