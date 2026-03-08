@@ -423,7 +423,6 @@ __Learning Objectives__
 * Implement deep learning content based filtering using a neural network in TensorFlow
 * Understand ethical considerations in building recommender systems
 
-
 #### Colaborative filtering recommender systems
 * __Collaborative filtering__  
   * Is a method of making recommendations based on the preferences of similar users.  
@@ -444,13 +443,13 @@ To learn parameters w and b for collaborative filtering, we can use the followin
 <img width="2392" alt="Image" src="https://github.com/user-attachments/assets/12d2c7f0-0535-4464-90c4-7404a0725a9e" />
 &nbsp;
 
-* Gradient descent for collaborative filtering  
+* __Gradient descent__ for collaborative filtering  
 <img width="1458" alt="Image" src="https://github.com/user-attachments/assets/127e838e-3688-44f7-94ee-7c3b93ace7d3" />
 &nbsp;
 
-* Binary labels: favs, likes and clicks   
+* __Binary labels__: favs, likes and clicks   
   * Previously, we have been working with ratings as labels, which are continuous values. However, in many cases, we only have binary labels, such as whether a user liked an item or not. In this case, we can use a different cost function that is more appropriate for binary labels.
-  * Cost function for binary labels:
+  * Cost function for binary labels:   
   $$J(w,b) = -\frac{1}{m} \sum_{i=1}^m \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$$
 
 #### Mean normalization for collaborative filtering
