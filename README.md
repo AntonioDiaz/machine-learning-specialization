@@ -34,6 +34,7 @@ Contents
   - [Week 2: Recommender systems](#week-2-recommender-systems)
     - [Colaborative filtering recommender systems](#colaborative-filtering-recommender-systems)
     - [Mean normalization for collaborative filtering](#mean-normalization-for-collaborative-filtering)
+    - [TensorFlow implementation of collaborative filtering](#tensorflow-implementation-of-collaborative-filtering)
     - [Labs](#labs-8)
   - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
     - [Notes](#notes-8)
@@ -474,6 +475,14 @@ where m is the number of users, n is the number of items, $f_{w,b}(x^{(i)})$ is 
 To improve the performance of collaborative filtering, we can apply mean normalization to the ratings. This involves subtracting the mean rating for each item from the ratings before training the model. This helps to account for differences in user preferences and can lead to better recommendations.  
 * Normalization by rows (users) or by columns (items), when new customer is added uses normalization by rows (example below) when added new movie use normalization by columns.  
 <img width="1976" alt="Image" src="https://github.com/user-attachments/assets/419a6f25-ded4-4305-a782-e76ae12b1b09" />
+&nbsp;
+
+#### TensorFlow implementation of collaborative filtering
+* In TensorFlow, we can implement collaborative filtering using the Keras API. We can define a model that takes the user and item features as input and outputs the predicted rating. We can then compile the model with the appropriate loss function (e.g., binary cross-entropy for binary labels) and optimizer (e.g., Adam), and train the model on the training data. After training, we can use the model to make predictions for new user-item pairs and generate recommendations based on those predictions.
+
+* Gradient decent reminder  
+<img width="1982" alt="Image" src="https://github.com/user-attachments/assets/805af192-f9bd-4262-b296-ee1c983ae229" />
+* 
 
 #### Labs
 
