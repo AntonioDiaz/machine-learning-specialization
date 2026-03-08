@@ -33,6 +33,7 @@ Contents
     - [Labs](#labs-7)
   - [Week 2: Recommender systems](#week-2-recommender-systems)
     - [Colaborative filtering recommender systems](#colaborative-filtering-recommender-systems)
+    - [Mean normalization for collaborative filtering](#mean-normalization-for-collaborative-filtering)
     - [Labs](#labs-8)
   - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
     - [Notes](#notes-8)
@@ -425,8 +426,9 @@ __Learning Objectives__
 
 #### Colaborative filtering recommender systems
 * __Collaborative filtering__  
-is a method of making recommendations based on the preferences of similar users. The idea is to find users who have similar preferences and then recommend items that those similar users have liked.  
-<img width="1970" alt="Image" src="https://github.com/user-attachments/assets/580d8f3b-926d-43ea-a1fc-b5c2d1165853" />
+  * Is a method of making recommendations based on the preferences of similar users.  
+  * The idea is to find users who have similar preferences and then recommend items that those similar users have liked.  
+<img width="1970" alt="Image" src="https://github.com/user-attachments/assets/edbd5367-6987-4782-ac1d-75004af73ce8" />
 &nbsp;
 
 
@@ -443,7 +445,14 @@ To learn parameters w and b for collaborative filtering, we can use the followin
 * Function to learn features x for collaborative filtering
 <img width="2392" alt="Image" src="https://github.com/user-attachments/assets/12d2c7f0-0535-4464-90c4-7404a0725a9e" />
 
-* Gradient descent for collaborative filtering
+* Gradient descent for collaborative filtering  
+<img width="1458" alt="Image" src="https://github.com/user-attachments/assets/127e838e-3688-44f7-94ee-7c3b93ace7d3" />
+
+* Binary labels: favs, likes and clicks
+  * 
+  * Cost function for binary labels:
+
+#### Mean normalization for collaborative filtering
   
 
 #### Labs
