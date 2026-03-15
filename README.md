@@ -35,6 +35,7 @@ Contents
     - [Colaborative filtering recommender systems](#colaborative-filtering-recommender-systems)
     - [Mean normalization for collaborative filtering](#mean-normalization-for-collaborative-filtering)
     - [TensorFlow implementation of collaborative filtering](#tensorflow-implementation-of-collaborative-filtering)
+    - [Content-based filtering](#content-based-filtering)
     - [Labs](#labs-8)
   - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
     - [Notes](#notes-8)
@@ -486,6 +487,14 @@ To improve the performance of collaborative filtering, we can apply mean normali
 
 * __Auto Diff__ in TensorFlow: automatically compute derivative for gradient descent.  
 <img width="1986" alt="Image" src="https://github.com/user-attachments/assets/2623b0a5-a71e-466d-8f48-1c98a9183efc" />
+
+#### Content-based filtering
+* Colaborative filtering vs content-based filtering:  
+  
+  * __Collaborative filtering__ makes recommendations based on the preferences of similar users, while __content-based filtering__ makes recommendations based on the features of the items themselves.  
+
+<img width="1942" alt="Image" src="https://github.com/user-attachments/assets/4a7e517e-0437-4e13-94e6-bea8754c841d" />  
+  
 
 
 #### Labs
