@@ -488,14 +488,22 @@ To improve the performance of collaborative filtering, we can apply mean normali
 * __Auto Diff__ in TensorFlow: automatically compute derivative for gradient descent.  
 <img width="1986" alt="Image" src="https://github.com/user-attachments/assets/2623b0a5-a71e-466d-8f48-1c98a9183efc" />
 
-#### Content-based filtering
-* Colaborative filtering vs content-based filtering:  
+#### Content-based filtering  
   
-  * __Collaborative filtering__ makes recommendations based on the preferences of similar users, while __content-based filtering__ makes recommendations based on the features of the items themselves.  
-
+* __Collaborative filtering__ makes recommendations based on the preferences of similar users, while __content-based filtering__ makes recommendations based on the features of the items themselves.  
 <img width="1942" alt="Image" src="https://github.com/user-attachments/assets/4a7e517e-0437-4e13-94e6-bea8754c841d" />  
-  
 
+* Content-based neural network architecture
+<img width="2000" alt="Image" src="https://github.com/user-attachments/assets/77ad8c58-6de1-4fb6-8cf3-dee12a9808e1" />
+
+* Content-based filtering cost function
+<img width="1916" alt="Image" src="https://github.com/user-attachments/assets/2a323365-604c-4b0f-8de9-e4d224a82c34" />
+
+* Finding simmilar items using content-based filtering
+<img width="1892" alt="Image" src="https://github.com/user-attachments/assets/50944ae0-96b3-4bf8-8c42-a17a9e396c44" />
+
+* Recommendations for a large catalogue
+  
 
 #### Labs
 * Lab 01: [Collaborative Filtering Recommender Systems](03_unsupervised_learning/02_week/C3_W2_Collaborative_RecSys_Assignment.ipynb)
