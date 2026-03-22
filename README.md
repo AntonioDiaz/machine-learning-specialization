@@ -511,8 +511,8 @@ To improve the performance of collaborative filtering, we can apply mean normali
   
 
 #### Labs
-* Lab 01: [Collaborative Filtering Recommender Systems](03_unsupervised_learning/02_week/C3_W2_Collaborative_RecSys_Assignment.ipynb)
-
+* Lab 01: [Collaborative Filtering Recommender Systems](03_unsupervised_learning/02_week/C3_W2_colaborative_filtering/C3_W2_Collaborative_RecSys_Assignment.ipynb)
+* Lab 02: [Content-Based Filtering Recommender Systems](03_unsupervised_learning/02_week/C2_W2_content_based_filtering/C3_W2_RecSysNN_Assignment.ipynb)
 
 ### Week 3 Reinforcement Learning
 __Learning Objectives__
