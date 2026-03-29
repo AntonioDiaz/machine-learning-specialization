@@ -543,7 +543,16 @@ __Learning Objectives__
 <img width="1706" alt="Image" src="https://github.com/user-attachments/assets/1b923961-55a9-4619-8288-d9ca2588de60" />
 
 #### Continuous state spaces
+* Actions and states
+<img width="1898" alt="Image" src="https://github.com/user-attachments/assets/3b68fa60-923e-4573-9ccf-2564e4156b7c" />
+&nbsp;
 
+* Rewards
+<img width="1942" alt="Image" src="https://github.com/user-attachments/assets/a6d52a4d-f26d-4c14-9821-cf86e940c5e1" />
+&nbsp;
+
+* Policy and Discount factor, the objective of reinforcement learning is to learn a policy that maximizes the expected return, which is the cumulative future reward discounted by a factor $\gamma$ that determines the importance of future rewards compared to immediate rewards.
+$\gamma = 0.985$
 
 
 #### Labs
