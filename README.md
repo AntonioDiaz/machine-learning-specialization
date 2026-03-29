@@ -526,16 +526,19 @@ __Learning Objectives__
 * Build a deep Q-learning network
 
 #### Reinforcement Learning introduction
-<img width="1879" alt="Image" src="https://github.com/user-attachments/assets/7ecbc8a0-ec18-474e-bb0b-3d4d398240ba" />
+
+<img width="1879" alt="Image" src="https://github.com/user-attachments/assets/807323d4-2d9c-48c2-b3e1-bd0a32199e6f" />
 &nbsp;
 
-<img width="1896" alt="Image" src="https://github.com/user-attachments/assets/01cfdc5b-5567-4339-bd03-cddfe260c111" />
+<img width="1896" alt="Image" src="https://github.com/user-attachments/assets/d8dd8ae3-a27a-4a67-8712-8b348f256647" />
 &nbsp;
-
-* State action value function: $Q(s,a)$ represents the expected return (cumulative future reward) of taking action a in state s and following a certain policy thereafter. The goal of reinforcement learning is to learn an optimal policy that maximizes the expected return, which can be achieved by learning the optimal state-action value function $Q^*(s,a)$.
-  |
 
 #### State-action value function
+* State action value function: $Q(s,a)$ represents the expected return (cumulative future reward) of taking action a in state s and following a certain policy thereafter. The goal of reinforcement learning is to learn an optimal policy that maximizes the expected return, which can be achieved by learning the optimal state-action value function $Q^*(s,a)$.  
+  
+<img width="1976" alt="Image" src="https://github.com/user-attachments/assets/3bc07fcf-59ac-467e-919e-df7c29f590e7" />
+
+
 #### Continuous state spaces
 
 
