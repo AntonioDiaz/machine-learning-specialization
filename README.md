@@ -38,7 +38,9 @@ Contents
     - [Content-based filtering](#content-based-filtering)
     - [Labs](#labs-8)
   - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
-    - [Notes](#notes-8)
+    - [Reinforcement Learning introduction](#reinforcement-learning-introduction)
+    - [State-action value function](#state-action-value-function)
+    - [Continuous state spaces](#continuous-state-spaces)
     - [Labs](#labs-9)
 
 
@@ -515,8 +517,27 @@ To improve the performance of collaborative filtering, we can apply mean normali
 * Lab 02: [Content-Based Filtering Recommender Systems](03_unsupervised_learning/02_week/C2_W2_content_based_filtering/C3_W2_RecSysNN_Assignment.ipynb)
 
 ### Week 3 Reinforcement Learning
+>This week, you will learn about reinforcement learning, and build a deep Q-learning neural network in order to land a virtual lunar lander on Mars!
 __Learning Objectives__
+* Understand key terms such as return, state, action, and policy as it applies to reinforcement learning
+* Understand the Bellman equations
+* Understand the state-action value function
+* Understand continuous state spaces
+* Build a deep Q-learning network
 
-#### Notes
+#### Reinforcement Learning introduction
+<img width="1879" alt="Image" src="https://github.com/user-attachments/assets/7ecbc8a0-ec18-474e-bb0b-3d4d398240ba" />
+&nbsp;
+
+<img width="1896" alt="Image" src="https://github.com/user-attachments/assets/01cfdc5b-5567-4339-bd03-cddfe260c111" />
+&nbsp;
+
+* State action value function: $Q(s,a)$ represents the expected return (cumulative future reward) of taking action a in state s and following a certain policy thereafter. The goal of reinforcement learning is to learn an optimal policy that maximizes the expected return, which can be achieved by learning the optimal state-action value function $Q^*(s,a)$.
+  |
+
+#### State-action value function
+#### Continuous state spaces
+
+
 
 #### Labs
