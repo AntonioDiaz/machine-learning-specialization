@@ -544,3 +544,4 @@ __Learning Objectives__
 
 
 #### Labs
+* Lab 01: [State Action function](03_unsupervised_learning/03_week/01_lab_reinforcement_learning/state_action_value_function_example.ipynb)
