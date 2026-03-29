@@ -540,7 +540,7 @@ __Learning Objectives__
 <img width="1976" alt="Image" src="https://github.com/user-attachments/assets/3bc07fcf-59ac-467e-919e-df7c29f590e7" />
 
 #### Bellman Equation
-
+<img width="1706" alt="Image" src="https://github.com/user-attachments/assets/1b923961-55a9-4619-8288-d9ca2588de60" />
 
 #### Continuous state spaces
 
