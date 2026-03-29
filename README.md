@@ -40,6 +40,7 @@ Contents
   - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
     - [Reinforcement Learning introduction](#reinforcement-learning-introduction)
     - [State-action value function](#state-action-value-function)
+    - [Bellman Equation](#bellman-equation)
     - [Continuous state spaces](#continuous-state-spaces)
     - [Labs](#labs-9)
 
@@ -537,6 +538,8 @@ __Learning Objectives__
 * State action value function: $Q(s,a)$ represents the expected return (cumulative future reward) of taking action a in state s and following a certain policy thereafter. The goal of reinforcement learning is to learn an optimal policy that maximizes the expected return, which can be achieved by learning the optimal state-action value function $Q^*(s,a)$.  
   
 <img width="1976" alt="Image" src="https://github.com/user-attachments/assets/3bc07fcf-59ac-467e-919e-df7c29f590e7" />
+
+#### Bellman Equation
 
 
 #### Continuous state spaces
