@@ -41,7 +41,7 @@ Contents
     - [Reinforcement Learning introduction](#reinforcement-learning-introduction)
     - [State-action value function](#state-action-value-function)
     - [Bellman Equation](#bellman-equation)
-    - [Continuous state spaces](#continuous-state-spaces)
+    - [Deep Reinforcement learning](#deep-reinforcement-learning)
     - [Labs](#labs-9)
 
 
@@ -542,7 +542,7 @@ __Learning Objectives__
 #### Bellman Equation
 <img width="1706" alt="Image" src="https://github.com/user-attachments/assets/1b923961-55a9-4619-8288-d9ca2588de60" />
 
-#### Continuous state spaces
+#### Deep Reinforcement learning
 * Actions and states
 <img width="1898" alt="Image" src="https://github.com/user-attachments/assets/3b68fa60-923e-4573-9ccf-2564e4156b7c" />
 &nbsp;
@@ -551,9 +551,19 @@ __Learning Objectives__
 <img width="1942" alt="Image" src="https://github.com/user-attachments/assets/a6d52a4d-f26d-4c14-9821-cf86e940c5e1" />
 &nbsp;
 
-* Policy and Discount factor, the objective of reinforcement learning is to learn a policy that maximizes the expected return, which is the cumulative future reward discounted by a factor $\gamma$ that determines the importance of future rewards compared to immediate rewards.
+* Policy and Discount factor, the objective of reinforcement learning is to learn a policy that maximizes the expected return, which is the cumulative future reward discounted by a factor $\gamma$ that determines the importance of future rewards compared to immediate rewards.  
 $\gamma = 0.985$
 
+* Deep Reinforcement Learning. 
+<img width="2370" alt="Image" src="https://github.com/user-attachments/assets/64d01fb9-e71f-44b9-a236-db6e8e3014ea" />
+&nbsp;
+
+* Building trainning data for deep reinforcement learning.
+<img width="2272" alt="Image" src="https://github.com/user-attachments/assets/45c1a8d2-2536-4a5a-80c9-87fc348c0277" />
+&nbsp;
+
+* Deep Q-learning algorithm
+<img width="2350" alt="Image" src="https://github.com/user-attachments/assets/76768634-eb3c-4ac3-88ff-1fc40f9baa67" />
 
 #### Labs
 * Lab 01: [State Action function](03_unsupervised_learning/03_week/01_lab_reinforcement_learning/state_action_value_function_example.ipynb)
