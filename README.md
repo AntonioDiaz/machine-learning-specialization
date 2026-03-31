@@ -180,7 +180,23 @@ __Learning Objectives__
 <img width="1594" alt="Image" src="https://github.com/user-attachments/assets/c1dc2678-3a20-4109-8880-26fae3ea86f1" />
 &nbsp;
 
-* |
+* From Logistic Regression to Neural Networks
+  * Logistic regression can be seen as a simple neural network with no hidden layers and a sigmoid activation function. By adding hidden layers and using different activation functions, we can create more complex neural networks that can learn more complex patterns in the data.  
+  * Only 1 feature
+<img width="1562" alt="Image" src="https://github.com/user-attachments/assets/f857dd53-a352-403d-af89-57cb166b68f6" />
+&nbsp;
+
+* Layers in a neural network
+  * Input layer: the layer that receives the input data.
+  * Hidden layers: the layers that perform computations and learn features from the input data.
+  * Output layer: the layer that produces the final output of the neural network, such as a prediction or classification.   
+<img width="1550" alt="Image" src="https://github.com/user-attachments/assets/33586680-8e40-4683-a048-61b205200b0e" />
+&nbsp;
+
+* Neural Network Architecture
+  * The architecture of a neural network refers to the number of layers and the number of neurons in each layer. The architecture can be designed based on the complexity of the problem and the amount of data available. A common architecture for image classification tasks is a convolutional neural network (CNN), which consists of convolutional layers, pooling layers, and fully connected layers. The choice of architecture can have a significant impact on the performance of the neural network.  
+<img width="1554" alt="Image" src="https://github.com/user-attachments/assets/560363ae-887d-4be1-8f58-3a61ae65040a" />
+&nbsp;
 
 #### Labs
 * [Lab 01](02_advanced_learning_algorithms/01_week/C2_W1_Lab01_Neurons_and_Layers.ipynb): Neurons and Layers, introduction to Tensorflow and Keras.
