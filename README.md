@@ -14,20 +14,20 @@ Contents
     - [Labs](#labs-2)
 - [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
   - [Week 1: Neural networks](#week-1-neural-networks)
-    - [Notes](#notes-3)
+    - [Neural Networks](#neural-networks)
     - [Labs](#labs-3)
   - [Week 2: Neural network training](#week-2-neural-network-training)
-    - [Notes](#notes-4)
+    - [Notes](#notes-3)
     - [Labs](#labs-4)
   - [Week 3: Advice for applying machine learning](#week-3-advice-for-applying-machine-learning)
-    - [Notes](#notes-5)
+    - [Notes](#notes-4)
     - [Labs](#labs-5)
   - [Week 4: Decision trees](#week-4-decision-trees)
-    - [Notes](#notes-6)
+    - [Notes](#notes-5)
     - [Labs](#labs-6)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
   - [Week 1: Unsupervised learning](#week-1-unsupervised-learning)
-    - [Notes](#notes-7)
+    - [Notes](#notes-6)
     - [K-means clustering](#k-means-clustering)
     - [Anomaly detection](#anomaly-detection)
     - [Labs](#labs-7)
@@ -175,8 +175,12 @@ __Learning Objectives__
 * Build a neural network in regular Python code (from scratch) to make predictions.
 * (Optional): Learn how neural networks use parallel processing (vectorization) to make computations faster.
 
-#### Notes
-todo
+#### Neural Networks
+* Bioligical neuron vs simplified artificial neural network
+<img width="1594" alt="Image" src="https://github.com/user-attachments/assets/c1dc2678-3a20-4109-8880-26fae3ea86f1" />
+&nbsp;
+
+* |
 
 #### Labs
 * [Lab 01](02_advanced_learning_algorithms/01_week/C2_W1_Lab01_Neurons_and_Layers.ipynb): Neurons and Layers, introduction to Tensorflow and Keras.
@@ -540,10 +544,28 @@ __Learning Objectives__
 <img width="1976" alt="Image" src="https://github.com/user-attachments/assets/3bc07fcf-59ac-467e-919e-df7c29f590e7" />
 
 #### Bellman Equation
+* The Bellman equation is a fundamental equation in reinforcement learning that describes the relationship between the value of a state and the values of its successor states. It can be expressed as follows:
+$$Q(s,a) = \mathbb{E}[r + \gamma \max_{a'} Q(s',a') | s, a]$$
+where $Q(s,a)$ is the state-action value function, $r$ is the reward received after taking action $a$ in state $s$, $\gamma$ is the discount factor that determines the importance of future rewards, and $s'$ is the next state resulting from taking action $a$ in state $s$. The Bellman equation states that the value of taking action $a$ in state $s$ is equal to the expected reward plus the discounted value of the best action in the next state $s'$. This equation is used to derive the optimal policy and to update the state-action value function during the learning process.
 <img width="1706" alt="Image" src="https://github.com/user-attachments/assets/1b923961-55a9-4619-8288-d9ca2588de60" />
 
 #### Deep Reinforcement learning
 * Actions and states
+  * There are 8 states:
+    * x position
+    * y position
+    * x velocity: $\dot{x}$
+    * y velocity: $\dot{y}$
+    * angle: $\theta$
+    * angular velocity: $\dot{\theta}$
+    * left leg contact (1 or 0)
+    * right leg contact (1 or 0)
+  * There are 4 actions:
+    * do nothing
+    * fire left orientation engine
+    * fire main engine
+    * fire right orientation engine. 
+  
 <img width="1898" alt="Image" src="https://github.com/user-attachments/assets/3b68fa60-923e-4573-9ccf-2564e4156b7c" />
 &nbsp;
 
@@ -553,17 +575,24 @@ __Learning Objectives__
 
 * Policy and Discount factor, the objective of reinforcement learning is to learn a policy that maximizes the expected return, which is the cumulative future reward discounted by a factor $\gamma$ that determines the importance of future rewards compared to immediate rewards.  
 $\gamma = 0.985$
+&nbsp;
 
-* Deep Reinforcement Learning. 
+* Deep Reinforcement Learning 
+  
 <img width="2370" alt="Image" src="https://github.com/user-attachments/assets/64d01fb9-e71f-44b9-a236-db6e8e3014ea" />
 &nbsp;
 
 * Building trainning data for deep reinforcement learning.
+  
 <img width="2272" alt="Image" src="https://github.com/user-attachments/assets/45c1a8d2-2536-4a5a-80c9-87fc348c0277" />
 &nbsp;
 
 * Deep Q-learning algorithm
+
 <img width="2350" alt="Image" src="https://github.com/user-attachments/assets/76768634-eb3c-4ac3-88ff-1fc40f9baa67" />
+&nbsp;
+
+* Improved neural network architecture
 
 #### Labs
 * Lab 01: [State Action function](03_unsupervised_learning/03_week/01_lab_reinforcement_learning/state_action_value_function_example.ipynb)
