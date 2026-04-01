@@ -608,7 +608,10 @@ $\gamma = 0.985$
 <img width="2350" alt="Image" src="https://github.com/user-attachments/assets/76768634-eb3c-4ac3-88ff-1fc40f9baa67" />
 &nbsp;
 
-* Improved neural network architecture
+* Improved neural network architecture, instead of carry 4 inferences from every single state is more efficient ​to train a single neural network to ​output all four of these values simultaneously.
+<img width="1594" alt="Image" src="https://github.com/user-attachments/assets/abf2d880-29fe-4827-9a6f-73297fd9d653" />
+&nbsp;
+
 
 #### Labs
 * Lab 01: [State Action function](03_unsupervised_learning/03_week/01_lab_reinforcement_learning/state_action_value_function_example.ipynb)
