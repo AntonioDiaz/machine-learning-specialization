@@ -618,3 +618,4 @@ $\gamma = 0.985$
 
 #### Labs
 * Lab 01: [State Action function](03_unsupervised_learning/03_week/01_lab_reinforcement_learning/state_action_value_function_example.ipynb)
+* Lab 02: [Lunar Lander with Deep Q-learning](03_unsupervised_learning/03_week/02_lab_lunar_lander/C3_W3_A1_Assignment.ipynb)
