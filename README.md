@@ -109,11 +109,10 @@ $$\begin{aligned} \text{where:} \newline
 $$\frac{\partial J(w,b)}{\partial w}$$  
 
 #### Labs
-* [Lab 01](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab01_Python_Jupyter_Soln.ipynb): Jupyter notebook introduction. 
-* [Lab 02](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab02_Model_Representation_Soln.ipynb): Linear regression for one variable. 
-* [Lab 03](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab03_Cost_function_Soln.ipynb): Cost function for linear regression with one variable. 
-* [Lab 04](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab04_Gradient_Descent_Soln.ipynb): Gradient Descent. 
-  
+* Lab 01: [Python Jupyter Notebook introduction](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab01_Python_Jupyter_Soln.ipynb)
+* Lab 02: [Linear regression for one variable](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab02_Model_Representation_Soln.ipynb)
+* Lab 03: [Cost function for linear regression with one variable](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab03_Cost_function_Soln.ipynb)
+* Lab 04: [Gradient Descent](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab04_Gradient_Descent_Soln.ipynb)
 ### Week 2: Regression with multiple input variables
 
 >This week, you'll extend linear regression to handle multiple input features. You'll also learn some methods for improving your model's training and performance, such as vectorization, feature scaling, feature engineering and polynomial regression. At the end of the week, you'll get to practice implementing linear regression in code.
@@ -127,12 +126,12 @@ __Learning Objectives__
 todo
 
 #### Labs
-* [Lab 01](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab01_Python_Numpy_Vectorization_Soln.ipynb): Python, NumPy and Vectorization
-* [Lab 02](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab02_Multiple_Variable_Soln.ipynb): Multiple Variable Linear Regression
-* [Lab 03](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb): Feature scaling and Learning Rate (Multi-variable)
-* [Lab 04](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab04_FeatEng_PolyReg_Soln.ipynb): Feature Engineering and Polynomial Regression
-* [Lab 05](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab05_Sklearn_GD_Soln.ipynb): Linear Regression using Scikit-Learn, Gradient Descent
-* [Lab 06](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab06_Sklearn_Normal_Soln.ipynb): Linear Regression using Scikit-Learn, Linear Regression using a close form solution
+* Lab 01: [Python, NumPy and Vectorization](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab01_Python_Numpy_Vectorization_Soln.ipynb)
+* Lab 02: [Multiple Variable Linear Regression](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab02_Multiple_Variable_Soln.ipynb)
+* Lab 03: [Feature scaling and Learning Rate (Multi-variable)](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb)
+* Lab 04: [Feature Engineering and Polynomial Regression](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab04_FeatEng_PolyReg_Soln.ipynb)
+* Lab 05: [Linear Regression using Scikit-Learn, Gradient Descent](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab05_Sklearn_GD_Soln.ipynb)
+* Lab 06: [Linear Regression using Scikit-Learn, close form solution](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab06_Sklearn_Normal_Soln.ipynb)
 
 ### Week 3: Classification
 >This week, you'll learn the other type of supervised learning, classification. You'll learn how to predict categories using the logistic regression model. You'll learn about the problem of overfitting, and how to handle this problem with a method...
@@ -147,15 +146,15 @@ __Learning Objectives__
 * todo
 
 #### Labs
-* [Lab 01](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab01_Classification_Soln.ipynb): classification
-* [Lab 02](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab02_Sigmoid_function_Soln.ipynb): Logistic Regression
-* [Lab 03](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb): Logistic Regression and Decision Boundary
-* [Lab 04](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab04_LogisticLoss_Soln.ipynb): Logistic Regression and Logistic Loss
-* [Lab 05](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab05_Cost_Function_Soln.ipynb): Cost Function for Logistic Regression
-* [Lab 06](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab06_Gradient_Descent_Soln.ipynb): Gradient Descent for Logisic Regression
-* [Lab 07](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab07_Scikit_Learn_Soln.ipynb): Logistic Regression using Scikit-Learn
-* [Lab 08](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab08_Overfitting_Soln.ipynb): Overfitting
-* [Lab 09](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab09_Regularization_Soln.ipynb): Regularized Cost and Gradient
+* Lab 01: [Classification](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab01_Classification_Soln.ipynb)
+* Lab 02: [Logistic Regression](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab02_Sigmoid_function_Soln.ipynb)
+* Lab 03: [Logistic Regression and Decision Boundary](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb)
+* Lab 04: [Logistic Regression and Logistic Loss](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab04_LogisticLoss_Soln.ipynb)
+* Lab 05: [Cost Function for Logistic Regression](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab05_Cost_Function_Soln.ipynb)
+* Lab 06: [Gradient Descent for Logistic Regression](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab06_Gradient_Descent_Soln.ipynb)
+* Lab 07: [Logistic Regression using Scikit-Learn](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab07_Scikit_Learn_Soln.ipynb)
+* Lab 08: [Overfitting](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab08_Overfitting_Soln.ipynb)
+* Lab 09: [Regularized Cost and Gradient](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab09_Regularization_Soln.ipynb)
 
 ## 02 - Advanced Learning Algorithms
 
@@ -199,9 +198,9 @@ __Learning Objectives__
 &nbsp;
 
 #### Labs
-* [Lab 01](02_advanced_learning_algorithms/01_week/C2_W1_Lab01_Neurons_and_Layers.ipynb): Neurons and Layers, introduction to Tensorflow and Keras.
-* [Lab 02](02_advanced_learning_algorithms/01_week/C2_W1_Lab02_CoffeeRoasting_TF.ipynb): Simple Neural Network with Tensorflow, coffee roasting example.
-* [Lab 03](02_advanced_learning_algorithms/01_week/C2_W1_Lab03_CoffeeRoasting_Numpy.ipynb): Simple Neural Network with Numpy, coffee roasting example.
+* Lab 01: [Neurons and Layers, introduction to TensorFlow and Keras](02_advanced_learning_algorithms/01_week/C2_W1_Lab01_Neurons_and_Layers.ipynb)
+* Lab 02: [Simple Neural Network with TensorFlow, coffee roasting example](02_advanced_learning_algorithms/01_week/C2_W1_Lab02_CoffeeRoasting_TF.ipynb)
+* Lab 03: [Simple Neural Network with Numpy, coffee roasting example](02_advanced_learning_algorithms/01_week/C2_W1_Lab03_CoffeeRoasting_Numpy.ipynb)
 
 ### Week 2: Neural network training
 >This week, you'll learn how to train your model in `TensorFlow`, and also learn about other important `activation functions` (besides the sigmoid function), and where to use each type in a neural network. You'll also learn how to go beyond binary classification to `multiclass classification` (3 or more categories). Multiclass classification will introduce you to a new activation function and a new loss function. Optionally, you can also learn about the difference between multiclass classification and multi-label classification. You'll learn about the `Adam optimizer`, and why it's an improvement upon regular gradient descent for neural network training. Finally, you will get a brief introduction to other layer types besides the one you've seen thus far.
@@ -246,9 +245,9 @@ __Learning Objectives__
 
 
 #### Labs
-* [Lab 01](02_advanced_learning_algorithms/02_week/C2_W2_lab01_Relu.ipynb): ReLU activation
-* [Lab 02](02_advanced_learning_algorithms/02_week/C2_W2_lab02_SoftMax.ipynb): Softmax function
-* [Lab 03](02_advanced_learning_algorithms/02_week/C2_W2_lab03_Multiclass_TF.ipynb): Neural Network for multi-class classification
+* Lab 01: [ReLU activation](02_advanced_learning_algorithms/02_week/C2_W2_lab01_Relu.ipynb)
+* Lab 02: [Softmax function](02_advanced_learning_algorithms/02_week/C2_W2_lab02_SoftMax.ipynb)
+* Lab 03: [Neural Network for multi-class classification](02_advanced_learning_algorithms/02_week/C2_W2_lab03_Multiclass_TF.ipynb)
 
 ### Week 3: Advice for applying machine learning
 >This week you'll learn best practices for training and evaluating your learning algorithms to improve performance. This will cover a wide range of useful advice about the machine learning lifecycle, tuning your model, and also improving your training data 
@@ -334,10 +333,10 @@ Boosted trees, where each tree is trained to correct the errors of the previous 
 
 
 #### Labs
-* [Lab 01](02_advanced_learning_algorithms/04_week/C2_W4_Lab_01_Decision_Trees.ipynb): Decision Trees
+* Lab 01: [Decision Trees](02_advanced_learning_algorithms/04_week/C2_W4_Lab_01_Decision_Trees.ipynb)
 In this notebook you will visualize how a decision tree is split using information gain.
 
-* [Lab 02](02_advanced_learning_algorithms/04_week/C2_W4_Lab_02_Tree_Ensemble.ipynb): Treen Ensemble
+* Lab 02: [Tree Ensemble](02_advanced_learning_algorithms/04_week/C2_W4_Lab_02_Tree_Ensemble.ipynb)
 
 
 ## 03 - Unsupervised Learning, Recommenders, Reinforcement Learning
