@@ -4,30 +4,32 @@ Contents
 - [Links](#links)
 - [01 - Supervised Machine Learning: Regression and Classification](#01---supervised-machine-learning-regression-and-classification)
   - [Week 1: Introduction to Machine Learning](#week-1-introduction-to-machine-learning)
-    - [Notes](#notes)
+    - [Definitions](#definitions)
+    - [Intro Supervised Learning](#intro-supervised-learning)
+    - [Intro to Unsupervised Learning](#intro-to-unsupervised-learning)
     - [Labs](#labs)
   - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
-    - [Notes](#notes-1)
+    - [Notes](#notes)
     - [Labs](#labs-1)
   - [Week 3: Classification](#week-3-classification)
-    - [Notes](#notes-2)
+    - [Notes](#notes-1)
     - [Labs](#labs-2)
 - [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
   - [Week 1: Neural networks](#week-1-neural-networks)
     - [Neural Networks](#neural-networks)
     - [Labs](#labs-3)
   - [Week 2: Neural network training](#week-2-neural-network-training)
-    - [Notes](#notes-3)
+    - [Notes](#notes-2)
     - [Labs](#labs-4)
   - [Week 3: Advice for applying machine learning](#week-3-advice-for-applying-machine-learning)
-    - [Notes](#notes-4)
+    - [Notes](#notes-3)
     - [Labs](#labs-5)
   - [Week 4: Decision trees](#week-4-decision-trees)
-    - [Notes](#notes-5)
+    - [Notes](#notes-4)
     - [Labs](#labs-6)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
   - [Week 1: Unsupervised learning](#week-1-unsupervised-learning)
-    - [Notes](#notes-6)
+    - [Notes](#notes-5)
     - [K-means clustering](#k-means-clustering)
     - [Anomaly detection](#anomaly-detection)
     - [Labs](#labs-7)
@@ -79,7 +81,32 @@ __Learning Objectives__
 * Implement gradient descent
 * Optimize a regression model using gradient descent
 
-#### Notes
+#### Definitions
+* __Machine Learning__ is the science of getting computers to act without being explicitly programmed. It is a subset of artificial intelligence (AI) that focuses on building systems that can learn from data, identify patterns, and make decisions with minimal human intervention. Machine learning algorithms use statistical techniques to enable machines to improve their performance on a specific task over time as they are exposed to more data.
+  
+* __Supervised Learning__ is a type of machine learning where the algorithm is trained on a __labeled dataset__, which means that each training example is paired with an output label. The goal of supervised learning is to learn a mapping from inputs to outputs, so that the model can make predictions on new, unseen data. Examples of supervised learning tasks include regression (predicting continuous values) and classification (predicting discrete categories).
+
+* __Unsupervised Learning__ is a type of machine learning where the algorithm is trained on an __unlabeled dataset__, which means that the training examples do not have output labels. The goal of unsupervised learning is to find hidden __patterns__ or structures in the data. Examples of unsupervised learning tasks include clustering (grouping similar data points together) and dimensionality reduction (reducing the number of features in the data while preserving important information).
+  
+
+#### Intro Supervised Learning
+
+<img width="1392" alt="Image" src="https://github.com/user-attachments/assets/33748e53-666b-4e32-b342-54d7556d211b" />
+
+* __Regression__: predicting a continuous value (e.g., price of a house)
+* __Classification__: predicting a discrete category (e.g., whether an email is spam or not)
+
+<img width="1586" alt="Image" src="https://github.com/user-attachments/assets/fbbb6308-9640-44df-b0ce-23fdbd54b584" />
+
+
+#### Intro to Unsupervised Learning
+
+* __Clustering__: grouping data points into clusters of similar examples.
+* __Anomaly detection__: identifying data points that are significantly different from the majority of the data.
+* __Dimensionality reduction__: reducing the number of features in the data while preserving important information.
+
+<img width="1486" alt="Image" src="https://github.com/user-attachments/assets/71d49132-0f73-4baa-b796-fe52a44410b3" />  
+
 * `Linear Regression Model`  
   
 $$f_{w,b}(x^{(i)}) = wx^{(i)} + b$$
@@ -113,6 +140,7 @@ $$\frac{\partial J(w,b)}{\partial w}$$
 * Lab 02: [Linear regression for one variable](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab02_Model_Representation_Soln.ipynb)
 * Lab 03: [Cost function for linear regression with one variable](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab03_Cost_function_Soln.ipynb)
 * Lab 04: [Gradient Descent](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab04_Gradient_Descent_Soln.ipynb)
+
 ### Week 2: Regression with multiple input variables
 
 >This week, you'll extend linear regression to handle multiple input features. You'll also learn some methods for improving your model's training and performance, such as vectorization, feature scaling, feature engineering and polynomial regression. At the end of the week, you'll get to practice implementing linear regression in code.
