@@ -7,6 +7,7 @@ Contents
     - [Definitions](#definitions)
     - [Intro Supervised Learning](#intro-supervised-learning)
     - [Intro to Unsupervised Learning](#intro-to-unsupervised-learning)
+    - [Linear regression with one variable](#linear-regression-with-one-variable)
     - [Labs](#labs)
   - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
     - [Notes](#notes)
@@ -83,41 +84,48 @@ __Learning Objectives__
 
 #### Definitions
 * __Machine Learning__ is the science of getting computers to act without being explicitly programmed. It is a subset of artificial intelligence (AI) that focuses on building systems that can learn from data, identify patterns, and make decisions with minimal human intervention. Machine learning algorithms use statistical techniques to enable machines to improve their performance on a specific task over time as they are exposed to more data.
-  
-* __Supervised Learning__ is a type of machine learning where the algorithm is trained on a __labeled dataset__, which means that each training example is paired with an output label. The goal of supervised learning is to learn a mapping from inputs to outputs, so that the model can make predictions on new, unseen data. Examples of supervised learning tasks include regression (predicting continuous values) and classification (predicting discrete categories).
-
-* __Unsupervised Learning__ is a type of machine learning where the algorithm is trained on an __unlabeled dataset__, which means that the training examples do not have output labels. The goal of unsupervised learning is to find hidden __patterns__ or structures in the data. Examples of unsupervised learning tasks include clustering (grouping similar data points together) and dimensionality reduction (reducing the number of features in the data while preserving important information).
-  
+    
 
 #### Intro Supervised Learning
-
+* __Supervised Learning__ is a type of machine learning where the algorithm is trained on a __labeled dataset__, which means that each training example is paired with an output label. The goal of supervised learning is to learn a mapping from inputs to outputs, so that the model can make predictions on new, unseen data. Examples of supervised learning tasks include regression (predicting continuous values) and classification (predicting discrete categories).
+* There are two main types of supervised learning tasks:
+  * __Regression__: predicting a continuous value (e.g., price of a house)
+  * __Classification__: predicting a discrete category (e.g., whether an email is spam or not)
+  
 <img width="1392" alt="Image" src="https://github.com/user-attachments/assets/33748e53-666b-4e32-b342-54d7556d211b" />
-
-* __Regression__: predicting a continuous value (e.g., price of a house)
-* __Classification__: predicting a discrete category (e.g., whether an email is spam or not)
+&nbsp;
 
 <img width="1586" alt="Image" src="https://github.com/user-attachments/assets/fbbb6308-9640-44df-b0ce-23fdbd54b584" />
-
+&nbsp;
 
 #### Intro to Unsupervised Learning
-
-* __Clustering__: grouping data points into clusters of similar examples.
-* __Anomaly detection__: identifying data points that are significantly different from the majority of the data.
-* __Dimensionality reduction__: reducing the number of features in the data while preserving important information.
+* __Unsupervised Learning__ is a type of machine learning where the algorithm is trained on an __unlabeled dataset__, which means that the training examples do not have output labels. The goal of unsupervised learning is to find hidden __patterns__ or structures in the data. Examples of unsupervised learning tasks include clustering (grouping similar data points together) and dimensionality reduction (reducing the number of features in the data while preserving important information).
+* There are three main types of unsupervised learning tasks:
+  * __Clustering__: grouping data points into clusters of similar examples.
+  * __Anomaly detection__: identifying data points that are significantly different from the majority of the data.
+  * __Dimensionality reduction__: reducing the number of features in the data while preserving important information.
 
 <img width="1486" alt="Image" src="https://github.com/user-attachments/assets/71d49132-0f73-4baa-b796-fe52a44410b3" />  
+&nbsp;
 
-* `Linear Regression Model`  
+#### Linear regression with one variable  
+* `Linear Regression Model`
   
-$$f_{w,b}(x^{(i)}) = wx^{(i)} + b$$
+$f_{w,b}(x^{(i)}) = wx^{(i)} + b$
+
+<img width="1990" alt="Image" src="https://github.com/user-attachments/assets/91d229ca-6a96-4e74-8865-fa4b0214c129" />
+&nbsp;
+
+
+
 
 * `Squared Error Cost function`  
-  
-$$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
+ 
+$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $
 
 * `Gradient Descent`: optimizing w and b  
   
-$$\begin{aligned} 
+$\begin{aligned} 
 &\text{repeat until convergence: } \lbrace \\
 &\quad w = w - \alpha \frac{\partial J(w,b)}{\partial w} \\
 &\quad b = b - \alpha \frac{\partial J(w,b)}{\partial b} \\
@@ -127,13 +135,14 @@ $$\begin{aligned}
 $$\begin{aligned} \text{where:} \newline
 \frac{\partial J(w,b)}{\partial w}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})x^{(i)} \\
   \frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \\
-\end{aligned}$$
+\end{aligned}$
 
 * `Learning rate`   __$\alpha$__  
 
 * `Derivative term for` __$\omega$__  
 
-$$\frac{\partial J(w,b)}{\partial w}$$  
+$\frac{\partial J(w,b)}{\partial w}$  
+
 
 #### Labs
 * Lab 01: [Python Jupyter Notebook introduction](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab01_Python_Jupyter_Soln.ipynb)
