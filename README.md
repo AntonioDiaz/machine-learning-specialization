@@ -7,7 +7,9 @@ Contents
     - [Definitions](#definitions)
     - [Intro Supervised Learning](#intro-supervised-learning)
     - [Intro to Unsupervised Learning](#intro-to-unsupervised-learning)
-    - [Linear regression with one variable](#linear-regression-with-one-variable)
+    - [Linear regression](#linear-regression)
+    - [Squared Error Cost function](#squared-error-cost-function)
+    - [Gradient Descent](#gradient-descent)
     - [Labs](#labs)
   - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
     - [Notes](#notes)
@@ -108,7 +110,7 @@ __Learning Objectives__
 <img width="1486" alt="Image" src="https://github.com/user-attachments/assets/71d49132-0f73-4baa-b796-fe52a44410b3" />  
 &nbsp;
 
-#### Linear regression with one variable  
+#### Linear regression 
 * `Linear Regression Model`
   
 $f_{w,b}(x^{(i)}) = wx^{(i)} + b$
@@ -116,26 +118,35 @@ $f_{w,b}(x^{(i)}) = wx^{(i)} + b$
 <img width="1990" alt="Image" src="https://github.com/user-attachments/assets/91d229ca-6a96-4e74-8865-fa4b0214c129" />
 &nbsp;
 
-
-
-
-* `Squared Error Cost function`  
+#### Squared Error Cost function 
  
 $J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $
 
-* `Gradient Descent`: optimizing w and b  
-  
-$\begin{aligned} 
-&\text{repeat until convergence: } \lbrace \\
-&\quad w = w - \alpha \frac{\partial J(w,b)}{\partial w} \\
-&\quad b = b - \alpha \frac{\partial J(w,b)}{\partial b} \\
-&\rbrace
-\end{aligned}$$
+<img width="2001" height="989" alt="Image" src="https://github.com/user-attachments/assets/287900f1-fa39-4080-9725-e5c111ab741e" />
+&nbsp;
 
-$$\begin{aligned} \text{where:} \newline
-\frac{\partial J(w,b)}{\partial w}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})x^{(i)} \\
-  \frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \\
-\end{aligned}$
+
+#### Gradient Descent
+* Optimizing w and b  
+  
+<img width="1972" height="974" alt="Image" src="https://github.com/user-attachments/assets/43719b95-e84f-47c2-b166-c57369b67e2b" />
+
+$$
+\begin{aligned}
+\text{repeat until convergence: } \{ \\
+ w &= w - \alpha \frac{\partial J(w,b)}{\partial w} \\
+ b &= b - \alpha \frac{\partial J(w,b)}{\partial b} \\
+\}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\text{where:} \\
+\frac{\partial J(w,b)}{\partial w}  &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right) x^{(i)} \\
+\frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right)
+\end{aligned}
+$$
 
 * `Learning rate`   __$\alpha$__  
 
