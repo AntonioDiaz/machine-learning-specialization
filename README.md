@@ -135,6 +135,7 @@ $J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $
 <img width="1992" alt="Image" src="https://github.com/user-attachments/assets/ffcc1e19-42ef-4690-9842-556a0d78d4a2" />
 &nbsp;
 
+* `Gradient Descent Algorithm`
 ```math
 \begin{aligned}
 \text{repeat until convergence: } \{ \\
