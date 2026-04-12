@@ -10,44 +10,46 @@ Contents
     - [Linear regression](#linear-regression)
     - [Squared Error Cost function](#squared-error-cost-function)
     - [Gradient Descent](#gradient-descent)
-  - [Week 1 Labs](#week-1-labs)
+  - [Week 1: Labs](#week-1-labs)
   - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
-    - [Notes](#notes)
-    - [Labs](#labs)
+    - [Notes Multiple variable linear regression](#notes-multiple-variable-linear-regression)
+    - [Vectorization](#vectorization)
+    - [Gradient Descent with multiple variables](#gradient-descent-with-multiple-variables)
+  - [Week 2: Labs](#week-2-labs)
   - [Week 3: Classification](#week-3-classification)
-    - [Notes](#notes-1)
-    - [Labs](#labs-1)
+    - [Notes](#notes)
+  - [Week 3: Labs](#week-3-labs)
 - [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
   - [Week 1: Neural networks](#week-1-neural-networks)
     - [Neural Networks](#neural-networks)
-    - [Labs](#labs-2)
+    - [Labs](#labs)
   - [Week 2: Neural network training](#week-2-neural-network-training)
-    - [Notes](#notes-2)
-    - [Labs](#labs-3)
+    - [Notes](#notes-1)
+    - [Labs](#labs-1)
   - [Week 3: Advice for applying machine learning](#week-3-advice-for-applying-machine-learning)
-    - [Notes](#notes-3)
-    - [Labs](#labs-4)
+    - [Notes](#notes-2)
+    - [Labs](#labs-2)
   - [Week 4: Decision trees](#week-4-decision-trees)
-    - [Notes](#notes-4)
-    - [Labs](#labs-5)
+    - [Notes](#notes-3)
+    - [Labs](#labs-3)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
   - [Week 1: Unsupervised learning](#week-1-unsupervised-learning)
-    - [Notes](#notes-5)
+    - [Notes](#notes-4)
     - [K-means clustering](#k-means-clustering)
     - [Anomaly detection](#anomaly-detection)
-    - [Labs](#labs-6)
+    - [Labs](#labs-4)
   - [Week 2: Recommender systems](#week-2-recommender-systems)
     - [Colaborative filtering recommender systems](#colaborative-filtering-recommender-systems)
     - [Mean normalization for collaborative filtering](#mean-normalization-for-collaborative-filtering)
     - [TensorFlow implementation of collaborative filtering](#tensorflow-implementation-of-collaborative-filtering)
     - [Content-based filtering](#content-based-filtering)
-    - [Labs](#labs-7)
+    - [Labs](#labs-5)
   - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
     - [Reinforcement Learning introduction](#reinforcement-learning-introduction)
     - [State-action value function](#state-action-value-function)
     - [Bellman Equation](#bellman-equation)
     - [Deep Reinforcement learning](#deep-reinforcement-learning)
-    - [Labs](#labs-8)
+    - [Labs](#labs-6)
 
 
 <hr>
@@ -160,7 +162,7 @@ $J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $
 $\frac{\partial J(w,b)}{\partial w}$  
 
 
-### Week 1 Labs
+### Week 1: Labs
 * Lab 01: [Python Jupyter Notebook introduction](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab01_Python_Jupyter_Soln.ipynb)
 * Lab 02: [Linear regression for one variable](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab02_Model_Representation_Soln.ipynb)
 * Lab 03: [Cost function for linear regression with one variable](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab03_Cost_function_Soln.ipynb)
@@ -175,10 +177,47 @@ __Learning Objectives__
 * Use feature scaling, feature engineering, and polynomial regression to * improve model training
 * Implement linear regression in code
 
-#### Notes 
-todo
+#### Notes Multiple variable linear regression
+* `Multiple variable linear regression` is an extension of linear regression that allows for multiple input features. The model can be represented as follows:
+$f_{w,b}(x) = w_1 x_1 + w_2 x_2 + \ldots + w_n x_n + b$
+* Example: predicting the price of a house based on its size, number of bedrooms, and location. The input features would be the size, number of bedrooms, and location, and the output would be the price of the house. The model would learn the weights for each feature to make accurate predictions.  
+<img width="1982" alt="Image" src="https://github.com/user-attachments/assets/d94ad870-56b7-4500-9f57-6bddb46e1d66" />
 
-#### Labs
+#### Vectorization
+* `Vectorization` is a technique used to optimize the performance of machine learning algorithms by performing operations on entire arrays or matrices of data, rather than using explicit loops. This allows for faster computations and can significantly reduce the time it takes to train a model. In the context of linear regression, vectorization can be used to compute the cost function and gradients more efficiently, which can speed up the training process.  
+  
+<img width="1994" alt="Image" src="https://github.com/user-attachments/assets/1a98e322-9a5a-4681-8461-6cebaa57050a" />
+&nbsp;
+
+<img width="1984" alt="Image" src="https://github.com/user-attachments/assets/1146320b-87d6-4f72-98ca-b55ea649274e" />
+
+#### Gradient Descent with multiple variables
+* The gradient descent algorithm can be extended to handle multiple input features by updating the weights for each feature simultaneously. 
+
+* The update rule for each weight $w_j$ is as follows:
+```math 
+\begin{aligned}
+w_j &= w_j - \alpha \frac{\partial J(w,b)}{\partial w_j} \\
+\text{where:} \\
+\frac{\partial J(w,b)}{\partial w_j}  &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right) x_j^{(i)}
+\end{aligned}
+```
+* The update rule for the bias term $b$ is as follows:
+```math
+\begin{aligned}
+b &= b - \alpha \frac{\partial J(w,b)}{\partial b} \\
+\text{where:} \\
+\frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right)
+\end{aligned}
+```
+
+<img width="1994" alt="Image" src="https://github.com/user-attachments/assets/0c3e98c3-a320-4812-95ce-630079392ff6" />
+
+
+
+
+
+### Week 2: Labs
 * Lab 01: [Python, NumPy and Vectorization](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab01_Python_Numpy_Vectorization_Soln.ipynb)
 * Lab 02: [Multiple Variable Linear Regression](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab02_Multiple_Variable_Soln.ipynb)
 * Lab 03: [Feature scaling and Learning Rate (Multi-variable)](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb)
@@ -198,7 +237,7 @@ __Learning Objectives__
 * `sigmoid function` todo
 * todo
 
-#### Labs
+### Week 3: Labs 
 * Lab 01: [Classification](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab01_Classification_Soln.ipynb)
 * Lab 02: [Logistic Regression](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab02_Sigmoid_function_Soln.ipynb)
 * Lab 03: [Logistic Regression and Decision Boundary](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb)
