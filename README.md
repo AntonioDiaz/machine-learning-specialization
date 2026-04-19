@@ -307,7 +307,7 @@ b &= b - \alpha \left( \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})
 \end{aligned}
 ```
 
-<img width="2880" alt="Image" src="https://github.com/user-attachments/assets/8e6dd9a7-4e9d-4726-9d30-65e1afe2d976" />
+<img width="2019" height="990" alt="Image" src="https://github.com/user-attachments/assets/a1c81036-2c82-4231-ad23-b8ef53297878" />
 &nbsp;
 
 <img width="2002" alt="Image" src="https://github.com/user-attachments/assets/5c505719-e9cb-436c-96da-9758a91670b2" />
