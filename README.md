@@ -20,6 +20,8 @@ Contents
     - [Classification with logistic regression](#classification-with-logistic-regression)
     - [Decision boundary](#decision-boundary)
     - [Cost function for logistic regression](#cost-function-for-logistic-regression)
+    - [Overfitting and regularization](#overfitting-and-regularization)
+    - [Regularization to address overfitting](#regularization-to-address-overfitting)
   - [Week 3: Labs](#week-3-labs)
 - [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
   - [Week 1: Neural networks](#week-1-neural-networks)
@@ -257,14 +259,58 @@ __Learning Objectives__
 <img width="1972" alt="Image" src="https://github.com/user-attachments/assets/27ff21c5-bf58-4b69-93b6-5ecd73305b51" />
 
 #### Cost function for logistic regression
-* Logistic cost function
+* Logistic cost function. 
 The cost function for linear regression is not suitable for logistic regression because it is not convex and can lead to multiple local minima, making it difficult to optimize. Instead, logistic regression uses a different cost function called the logistic loss or cross-entropy loss, which is convex and has a single global minimum, making it easier to optimize using gradient descent. The logistic loss function is defined as follows:  
+ 
 $J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$  
 
 <img width="1978" alt="Image" src="https://github.com/user-attachments/assets/a2108749-888b-4bb7-86ca-4cf99698e441" />
 &nbsp;
 
 <img width="1982" alt="Image" src="https://github.com/user-attachments/assets/86ed10a4-5735-49f1-acc1-1f51c6460af6" />
+
+#### Overfitting and regularization
+* `Overfitting` occurs when a machine learning model learns the training data too well, including the noise and outliers, which can lead to poor performance on new, unseen data. This happens when the model is too complex relative to the amount of training data available. To address overfitting, we can use a technique called `regularization`, which adds a penalty term to the cost function to discourage the model from fitting the noise in the training data. Regularization can help improve the generalization of the model and prevent it from overfitting.
+
+<img width="1952" alt="Image" src="https://github.com/user-attachments/assets/3897d115-92f2-4b08-9d35-fe9f824ba556" />
+&nbsp;
+
+<img width="1922" alt="Image" src="https://github.com/user-attachments/assets/35d8ce58-82bb-43e6-9a61-d2021b9dcce9" />
+&nbsp;
+
+#### Regularization to address overfitting
+
+* Regularization adds a penalty term to the cost function that discourages the model from fitting the noise in the training data. This can help improve the generalization of the model and prevent it from overfitting. The most common types of regularization are L1 regularization (Lasso) and L2 regularization (Ridge). L1 regularization adds a penalty term proportional to the absolute value of the weights, while L2 regularization adds a penalty term proportional to the square of the weights. By adjusting the strength of the regularization, we can find a balance between fitting the training data well and generalizing to new data.
+
+<img width="1876" alt="Image" src="https://github.com/user-attachments/assets/892ba313-e646-4dac-8831-bb90e5c99af1" />
+
+* Cost function with regularization for linear regression
+$J(w,b) = \frac{1}{2m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 + \frac{\lambda}{2m} \sum_{j=1}^{n} w_j^2$
+
+* Gradient descent with regularization for linear regression
+```math
+\begin{aligned}
+w_j &= w_j - \alpha \left( \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) x_j^{(i)} + \frac{\lambda}{m} w_j \right) \\
+b &= b - \alpha \left( \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \right)
+\end{aligned}
+```
+<img width="1968" alt="Image" src="https://github.com/user-attachments/assets/1376b901-89b6-48a0-89e1-8841f990b3c9" />
+
+* Cost function with regularization for logistic regression
+$J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right] + \frac{\lambda}{2m} \sum_{j=1}^{n} w_j^2$
+
+* Gradient descent with regularization for logistic regression
+```math
+\begin{aligned}
+w_j &= w_j - \alpha \left( \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) x_j^{(i)} + \frac{\lambda}{m} w_j \right) \\
+b &= b - \alpha \left( \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \right)
+\end{aligned}
+```
+
+<img width="2880" alt="Image" src="https://github.com/user-attachments/assets/8e6dd9a7-4e9d-4726-9d30-65e1afe2d976" />
+&nbsp;
+
+<img width="2002" alt="Image" src="https://github.com/user-attachments/assets/5c505719-e9cb-436c-96da-9758a91670b2" />
 
 
 ### Week 3: Labs 
