@@ -19,6 +19,7 @@ Contents
   - [Week 3: Classification](#week-3-classification)
     - [Classification with logistic regression](#classification-with-logistic-regression)
     - [Decision boundary](#decision-boundary)
+    - [Cost function for logistic regression](#cost-function-for-logistic-regression)
   - [Week 3: Labs](#week-3-labs)
 - [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
   - [Week 1: Neural networks](#week-1-neural-networks)
@@ -254,6 +255,17 @@ __Learning Objectives__
   * By adding polynomial features to the logistic regression model, we can create a non-linear decision boundary that can capture more complex relationships between the features and the target variable. This allows the model to fit the data better and make more accurate predictions, especially when the relationship between the features and the target variable is not linear.
 
 <img width="1972" alt="Image" src="https://github.com/user-attachments/assets/27ff21c5-bf58-4b69-93b6-5ecd73305b51" />
+
+#### Cost function for logistic regression
+  
+<img width="1978" alt="Image" src="https://github.com/user-attachments/assets/a2108749-888b-4bb7-86ca-4cf99698e441" />
+&nbsp;
+
+* The cost function for logistic regression is called the __logistic loss__ or __cross-entropy loss__. It is defined as follows:  
+$J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$
+
+<img width="1982" alt="Image" src="https://github.com/user-attachments/assets/86ed10a4-5735-49f1-acc1-1f51c6460af6" />
+
 
 ### Week 3: Labs 
 * Lab 01: [Classification](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab01_Classification_Soln.ipynb)
