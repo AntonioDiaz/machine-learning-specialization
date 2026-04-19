@@ -257,12 +257,12 @@ __Learning Objectives__
 <img width="1972" alt="Image" src="https://github.com/user-attachments/assets/27ff21c5-bf58-4b69-93b6-5ecd73305b51" />
 
 #### Cost function for logistic regression
-  
+* Logistic cost function
+The cost function for linear regression is not suitable for logistic regression because it is not convex and can lead to multiple local minima, making it difficult to optimize. Instead, logistic regression uses a different cost function called the logistic loss or cross-entropy loss, which is convex and has a single global minimum, making it easier to optimize using gradient descent. The logistic loss function is defined as follows:  
+$J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$  
+
 <img width="1978" alt="Image" src="https://github.com/user-attachments/assets/a2108749-888b-4bb7-86ca-4cf99698e441" />
 &nbsp;
-
-* The cost function for logistic regression is called the __logistic loss__ or __cross-entropy loss__. It is defined as follows:  
-$J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$
 
 <img width="1982" alt="Image" src="https://github.com/user-attachments/assets/86ed10a4-5735-49f1-acc1-1f51c6460af6" />
 
