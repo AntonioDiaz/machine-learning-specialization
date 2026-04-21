@@ -25,7 +25,12 @@ Contents
   - [Week 3: Labs](#week-3-labs)
 - [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
   - [Week 1: Neural networks](#week-1-neural-networks)
-    - [Neural Networks](#neural-networks)
+    - [Neural Networks Intuition](#neural-networks-intuition)
+    - [From Logistic Regression to Neural Networks](#from-logistic-regression-to-neural-networks)
+    - [Neural Network Architecture](#neural-network-architecture)
+    - [Neural Network notation](#neural-network-notation)
+    - [Hand digit recognition example](#hand-digit-recognition-example)
+    - [TensorFlow implementation of a neural network](#tensorflow-implementation-of-a-neural-network)
     - [Labs](#labs)
   - [Week 2: Neural network training](#week-2-neural-network-training)
     - [Notes](#notes)
@@ -342,28 +347,71 @@ __Learning Objectives__
 * Build a neural network in regular Python code (from scratch) to make predictions.
 * (Optional): Learn how neural networks use parallel processing (vectorization) to make computations faster.
 
-#### Neural Networks
+#### Neural Networks Intuition
+* `Neural Networks` are a type of machine learning model inspired by the structure and function of the human brain. They consist of layers of interconnected nodes, called neurons, that process and transmit information.  
+  * Each neuron receives input from other neurons, applies a mathematical function to the input, and produces an output that is passed on to other neurons in the network. 
+  * Neural networks can learn complex patterns in data and are commonly used for tasks such as image recognition, natural language processing, and speech recognition. 
+  * The architecture of a neural network can vary depending on the specific task and the amount of data available, but they typically consist of an input layer, one or more hidden layers, and an output layer.
+
+
 * Bioligical neuron vs simplified artificial neural network
 <img width="1594" alt="Image" src="https://github.com/user-attachments/assets/c1dc2678-3a20-4109-8880-26fae3ea86f1" />
 &nbsp;
 
-* From Logistic Regression to Neural Networks
-  * Logistic regression can be seen as a simple neural network with no hidden layers and a sigmoid activation function. By adding hidden layers and using different activation functions, we can create more complex neural networks that can learn more complex patterns in the data.  
-  * Only 1 feature
+#### From Logistic Regression to Neural Networks
+
+* Logistic regression can be seen as a simple neural network with no hidden layers and a sigmoid activation function. By adding hidden layers and using different activation functions, we can create more complex neural networks that can learn more complex patterns in the data.  
+
+* Only 1 feature  
 <img width="1562" alt="Image" src="https://github.com/user-attachments/assets/f857dd53-a352-403d-af89-57cb166b68f6" />
 &nbsp;
 
 * Layers in a neural network
-  * Input layer: the layer that receives the input data.
-  * Hidden layers: the layers that perform computations and learn features from the input data.
-  * Output layer: the layer that produces the final output of the neural network, such as a prediction or classification.   
+  * __Input layer__: the layer that receives the input data.
+  * __Hidden layers__: the layers that perform computations and learn features from the input data.
+  * __Output layer__: the layer that produces the final output of the neural network, such as a prediction or classification.   
+* Example with 3 layers (input, hidden, output) and 4 features. 
 <img width="1550" alt="Image" src="https://github.com/user-attachments/assets/33586680-8e40-4683-a048-61b205200b0e" />
 &nbsp;
 
-* Neural Network Architecture
-  * The architecture of a neural network refers to the number of layers and the number of neurons in each layer. The architecture can be designed based on the complexity of the problem and the amount of data available. A common architecture for image classification tasks is a convolutional neural network (CNN), which consists of convolutional layers, pooling layers, and fully connected layers. The choice of architecture can have a significant impact on the performance of the neural network.  
+#### Neural Network Architecture
+* The architecture of a neural network refers to the number of layers and the number of neurons in each layer. The architecture can be designed based on the complexity of the problem and the amount of data available. A common architecture for image classification tasks is a __convolutional neural network__ (CNN), which consists of convolutional layers, pooling layers, and fully connected layers. The choice of architecture can have a significant impact on the performance of the neural network.  
 <img width="1554" alt="Image" src="https://github.com/user-attachments/assets/560363ae-887d-4be1-8f58-3a61ae65040a" />
 &nbsp;
+
+#### Neural Network notation
+* $a^{[l]}$: activation of layer $l$
+* $w^{[l]}$: weights of layer $l$
+* $b^{[l]}$: bias of layer $l$
+* $z^{[l]}$: linear transformation of layer $l$, calculated as $z^{[l]} = w^{[l]} a^{[l-1]} + b^{[l]}$
+* $f^{[l]}$: activation function of layer $l$, applied to $z^{[l]}$ to get $a^{[l]} = f^{[l]}(z^{[l]})$  
+* Example of a 4-layer neural network with input layer, hidden layer, and output layer:
+<img width="1980" alt="Image" src="https://github.com/user-attachments/assets/226441a7-e685-484e-92c5-25390e360df5" />
+
+#### Hand digit recognition example
+* The hand digit recognition example is a common application of neural networks, where the goal is to classify images of handwritten digits (0-9) into their respective categories. The input to the neural network is a 28x28 pixel image of a handwritten digit, which is flattened into a 784-dimensional vector. The neural network consists of an input layer with 784 neurons, one or more hidden layers with a certain number of neurons, and an output layer with 10 neurons (one for each digit). The output of the neural network is a probability distribution over the 10 possible classes, and the predicted class is the one with the highest probability. This example is often used as a benchmark for evaluating the performance of different neural network architectures and training algorithms.
+* __Forward propagation__: the process of calculating the activations of each layer in the neural network, starting from the input layer and moving forward through the hidden layers to the output layer. This involves applying the weights and biases of each layer to the input data and applying the activation function to produce the output of each layer. The final output of the neural network is obtained after forward propagation through all layers.
+* Example of a neural network architecture for hand digit recognition:
+<img width="1964" height="982" alt="Image" src="https://github.com/user-attachments/assets/f24b484e-1664-4351-a4d7-3d780fd28275" />
+
+#### TensorFlow implementation of a neural network
+* TensorFlow is a popular open-source machine learning framework that provides a high-level API for building and training neural networks. With TensorFlow, you can easily define the architecture of your neural network, specify the loss function and optimization algorithm, and train your model on a dataset. TensorFlow also provides tools for visualizing the training process and evaluating the performance of your model. By using TensorFlow, you can quickly build and experiment with different neural network architectures to find the best model for your specific task.
+* Example of a simple neural network implementation in TensorFlow for hand digit recognition:
+```python
+import tensorflow as tf
+from tensorflow import keras  
+model = keras.Sequential([
+    keras.layers.Flatten(input_shape=(28, 28)),
+    keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dense(10, activation='softmax')
+])
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+model.fit(x_train, y_train, epochs=5)
+```
+<img width="1942" alt="Image" src="https://github.com/user-attachments/assets/cd98ee0a-2c01-4e95-b33a-2bfd55ba7c9b" />
+
 
 #### Labs
 * Lab 01: [Neurons and Layers, introduction to TensorFlow and Keras](02_advanced_learning_algorithms/01_week/C2_W1_Lab01_Neurons_and_Layers.ipynb)
