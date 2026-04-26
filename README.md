@@ -33,17 +33,21 @@ Contents
     - [TensorFlow implementation of a neural network](#tensorflow-implementation-of-a-neural-network)
     - [Labs](#labs)
   - [Week 2: Neural network training](#week-2-neural-network-training)
-    - [Notes](#notes)
+    - [Neural network training](#neural-network-training)
+    - [Activation functions](#activation-functions)
+    - [Choosing activation functions](#choosing-activation-functions)
+    - [Multiclass classification](#multiclass-classification)
+    - [Softmax function](#softmax-function)
     - [Labs](#labs-1)
   - [Week 3: Advice for applying machine learning](#week-3-advice-for-applying-machine-learning)
-    - [Notes](#notes-1)
+    - [Notes](#notes)
     - [Labs](#labs-2)
   - [Week 4: Decision trees](#week-4-decision-trees)
-    - [Notes](#notes-2)
+    - [Notes](#notes-1)
     - [Labs](#labs-3)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
   - [Week 1: Unsupervised learning](#week-1-unsupervised-learning)
-    - [Notes](#notes-3)
+    - [Notes](#notes-2)
     - [K-means clustering](#k-means-clustering)
     - [Anomaly detection](#anomaly-detection)
     - [Labs](#labs-4)
@@ -432,11 +436,47 @@ __Learning Objectives__
 * Use the recommended method for implementing multiclass classification in code
 * (Optional): Explain the difference between multi-label and multiclass classification
 
-#### Notes
-* Model training steps
+#### Neural network training
+* Model training steps:
   1. Create the model
-  2. Loss and cont functions
+  2. Loss and cost functions
   3. Gradient Descent
+
+<img width="2392" alt="Image" src="https://github.com/user-attachments/assets/e48f7e50-2a33-422c-aa9a-89e475877bc6" />
+
+#### Activation functions
+* Non-linear activation functions are necessary in neural networks because they allow the network to learn and model complex relationships between the input and output data. Without non-linear activation functions, a neural network would only be able to learn linear relationships, which would limit its ability to solve complex problems. Non-linear activation functions introduce non-linearity into the network, enabling it to capture intricate patterns and make more accurate predictions. 
+* Common non-linear activation functions include __ReLU__ (Rectified Linear Unit), __sigmoid__, and __tanh__.
+<img width="2392" alt="Image" src="https://github.com/user-attachments/assets/2b9be96d-2c80-4cfa-a1eb-1ef0060daf5b" />
+
+#### Choosing activation functions
+* The choice of activation function depends on the specific problem and the architecture of the neural network. 
+* For __hidden layers__, __ReLU__ is often a good choice because it is computationally efficient and helps to mitigate the vanishing gradient problem. 
+* For __output layers__, the choice of activation function depends on the type of problem being solved. 
+  * For binary classification problems, sigmoid is commonly used because it outputs a probability between 0 and 1. 
+  * For regression problems, a linear activation function may be appropriate. 
+  * For multiclass classification problems, softmax is often used because it outputs a probability distribution over multiple classes.
+  * Ultimately, the choice of activation function should be guided by experimentation and evaluation of the model's performance on the specific task at hand.
+  <img width="2368" alt="Image" src="https://github.com/user-attachments/assets/fb83ec92-ee23-4c1f-9972-c259a6c555e2" />
+
+* Why non-linear activation functions are necessary
+  * If we only use linear activation functions, the output of each layer would be a linear combination of the inputs, and the entire neural network would essentially be a linear model. This would limit the network's ability to learn complex patterns and relationships in the data. Non-linear activation functions allow the network to capture non-linear relationships, enabling it to model more complex functions and make more accurate predictions. Without non-linear activation functions, a neural network would not be able to learn and represent the intricate patterns that are often present in real-world data, making it less effective for tasks such as image recognition, natural language processing, and other complex problems. 
+  * For example, if we have a neural network with only linear activation functions, the output of the network would be a linear function of the input, regardless of the number of layers. This means that the network would not be able to learn and represent non-linear relationships in the data, which are often crucial for solving complex problems. By introducing non-linear activation functions, we allow the network to learn and model these non-linear relationships, making it more powerful and effective for a wide range of tasks.
+
+#### Multiclass classification
+* Multiclass classification is a type of classification problem where there are more than two classes or categories to predict. In multiclass classification, the goal is to assign an input to one of several possible classes. This is in contrast to binary classification, where there are only two classes (e.g., yes/no, true/false). Multiclass classification can be implemented using various algorithms, such as logistic regression, decision trees, support vector machines, and neural networks. The choice of algorithm depends on the specific problem, the amount of data available, and the desired level of interpretability. Common applications of multiclass classification include image recognition, natural language processing, and medical diagnosis.
+
+<img width="2342" alt="Image" src="https://github.com/user-attachments/assets/02d99375-b9c2-4d1b-9da4-bbe5af1ee5aa" />
+
+#### Softmax function
+* The softmax function is a mathematical function that converts a vector of real numbers into a probability distribution. It is commonly used in the output layer of a neural network for multiclass classification problems. The softmax function takes a vector of raw scores (logits) as input and applies the following transformation to produce a probability distribution over the classes:  
+```math
+\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}
+``` 
+where $z_i$ is the raw score for class $i$, and $K$ is the total number of classes. The softmax function ensures that the output values are between 0 and 1, and that they sum to 1, making them interpretable as probabilities. The class with the highest probability is typically chosen as the predicted class for a given input.  
+
+<img width="2380" alt="Image" src="https://github.com/user-attachments/assets/7de9e06b-586a-4641-87bb-9812943f4219" />
+
 
 * Activation functions
   * Linear Activation Function
