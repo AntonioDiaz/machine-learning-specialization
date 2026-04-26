@@ -477,6 +477,19 @@ where $z_i$ is the raw score for class $i$, and $K$ is the total number of class
 
 <img width="2380" alt="Image" src="https://github.com/user-attachments/assets/7de9e06b-586a-4641-87bb-9812943f4219" />
 
+* Softmax and cross-entropy loss for multiclass classification
+  * The softmax function is often used in conjunction with the cross-entropy loss function for training neural networks on multiclass classification problems. The cross-entropy loss function measures the difference between the predicted probability distribution (output of the softmax function) and the true distribution (the one-hot encoded labels). The loss is calculated as follows:  
+```math
+J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \sum_{j=1}^{K} y_j^{(i)} \log(\text{softmax}(z_j^{(i)}))
+```
+where $y_j^{(i)}$ is the true label for class $j$ for
+the $i$-th training example, and $\text{softmax}(z_j^{(i)})$ is the predicted probability for class $j$ for the $i$-th training example. The goal of training is to minimize this loss function, which encourages the model to output probabilities that are close to the true labels.
+
+<img width="2368" alt="Image" src="https://github.com/user-attachments/assets/a69a47ac-7de4-428f-ba64-033fd09c84b2" />
+&nbsp;
+
+<img width="2408" alt="Image" src="https://github.com/user-attachments/assets/b1162260-c707-40ad-b3fd-e6cb7dc34f76" />
+
 
 * Activation functions
   * Linear Activation Function
