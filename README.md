@@ -458,12 +458,18 @@ __Learning Objectives__
   * For binary classification problems, sigmoid is commonly used because it outputs a probability between 0 and 1. 
   * For regression problems, a linear activation function may be appropriate. 
   * For multiclass classification problems, softmax is often used because it outputs a probability distribution over multiple classes.
-  * Ultimately, the choice of activation function should be guided by experimentation and evaluation of the model's performance on the specific task at hand.
+  * Ultimately, the choice of activation function should be guided by experimentation and evaluation of the model's performance on the specific task at hand.  
+
   <img width="2368" alt="Image" src="https://github.com/user-attachments/assets/fb83ec92-ee23-4c1f-9972-c259a6c555e2" />
 
-* Why non-linear activation functions are necessary
-  * If we only use linear activation functions, the output of each layer would be a linear combination of the inputs, and the entire neural network would essentially be a linear model. This would limit the network's ability to learn complex patterns and relationships in the data. Non-linear activation functions allow the network to capture non-linear relationships, enabling it to model more complex functions and make more accurate predictions. Without non-linear activation functions, a neural network would not be able to learn and represent the intricate patterns that are often present in real-world data, making it less effective for tasks such as image recognition, natural language processing, and other complex problems. 
-  * For example, if we have a neural network with only linear activation functions, the output of the network would be a linear function of the input, regardless of the number of layers. This means that the network would not be able to learn and represent non-linear relationships in the data, which are often crucial for solving complex problems. By introducing non-linear activation functions, we allow the network to learn and model these non-linear relationships, making it more powerful and effective for a wide range of tasks.
+* __Why non-linear activation functions are necessary__
+
+  * If we only use linear activation functions, the output of each layer would be a linear combination of the inputs, and the entire neural network would essentially be a linear model. This would limit the network's ability to __learn complex patterns__ and relationships in the data. 
+º
+  * Non-linear activation functions allow the network to capture non-linear relationships, enabling it to model more complex functions and make more accurate predictions. 
+
+  * Without non-linear activation functions, a neural network would not be able to learn and __represent the intricate patterns__ that are often present in real-world data, making it less effective for tasks such as image recognition, natural language processing, and other complex problems. 
+
 
 #### Multiclass classification
 * Multiclass classification is a type of classification problem where there are more than two classes or categories to predict. In multiclass classification, the goal is to assign an input to one of several possible classes. This is in contrast to binary classification, where there are only two classes (e.g., yes/no, true/false). Multiclass classification can be implemented using various algorithms, such as logistic regression, decision trees, support vector machines, and neural networks. The choice of algorithm depends on the specific problem, the amount of data available, and the desired level of interpretability. Common applications of multiclass classification include image recognition, natural language processing, and medical diagnosis.
