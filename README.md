@@ -461,28 +461,34 @@ __Learning Objectives__
   * For regression problems, a linear activation function may be appropriate. 
   * For multiclass classification problems, softmax is often used because it outputs a probability distribution over multiple classes.
   * Ultimately, the choice of activation function should be guided by experimentation and evaluation of the model's performance on the specific task at hand.  
-&nbsp;
+
 <img width="2368" alt="Image" src="https://github.com/user-attachments/assets/fb83ec92-ee23-4c1f-9972-c259a6c555e2" />
 
 * __Why non-linear activation functions are necessary__
 
   * If we only use linear activation functions, the output of each layer would be a linear combination of the inputs, and the entire neural network would essentially be a linear model. This would limit the network's ability to __learn complex patterns__ and relationships in the data. 
-º
+
   * Non-linear activation functions allow the network to capture non-linear relationships, enabling it to model more complex functions and make more accurate predictions. 
 
   * Without non-linear activation functions, a neural network would not be able to learn and __represent the intricate patterns__ that are often present in real-world data, making it less effective for tasks such as image recognition, natural language processing, and other complex problems. 
 
 
 #### Multiclass classification
-* Multiclass classification is a type of classification problem where there are more than two classes or categories to predict. In multiclass classification, the goal is to assign an input to one of several possible classes. This is in contrast to binary classification, where there are only two classes (e.g., yes/no, true/false). Multiclass classification can be implemented using various algorithms, such as logistic regression, decision trees, support vector machines, and neural networks. The choice of algorithm depends on the specific problem, the amount of data available, and the desired level of interpretability. Common applications of multiclass classification include image recognition, natural language processing, and medical diagnosis.
+* Multiclass classification is a type of classification problem where there are more than two classes or categories to predict.
+* In multiclass classification, the goal is to assign an input to one of several possible classes. This is in contrast to binary classification, where there are only two classes (e.g., yes/no, true/false). 
+* Multiclass classification can be implemented using various algorithms, such as logistic regression, decision trees, support vector machines, and neural networks. 
+* The choice of algorithm depends on the specific problem, the amount of data available, and the desired level of interpretability. 
+* Common applications of multiclass classification include image recognition, natural language processing, and medical diagnosis.
 
 <img width="2342" alt="Image" src="https://github.com/user-attachments/assets/02d99375-b9c2-4d1b-9da4-bbe5af1ee5aa" />
 
 #### Softmax function
 * The softmax function is a mathematical function that converts a vector of real numbers into a probability distribution. It is commonly used in the output layer of a neural network for multiclass classification problems. The softmax function takes a vector of raw scores (logits) as input and applies the following transformation to produce a probability distribution over the classes:  
+
 ```math
 \text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}
 ``` 
+
 where $z_i$ is the raw score for class $i$, and $K$ is the total number of classes. The softmax function ensures that the output values are between 0 and 1, and that they sum to 1, making them interpretable as probabilities. The class with the highest probability is typically chosen as the predicted class for a given input.  
 
 <img width="2380" alt="Image" src="https://github.com/user-attachments/assets/7de9e06b-586a-4641-87bb-9812943f4219" />
