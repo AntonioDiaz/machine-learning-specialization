@@ -15,14 +15,14 @@ Contents
     - [Notes Multiple variable linear regression](#notes-multiple-variable-linear-regression)
     - [Vectorization](#vectorization)
     - [Gradient Descent with multiple variables](#gradient-descent-with-multiple-variables)
-  - [Week 2: Labs](#week-2-labs)
+    - [Week 2: Labs](#week-2-labs)
   - [Week 3: Classification](#week-3-classification)
     - [Classification with logistic regression](#classification-with-logistic-regression)
     - [Decision boundary](#decision-boundary)
     - [Cost function for logistic regression](#cost-function-for-logistic-regression)
     - [Overfitting and regularization](#overfitting-and-regularization)
     - [Regularization to address overfitting](#regularization-to-address-overfitting)
-  - [Week 3: Labs](#week-3-labs)
+    - [Week 3: Labs](#week-3-labs)
 - [02 - Advanced Learning Algorithms](#02---advanced-learning-algorithms)
   - [Week 1: Neural networks](#week-1-neural-networks)
     - [Neural Networks Intuition](#neural-networks-intuition)
@@ -31,38 +31,38 @@ Contents
     - [Neural Network notation](#neural-network-notation)
     - [Hand digit recognition example](#hand-digit-recognition-example)
     - [TensorFlow implementation of a neural network](#tensorflow-implementation-of-a-neural-network)
-    - [Labs](#labs)
+    - [Week 2: Labs](#week-2-labs-1)
   - [Week 2: Neural network training](#week-2-neural-network-training)
     - [Neural network training](#neural-network-training)
     - [Activation functions](#activation-functions)
     - [Choosing activation functions](#choosing-activation-functions)
     - [Multiclass classification](#multiclass-classification)
     - [Softmax function](#softmax-function)
-    - [Labs](#labs-1)
+    - [Week 2: Labs](#week-2-labs-2)
   - [Week 3: Advice for applying machine learning](#week-3-advice-for-applying-machine-learning)
     - [Notes](#notes)
-    - [Labs](#labs-2)
+    - [Labs](#labs)
   - [Week 4: Decision trees](#week-4-decision-trees)
     - [Notes](#notes-1)
-    - [Labs](#labs-3)
+    - [Labs](#labs-1)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
   - [Week 1: Unsupervised learning](#week-1-unsupervised-learning)
     - [Notes](#notes-2)
     - [K-means clustering](#k-means-clustering)
     - [Anomaly detection](#anomaly-detection)
-    - [Labs](#labs-4)
+    - [Labs](#labs-2)
   - [Week 2: Recommender systems](#week-2-recommender-systems)
     - [Colaborative filtering recommender systems](#colaborative-filtering-recommender-systems)
     - [Mean normalization for collaborative filtering](#mean-normalization-for-collaborative-filtering)
     - [TensorFlow implementation of collaborative filtering](#tensorflow-implementation-of-collaborative-filtering)
     - [Content-based filtering](#content-based-filtering)
-    - [Labs](#labs-5)
+    - [Labs](#labs-3)
   - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
     - [Reinforcement Learning introduction](#reinforcement-learning-introduction)
     - [State-action value function](#state-action-value-function)
     - [Bellman Equation](#bellman-equation)
     - [Deep Reinforcement learning](#deep-reinforcement-learning)
-    - [Labs](#labs-6)
+    - [Labs](#labs-4)
 
 
 <hr>
@@ -226,11 +226,7 @@ b &= b - \alpha \frac{\partial J(w,b)}{\partial b} \\
 
 <img width="1994" alt="Image" src="https://github.com/user-attachments/assets/0c3e98c3-a320-4812-95ce-630079392ff6" />
 
-
-
-
-
-### Week 2: Labs
+#### Week 2: Labs
 * Lab 01: [Python, NumPy and Vectorization](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab01_Python_Numpy_Vectorization_Soln.ipynb)
 * Lab 02: [Multiple Variable Linear Regression](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab02_Multiple_Variable_Soln.ipynb)
 * Lab 03: [Feature scaling and Learning Rate (Multi-variable)](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb)
@@ -322,7 +318,7 @@ b &= b - \alpha \left( \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})
 <img width="2002" alt="Image" src="https://github.com/user-attachments/assets/5c505719-e9cb-436c-96da-9758a91670b2" />
 
 
-### Week 3: Labs 
+#### Week 3: Labs 
 * Lab 01: [Classification](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab01_Classification_Soln.ipynb)
 * Lab 02: [Logistic Regression](01_supervised_ml_regression_and_classification/03_week/C1_W3_Lab02_Sigmoid_function_Soln.ipynb)
 * Lab 03: [Logistic Regression and Decision Boundary](01_supervised_ml_regression_and_classification/02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb)
@@ -417,7 +413,7 @@ model.fit(x_train, y_train, epochs=5)
 <img width="1942" alt="Image" src="https://github.com/user-attachments/assets/cd98ee0a-2c01-4e95-b33a-2bfd55ba7c9b" />
 
 
-#### Labs
+#### Week 2: Labs
 * Lab 01: [Neurons and Layers, introduction to TensorFlow and Keras](02_advanced_learning_algorithms/01_week/C2_W1_Lab01_Neurons_and_Layers.ipynb)
 * Lab 02: [Simple Neural Network with TensorFlow, coffee roasting example](02_advanced_learning_algorithms/01_week/C2_W1_Lab02_CoffeeRoasting_TF.ipynb)
 * Lab 03: [Simple Neural Network with Numpy, coffee roasting example](02_advanced_learning_algorithms/01_week/C2_W1_Lab03_CoffeeRoasting_Numpy.ipynb)
@@ -445,6 +441,12 @@ __Learning Objectives__
 <img width="2392" alt="Image" src="https://github.com/user-attachments/assets/e48f7e50-2a33-422c-aa9a-89e475877bc6" />
 
 #### Activation functions
+
+* Linear Activation Function
+* Sigmoid
+* **ReLU: Rectified Linear Unit** $a = \max(0,z)$
+<img width="1000" src="https://github.com/user-attachments/assets/243a44bc-2707-4b56-ba0a-3dc8e1bf58d0" />
+
 * Non-linear activation functions are necessary in neural networks because they allow the network to learn and model complex relationships between the input and output data. Without non-linear activation functions, a neural network would only be able to learn linear relationships, which would limit its ability to solve complex problems. Non-linear activation functions introduce non-linearity into the network, enabling it to capture intricate patterns and make more accurate predictions. 
 * Common non-linear activation functions include __ReLU__ (Rectified Linear Unit), __sigmoid__, and __tanh__.
 <img width="2392" alt="Image" src="https://github.com/user-attachments/assets/2b9be96d-2c80-4cfa-a1eb-1ef0060daf5b" />
@@ -491,12 +493,6 @@ the $i$-th training example, and $\text{softmax}(z_j^{(i)})$ is the predicted pr
 <img width="2408" alt="Image" src="https://github.com/user-attachments/assets/b1162260-c707-40ad-b3fd-e6cb7dc34f76" />
 
 
-* Activation functions
-  * Linear Activation Function
-  * Sigmoid
-  * **ReLU: Rectified Linear Unit** $a = \max(0,z)$
-<img width="1000" src="https://github.com/user-attachments/assets/243a44bc-2707-4b56-ba0a-3dc8e1bf58d0" />
-
 * Choosing Activation
   * __Output Layer__: depends on the response we are waiting.
     * `sigmoid`: for binary classification, $y=1/0$
@@ -513,7 +509,7 @@ the $i$-th training example, and $\text{softmax}(z_j^{(i)})$ is the predicted pr
 * Convolutional layer and Convonutional Neural Network
 
 
-#### Labs
+#### Week 2: Labs
 * Lab 01: [ReLU activation](02_advanced_learning_algorithms/02_week/C2_W2_lab01_Relu.ipynb)
 * Lab 02: [Softmax function](02_advanced_learning_algorithms/02_week/C2_W2_lab02_SoftMax.ipynb)
 * Lab 03: [Neural Network for multi-class classification](02_advanced_learning_algorithms/02_week/C2_W2_lab03_Multiclass_TF.ipynb)
