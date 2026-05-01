@@ -461,8 +461,8 @@ __Learning Objectives__
   * For regression problems, a linear activation function may be appropriate. 
   * For multiclass classification problems, softmax is often used because it outputs a probability distribution over multiple classes.
   * Ultimately, the choice of activation function should be guided by experimentation and evaluation of the model's performance on the specific task at hand.  
-
-  <img width="2368" alt="Image" src="https://github.com/user-attachments/assets/fb83ec92-ee23-4c1f-9972-c259a6c555e2" />
+&nbsp;
+<img width="2368" alt="Image" src="https://github.com/user-attachments/assets/fb83ec92-ee23-4c1f-9972-c259a6c555e2" />
 
 * __Why non-linear activation functions are necessary__
 
