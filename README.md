@@ -10,7 +10,7 @@ Contents
     - [Linear regression](#linear-regression)
     - [Squared Error Cost function](#squared-error-cost-function)
     - [Gradient Descent](#gradient-descent)
-  - [Week 1: Labs](#week-1-labs)
+    - [Week 1: Labs](#week-1-labs)
   - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
     - [Notes Multiple variable linear regression](#notes-multiple-variable-linear-regression)
     - [Vectorization](#vectorization)
@@ -31,38 +31,38 @@ Contents
     - [Neural Network notation](#neural-network-notation)
     - [Hand digit recognition example](#hand-digit-recognition-example)
     - [TensorFlow implementation of a neural network](#tensorflow-implementation-of-a-neural-network)
-    - [Week 2: Labs](#week-2-labs-1)
+    - [Week 1: Labs](#week-1-labs-1)
   - [Week 2: Neural network training](#week-2-neural-network-training)
     - [Neural network training](#neural-network-training)
     - [Activation functions](#activation-functions)
     - [Choosing activation functions](#choosing-activation-functions)
     - [Multiclass classification](#multiclass-classification)
     - [Softmax function](#softmax-function)
-    - [Week 2: Labs](#week-2-labs-2)
+    - [Week 2: Labs](#week-2-labs-1)
   - [Week 3: Advice for applying machine learning](#week-3-advice-for-applying-machine-learning)
     - [Notes](#notes)
-    - [Labs](#labs)
+    - [Week 3: Labs](#week-3-labs-1)
   - [Week 4: Decision trees](#week-4-decision-trees)
     - [Notes](#notes-1)
-    - [Labs](#labs-1)
+    - [Week 4: Labs](#week-4-labs)
 - [03 - Unsupervised Learning, Recommenders, Reinforcement Learning](#03---unsupervised-learning-recommenders-reinforcement-learning)
   - [Week 1: Unsupervised learning](#week-1-unsupervised-learning)
     - [Notes](#notes-2)
     - [K-means clustering](#k-means-clustering)
     - [Anomaly detection](#anomaly-detection)
-    - [Labs](#labs-2)
+    - [Labs](#labs)
   - [Week 2: Recommender systems](#week-2-recommender-systems)
     - [Colaborative filtering recommender systems](#colaborative-filtering-recommender-systems)
     - [Mean normalization for collaborative filtering](#mean-normalization-for-collaborative-filtering)
     - [TensorFlow implementation of collaborative filtering](#tensorflow-implementation-of-collaborative-filtering)
     - [Content-based filtering](#content-based-filtering)
-    - [Labs](#labs-3)
+    - [Labs](#labs-1)
   - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
     - [Reinforcement Learning introduction](#reinforcement-learning-introduction)
     - [State-action value function](#state-action-value-function)
     - [Bellman Equation](#bellman-equation)
     - [Deep Reinforcement learning](#deep-reinforcement-learning)
-    - [Labs](#labs-4)
+    - [Labs](#labs-2)
 
 
 <hr>
@@ -175,7 +175,7 @@ $J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $
 $\frac{\partial J(w,b)}{\partial w}$  
 
 
-### Week 1: Labs
+#### Week 1: Labs
 * Lab 01: [Python Jupyter Notebook introduction](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab01_Python_Jupyter_Soln.ipynb)
 * Lab 02: [Linear regression for one variable](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab02_Model_Representation_Soln.ipynb)
 * Lab 03: [Cost function for linear regression with one variable](01_supervised_ml_regression_and_classification/01_week/C1_W1_Lab03_Cost_function_Soln.ipynb)
@@ -413,7 +413,7 @@ model.fit(x_train, y_train, epochs=5)
 <img width="1942" alt="Image" src="https://github.com/user-attachments/assets/cd98ee0a-2c01-4e95-b33a-2bfd55ba7c9b" />
 
 
-#### Week 2: Labs
+#### Week 1: Labs
 * Lab 01: [Neurons and Layers, introduction to TensorFlow and Keras](02_advanced_learning_algorithms/01_week/C2_W1_Lab01_Neurons_and_Layers.ipynb)
 * Lab 02: [Simple Neural Network with TensorFlow, coffee roasting example](02_advanced_learning_algorithms/01_week/C2_W1_Lab02_CoffeeRoasting_TF.ipynb)
 * Lab 03: [Simple Neural Network with Numpy, coffee roasting example](02_advanced_learning_algorithms/01_week/C2_W1_Lab03_CoffeeRoasting_Numpy.ipynb)
@@ -536,10 +536,9 @@ __Learning Objectives__
 * Bias
 * Variance
 
-#### Labs
+#### Week 3: Labs
 * Lab 01: [model evaluation and selection](02_advanced_learning_algorithms/03_week/C2W3_Lab_01_Model_Evaluation_and_Selection.ipynb)
 * Lab 02: [diagnosing bias and variance](02_advanced_learning_algorithms/03_week/C2W3_Lab_02_Diagnosing_Bias_and_Variance.ipynb)
-
 
 ### Week 4: Decision trees
 >This week, you'll learn about a practical and very commonly used learning algorithm the decision tree. You'll also learn about variations of the decision tree, including random forests and boosted trees (XGBoost).
@@ -597,10 +596,9 @@ Idea: when choosing a feature to use split, if $n$ features are available, pick 
 Boosted trees, where each tree is trained to correct the errors of the previous tree. The final decision is taken by weighted mayority of each tree.
 
 
-#### Labs
+#### Week 4: Labs
 * Lab 01: [Decision Trees](02_advanced_learning_algorithms/04_week/C2_W4_Lab_01_Decision_Trees.ipynb)
 In this notebook you will visualize how a decision tree is split using information gain.
-
 * Lab 02: [Tree Ensemble](02_advanced_learning_algorithms/04_week/C2_W4_Lab_02_Tree_Ensemble.ipynb)
 
 
