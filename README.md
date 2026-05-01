@@ -448,7 +448,9 @@ __Learning Objectives__
 <img width="1000" src="https://github.com/user-attachments/assets/243a44bc-2707-4b56-ba0a-3dc8e1bf58d0" />
 
 * Non-linear activation functions are necessary in neural networks because they allow the network to learn and model complex relationships between the input and output data. Without non-linear activation functions, a neural network would only be able to learn linear relationships, which would limit its ability to solve complex problems. Non-linear activation functions introduce non-linearity into the network, enabling it to capture intricate patterns and make more accurate predictions. 
+  
 * Common non-linear activation functions include __ReLU__ (Rectified Linear Unit), __sigmoid__, and __tanh__.
+
 <img width="2392" alt="Image" src="https://github.com/user-attachments/assets/2b9be96d-2c80-4cfa-a1eb-1ef0060daf5b" />
 
 #### Choosing activation functions
