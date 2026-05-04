@@ -42,8 +42,8 @@ https://www.deeplearning.ai/courses/machine-learning-specialization/
 
 ## 03 - Unsupervised Learning, Recommenders, Reinforcement Learning
 
-> Week 1: Unsupervised learning 
-> Week 2: Recommender systems 
+> Week 1: Unsupervised learning  
+> Week 2: Recommender systems  
 > Week 3: Reinforcement Learning
 
 [Full notes →](03_unsupervised_learning/README.md)
