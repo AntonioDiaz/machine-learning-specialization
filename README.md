@@ -483,7 +483,9 @@ __Learning Objectives__
 <img width="2342" alt="Image" src="https://github.com/user-attachments/assets/02d99375-b9c2-4d1b-9da4-bbe5af1ee5aa" />
 
 #### Softmax function
-* The softmax function is a mathematical function that converts a vector of real numbers into a probability distribution. It is commonly used in the output layer of a neural network for multiclass classification problems. The softmax function takes a vector of raw scores (logits) as input and applies the following transformation to produce a probability distribution over the classes:  
+* The softmax function is a mathematical function that converts a vector of real numbers into a probability distribution.
+* It is commonly used in the output layer of a neural network for multiclass classification problems. 
+* The softmax function takes a vector of raw scores (logits) as input and applies the following transformation to produce a probability distribution over the classes:  
 
 ```math
 \text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}
@@ -494,7 +496,8 @@ where $z_i$ is the raw score for class $i$, and $K$ is the total number of class
 <img width="2380" alt="Image" src="https://github.com/user-attachments/assets/7de9e06b-586a-4641-87bb-9812943f4219" />
 
 * Softmax and cross-entropy loss for multiclass classification
-  * The softmax function is often used in conjunction with the cross-entropy loss function for training neural networks on multiclass classification problems. The cross-entropy loss function measures the difference between the predicted probability distribution (output of the softmax function) and the true distribution (the one-hot encoded labels). The loss is calculated as follows:  
+  * The softmax function is often used in conjunction with the cross-entropy loss function for training neural networks on multiclass classification problems. 
+  * The cross-entropy loss function measures the difference between the predicted probability distribution (output of the softmax function) and the true distribution (the one-hot encoded labels). The loss is calculated as follows:  
 ```math
 J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \sum_{j=1}^{K} y_j^{(i)} \log(\text{softmax}(z_j^{(i)}))
 ```
