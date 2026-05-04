@@ -35,7 +35,7 @@ https://www.deeplearning.ai/courses/machine-learning-specialization/
 
 > Week 1: Neural networks  
 > Week 2: Neural network training  
-> Week 3: Advice for applying machine learning
+> Week 3: Advice for applying machine learning  
 > Week 4: Decision trees
 
 [Full notes →](02_advanced_learning_algorithms/README.md)
