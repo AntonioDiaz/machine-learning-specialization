@@ -25,18 +25,25 @@ https://www.deeplearning.ai/courses/machine-learning-specialization/
 
 ## 01 - Supervised Machine Learning: Regression and Classification
 
-> Week 1: Introduction to Machine Learning · Week 2: Regression with multiple input variables · Week 3: Classification
+> Week 1: Introduction to Machine Learning   
+> Week 2: Regression with multiple input variables   
+> Week 3: Classification
 
 [Full notes →](01_supervised_ml_regression_and_classification/README.md)
 
 ## 02 - Advanced Learning Algorithms
 
-> Week 1: Neural networks · Week 2: Neural network training · Week 3: Advice for applying machine learning · Week 4: Decision trees
+> Week 1: Neural networks  
+> Week 2: Neural network training  
+> Week 3: Advice for applying machine learning
+> Week 4: Decision trees
 
 [Full notes →](02_advanced_learning_algorithms/README.md)
 
 ## 03 - Unsupervised Learning, Recommenders, Reinforcement Learning
 
-> Week 1: Unsupervised learning · Week 2: Recommender systems · Week 3: Reinforcement Learning
+> Week 1: Unsupervised learning 
+> Week 2: Recommender systems 
+> Week 3: Reinforcement Learning
 
 [Full notes →](03_unsupervised_learning/README.md)
