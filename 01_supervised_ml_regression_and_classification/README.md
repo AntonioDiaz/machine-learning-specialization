@@ -12,7 +12,7 @@ Contents
   - [Gradient Descent](#gradient-descent)
   - [Week 1: Labs](#week-1-labs)
 - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
-  - [Notes Multiple variable linear regression](#notes-multiple-variable-linear-regression)
+  - [Multiple variable linear regression](#multiple-variable-linear-regression)
   - [Vectorization](#vectorization)
   - [Gradient Descent with multiple variables](#gradient-descent-with-multiple-variables)
   - [Week 2: Labs](#week-2-labs)
@@ -130,14 +130,22 @@ __Learning Objectives__
 * Use feature scaling, feature engineering, and polynomial regression to * improve model training
 * Implement linear regression in code
 
-### Notes Multiple variable linear regression
-* `Multiple variable linear regression` is an extension of linear regression that allows for multiple input features. The model can be represented as follows:
-$f_{w,b}(x) = w_1 x_1 + w_2 x_2 + \ldots + w_n x_n + b$
-* Example: predicting the price of a house based on its size, number of bedrooms, and location. The input features would be the size, number of bedrooms, and location, and the output would be the price of the house. The model would learn the weights for each feature to make accurate predictions.  
+### Multiple variable linear regression
+
+* `Multiple variable linear regression` is an extension of linear regression that allows for multiple input features. The model can be represented as follows:  
+$$f_{w,b}(x) = w_1 x_1 + w_2 x_2 + \ldots + w_n x_n + b$$
+
+* Example: predicting the price of a house based on its size, number of bedrooms, and location. 
+  * The input features would be the size, number of bedrooms, and location, and the output would be the price of the house. 
+  * The model would learn the weights for each feature to make accurate predictions.  
+
 <img width="1982" alt="Image" src="https://github.com/user-attachments/assets/d94ad870-56b7-4500-9f57-6bddb46e1d66" />
 
 ### Vectorization
-* `Vectorization` is a technique used to optimize the performance of machine learning algorithms by performing operations on entire arrays or matrices of data, rather than using explicit loops. This allows for faster computations and can significantly reduce the time it takes to train a model. In the context of linear regression, vectorization can be used to compute the cost function and gradients more efficiently, which can speed up the training process.  
+
+* `Vectorization` is a technique used to optimize the performance of machine learning algorithms by performing operations on entire arrays or matrices of data, rather than using explicit loops.  
+* This allows for faster computations and can significantly reduce the time it takes to train a model.  
+* In the context of linear regression, vectorization can be used to compute the cost function and gradients more efficiently, which can speed up the training process.  
   
 <img width="1994" alt="Image" src="https://github.com/user-attachments/assets/1a98e322-9a5a-4681-8461-6cebaa57050a" />
 &nbsp;
@@ -190,7 +198,6 @@ __Learning Objectives__
 $$f_{w,b}(x) = \sigma(w^T x + b)$$
   
 * where $\sigma(z) = \frac{1}{1 + e^{-z}}$ is the __sigmoid function__, which maps any real-valued number into the (0, 1) interval. 
-  
 * The output of the logistic regression model can be interpreted as the probability of the positive class (e.g., yes, true, 1). 
 * To make a binary prediction, we can use a threshold (e.g., 0.5) to classify the output as either the positive class or the negative class (e.g., no, false, 0). 
 * Logistic regression is commonly used in applications such as spam detection, medical diagnosis, and customer churn prediction.  
@@ -200,12 +207,16 @@ $$f_{w,b}(x) = \sigma(w^T x + b)$$
 
 ### Decision boundary
 
-* The decision boundary is the line (or hyperplane) that separates the positive class from the negative class in the feature space. In logistic regression, the decision boundary is defined by the equation $w^T x + b = 0$. Data points on one side of the decision boundary are classified as the positive class, while data points on the other side are classified as the negative class. The position and shape of the decision boundary can be influenced by the weights and bias of the logistic regression model, as well as by the features used in the model.
+* The decision boundary is the line (or hyperplane) that separates the positive class from the negative class in the feature space.  
+* In logistic regression, the decision boundary is defined by the equation $w^T x + b = 0$.  
+* Data points on one side of the decision boundary are classified as the positive class, while data points on the other side are classified as the negative class.  
+* The position and shape of the decision boundary can be influenced by the weights and bias of the logistic regression model, as well as by the features used in the model.
 
 <img width="1974" alt="Image" src="https://github.com/user-attachments/assets/db9a0e4d-106c-43d0-9664-9d1ef5b83327" />
 
 * Non-linear decision boundary
-  * By adding polynomial features to the logistic regression model, we can create a non-linear decision boundary that can capture more complex relationships between the features and the target variable. This allows the model to fit the data better and make more accurate predictions, especially when the relationship between the features and the target variable is not linear.
+  * By adding polynomial features to the logistic regression model, we can create a non-linear decision boundary that can capture more complex relationships between the features and the target variable. 
+  * This allows the model to fit the data better and make more accurate predictions, especially when the relationship between the features and the target variable is not linear.
 
 <img width="1972" alt="Image" src="https://github.com/user-attachments/assets/27ff21c5-bf58-4b69-93b6-5ecd73305b51" />
 
