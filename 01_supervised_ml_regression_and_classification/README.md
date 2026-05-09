@@ -132,7 +132,9 @@ __Learning Objectives__
 
 ### Multiple variable linear regression
 
-* `Multiple variable linear regression` is an extension of linear regression that allows for multiple input features. The model can be represented as follows:  
+* `Multiple variable linear regression` is an extension of linear regression that allows for multiple input features. 
+* The model can be represented as follows:  
+  
 $$f_{w,b}(x) = w_1 x_1 + w_2 x_2 + \ldots + w_n x_n + b$$
 
 * Example: predicting the price of a house based on its size, number of bedrooms, and location. 
