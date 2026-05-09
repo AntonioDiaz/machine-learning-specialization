@@ -175,6 +175,7 @@ b &= b - \alpha \frac{\partial J(w,b)}{\partial b} \\
 * Lab 06: [Linear Regression using Scikit-Learn, close form solution](02_week/C1_W2_Lab06_Sklearn_Normal_Soln.ipynb)
 
 ## Week 3: Classification
+
 >This week, you'll learn the other type of supervised learning, classification. You'll learn how to predict categories using the logistic regression model. You'll learn about the problem of overfitting, and how to handle this problem with a method...
 
 __Learning Objectives__
@@ -183,14 +184,19 @@ __Learning Objectives__
 * Address overfitting using regularization, to improve model performance
 
 ### Classification with logistic regression
-* `Logistic regression` is a type of classification algorithm that is used to predict the probability of a binary outcome (e.g., yes/no, true/false, 1/0). The model can be represented as follows:
+* `Logistic regression` is a type of classification algorithm that is used to predict the probability of a binary outcome (e.g., yes/no, true/false, 1/0). 
+* The model can be represented as follows:
   
-  $f_{w,b}(x) = \sigma(w^T x + b)$
+$$f_{w,b}(x) = \sigma(w^T x + b)$$
   
-  where $\sigma(z) = \frac{1}{1 + e^{-z}}$ is the __sigmoid function__, which maps any real-valued number into the (0, 1) interval. The output of the logistic regression model can be interpreted as the probability of the positive class (e.g., yes, true, 1). To make a binary prediction, we can use a threshold (e.g., 0.5) to classify the output as either the positive class or the negative class (e.g., no, false, 0). Logistic regression is commonly used in applications such as spam detection, medical diagnosis, and customer churn prediction.  
-
-  <img width="1984" alt="Image" src="https://github.com/user-attachments/assets/8a7edf81-3ab1-4c36-8005-cb48d5a399ab" />
-  &nbsp;
+* where $\sigma(z) = \frac{1}{1 + e^{-z}}$ is the __sigmoid function__, which maps any real-valued number into the (0, 1) interval. 
+  
+* The output of the logistic regression model can be interpreted as the probability of the positive class (e.g., yes, true, 1). 
+* To make a binary prediction, we can use a threshold (e.g., 0.5) to classify the output as either the positive class or the negative class (e.g., no, false, 0). 
+* Logistic regression is commonly used in applications such as spam detection, medical diagnosis, and customer churn prediction.  
+&nbsp;
+<img width="1984" alt="Image" src="https://github.com/user-attachments/assets/8a7edf81-3ab1-4c36-8005-cb48d5a399ab" />
+&nbsp;
 
 ### Decision boundary
 
@@ -204,10 +210,11 @@ __Learning Objectives__
 <img width="1972" alt="Image" src="https://github.com/user-attachments/assets/27ff21c5-bf58-4b69-93b6-5ecd73305b51" />
 
 ### Cost function for logistic regression
-* Logistic cost function. 
-The cost function for linear regression is not suitable for logistic regression because it is not convex and can lead to multiple local minima, making it difficult to optimize. Instead, logistic regression uses a different cost function called the logistic loss or cross-entropy loss, which is convex and has a single global minimum, making it easier to optimize using gradient descent. The logistic loss function is defined as follows:  
+* The cost function for linear regression is not suitable for logistic regression because it is not convex and can lead to multiple local minima, making it difficult to optimize. 
+* Instead, logistic regression uses a different cost function called the `logistic loss` or `cross-entropy loss`, which is convex and has a single global minimum, making it easier to optimize using gradient descent. 
+* The logistic loss function is defined as follows:  
  
-$J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$  
+$$J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$$  
 
 <img width="1978" alt="Image" src="https://github.com/user-attachments/assets/a2108749-888b-4bb7-86ca-4cf99698e441" />
 &nbsp;
