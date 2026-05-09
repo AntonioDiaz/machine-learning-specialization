@@ -111,15 +111,6 @@ $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 \text{\}}
 ```
 
-
-```math
-\begin{aligned}
-\text{repeat until convergence: } \{ \\
- w &= w - \alpha \frac{\partial J(w,b)}{\partial w} \\
- b &= b - \alpha \frac{\partial J(w,b)}{\partial b} \\
-\}
-\end{aligned}
-```
 Where the partial derivatives of the cost function with respect to $w$ and $b$ are given by:
 ```math
 \begin{aligned}
