@@ -93,8 +93,8 @@ $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 
 
 ### Gradient Descent
-* `Gradient Descent` is an optimization algorithm used to minimize the cost function $J(w,b)$ by iteratively updating the parameters $w$ and $b$ in the direction of the negative gradient of the cost function with respect to those parameters. 
-* The learning rate $\alpha$ determines the size of the steps taken towards the minimum of the cost function. 
+* `Gradient Descent` is an optimization algorithm used to minimize the `cost function` $J(w,b)$ by iteratively updating the parameters $w$ and $b$ in the direction of the negative gradient of the cost function with respect to those parameters. 
+* The `learning rate` $\alpha$ determines the size of the steps taken towards the minimum of the cost function. 
 * The algorithm continues until convergence, which occurs when the parameters no longer change significantly or when a predetermined number of iterations is reached.
   
 <img width="1972" alt="Image" src="https://github.com/user-attachments/assets/43719b95-e84f-47c2-b166-c57369b67e2b" />
@@ -105,6 +105,14 @@ $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 
 * `Gradient Descent Algorithm`
 ```math
+\text{repeat until convergence: \{} \\
+\quad w := w - \alpha \frac{\partial J(w,b)}{\partial w} \\
+\quad b := b - \alpha \frac{\partial J(w,b)}{\partial b} \\
+\text{\}}
+```
+
+
+```math
 \begin{aligned}
 \text{repeat until convergence: } \{ \\
  w &= w - \alpha \frac{\partial J(w,b)}{\partial w} \\
@@ -112,10 +120,9 @@ $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 \}
 \end{aligned}
 ```
-
+Where the partial derivatives of the cost function with respect to $w$ and $b$ are given by:
 ```math
 \begin{aligned}
-\text{where:} \\
 \frac{\partial J(w,b)}{\partial w}  &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right) x^{(i)} \\
 \frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right)
 \end{aligned}
