@@ -93,7 +93,9 @@ $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 
 
 ### Gradient Descent
-* `Gradient Descent` is an optimization algorithm used to minimize the cost function $J(w,b)$ by iteratively updating the parameters $w$ and $b$ in the direction of the negative gradient of the cost function with respect to those parameters. The learning rate $\alpha$ determines the size of the steps taken towards the minimum of the cost function. The algorithm continues until convergence, which occurs when the parameters no longer change significantly or when a predetermined number of iterations is reached.
+* `Gradient Descent` is an optimization algorithm used to minimize the cost function $J(w,b)$ by iteratively updating the parameters $w$ and $b$ in the direction of the negative gradient of the cost function with respect to those parameters. 
+* The learning rate $\alpha$ determines the size of the steps taken towards the minimum of the cost function. 
+* The algorithm continues until convergence, which occurs when the parameters no longer change significantly or when a predetermined number of iterations is reached.
   
 <img width="1972" alt="Image" src="https://github.com/user-attachments/assets/43719b95-e84f-47c2-b166-c57369b67e2b" />
 &nbsp;
@@ -118,12 +120,10 @@ $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 \frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right)
 \end{aligned}
 ```
-
-* `Learning rate`   __$\alpha$__  
-
+ 
 * `Derivative term for` __$\omega$__  
 
-$\frac{\partial J(w,b)}{\partial w}$  
+$$\frac{\partial J(w,b)}{\partial w}$$  
 
 
 ### Week 1: Labs
