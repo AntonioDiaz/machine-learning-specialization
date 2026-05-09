@@ -40,11 +40,17 @@ __Learning Objectives__
 * Optimize a regression model using gradient descent
 
 ### Definitions
-* __Machine Learning__ is the science of getting computers to act without being explicitly programmed. It is a subset of artificial intelligence (AI) that focuses on building systems that can learn from data, identify patterns, and make decisions with minimal human intervention. Machine learning algorithms use statistical techniques to enable machines to improve their performance on a specific task over time as they are exposed to more data.
+
+* __Machine Learning__ is the science of getting computers to act without being explicitly programmed. It is a subset of artificial intelligence (AI) that focuses on building systems that can learn from data, identify patterns, and make decisions with minimal human intervention.   
+
+* Machine learning algorithms use statistical techniques to enable machines to improve their performance on a specific task over time as they are exposed to more data.
     
 
 ### Intro Supervised Learning
-* __Supervised Learning__ is a type of machine learning where the algorithm is trained on a __labeled dataset__, which means that each training example is paired with an output label. The goal of supervised learning is to learn a mapping from inputs to outputs, so that the model can make predictions on new, unseen data. Examples of supervised learning tasks include regression (predicting continuous values) and classification (predicting discrete categories).
+
+* __Supervised Learning__ is a type of machine learning where the algorithm is trained on a __labeled dataset__, which means that each training example is paired with an output label.  
+* The goal of supervised learning is to learn a mapping from inputs to outputs, so that the model can make predictions on new, unseen data. Examples of supervised learning tasks include regression (predicting continuous values) and classification (predicting discrete categories).
+  
 * There are two main types of supervised learning tasks:
   * __Regression__: predicting a continuous value (e.g., price of a house)
   * __Classification__: predicting a discrete category (e.g., whether an email is spam or not)
@@ -56,7 +62,10 @@ __Learning Objectives__
 &nbsp;
 
 ### Intro to Unsupervised Learning
-* __Unsupervised Learning__ is a type of machine learning where the algorithm is trained on an __unlabeled dataset__, which means that the training examples do not have output labels. The goal of unsupervised learning is to find hidden __patterns__ or structures in the data. Examples of unsupervised learning tasks include clustering (grouping similar data points together) and dimensionality reduction (reducing the number of features in the data while preserving important information).
+
+* __Unsupervised Learning__ is a type of machine learning where the algorithm is trained on an __unlabeled dataset__, which means that the training examples do not have output labels.  
+* The goal of unsupervised learning is to find hidden __patterns__ or structures in the data. 
+* Examples of unsupervised learning tasks include clustering (grouping similar data points together) and dimensionality reduction (reducing the number of features in the data while preserving important information).
 * There are three main types of unsupervised learning tasks:
   * __Clustering__: grouping data points into clusters of similar examples.
   * __Anomaly detection__: identifying data points that are significantly different from the majority of the data.
@@ -66,16 +75,18 @@ __Learning Objectives__
 &nbsp;
 
 ### Linear regression 
-* `Linear Regression Model`
+
+* `Linear Regression Model` is a simple machine learning algorithm used for regression tasks, which aims to model the relationship between a dependent variable (target) and one or more independent variables (features) by fitting a linear equation to the observed data.
   
-$f_{w,b}(x^{(i)}) = wx^{(i)} + b$
+$$f_{w,b}(x^{(i)}) = wx^{(i)} + b$$
 
 <img width="1990" alt="Image" src="https://github.com/user-attachments/assets/91d229ca-6a96-4e74-8865-fa4b0214c129" />
 &nbsp;
 
 ### Squared Error Cost function 
+* The `squared error cost function` is a commonly used cost function for regression problems, which measures the average squared difference between the predicted values and the actual target values.
  
-$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $
+$$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 
 <img width="2001" alt="Image" src="https://github.com/user-attachments/assets/287900f1-fa39-4080-9725-e5c111ab741e" />
 &nbsp;
