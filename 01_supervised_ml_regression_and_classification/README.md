@@ -225,12 +225,20 @@ $J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + 
 
 ### Regularization to address overfitting
 
-* Regularization adds a penalty term to the cost function that discourages the model from fitting the noise in the training data. This can help improve the generalization of the model and prevent it from overfitting. The most common types of regularization are L1 regularization (Lasso) and L2 regularization (Ridge). L1 regularization adds a penalty term proportional to the absolute value of the weights, while L2 regularization adds a penalty term proportional to the square of the weights. By adjusting the strength of the regularization, we can find a balance between fitting the training data well and generalizing to new data.
+* Regularization adds a penalty term to the cost function that discourages the model from fitting the noise in the training data. 
+* This can help improve the __generalization__ of the model and prevent it from overfitting. 
+* The most common types of regularization are L1 regularization (Lasso) and L2 regularization (Ridge). 
+  * __L1 regularization__ adds a penalty term proportional to the absolute value of the weights
+  * __L2 regularization__ adds a penalty term proportional to the square of the weights. 
+* By adjusting the strength of the regularization, we can find a balance between fitting the training data well and generalizing to new data.
 
 <img width="1876" alt="Image" src="https://github.com/user-attachments/assets/892ba313-e646-4dac-8831-bb90e5c99af1" />
+&nbsp;
 
-* Cost function with regularization for linear regression
+* Cost function with regularization for linear regression  
+
 $J(w,b) = \frac{1}{2m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 + \frac{\lambda}{2m} \sum_{j=1}^{n} w_j^2$
+&nbsp;
 
 * Gradient descent with regularization for linear regression
 ```math
@@ -239,10 +247,14 @@ w_j &= w_j - \alpha \left( \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(
 b &= b - \alpha \left( \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)}) \right)
 \end{aligned}
 ```
+&nbsp;
+
 <img width="1968" alt="Image" src="https://github.com/user-attachments/assets/1376b901-89b6-48a0-89e1-8841f990b3c9" />
 
-* Cost function with regularization for logistic regression
+* Cost function with regularization for logistic regression  
+  
 $J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right] + \frac{\lambda}{2m} \sum_{j=1}^{n} w_j^2$
+&nbsp;
 
 * Gradient descent with regularization for logistic regression
 ```math

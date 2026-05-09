@@ -19,10 +19,10 @@ Contents
   - [Softmax function](#softmax-function)
   - [Week 2: Labs](#week-2-labs)
 - [Week 3: Advice for applying machine learning](#week-3-advice-for-applying-machine-learning)
-  - [Notes](#notes)
+  - [Evaluating a model](#evaluating-a-model)
   - [Week 3: Labs](#week-3-labs)
 - [Week 4: Decision trees](#week-4-decision-trees)
-  - [Notes](#notes-1)
+  - [Notes](#notes)
   - [Week 4: Labs](#week-4-labs)
 
 <hr>
@@ -242,10 +242,12 @@ __Learning Objectives__
 * Learn to include fairness and ethics in your machine learning model development
 * Measure precision and recall to work with skewed (imbalanced) datasets
 
-### Notes
-* Training data set
-* Bias
-* Variance
+### Evaluating a model
+* In order to tell if your model is doing well, specially for applications where you have more than 1 or 2 features, you need to evaluate your model using a test set. 
+* The __test set__ is a separate dataset that is not used during the training of the model, and it allows you to evaluate how well your model generalizes to new, unseen data. 
+* By evaluating your model on a test set, you can get an estimate of its performance and identify any issues such as overfitting or underfitting. 
+* This is an important step in the machine learning process, as it helps you to ensure that your model is not just memorizing the training data but is able to make accurate predictions on new data.
+
 
 ### Week 3: Labs
 * Lab 01: [model evaluation and selection](03_week/C2W3_Lab_01_Model_Evaluation_and_Selection.ipynb)
