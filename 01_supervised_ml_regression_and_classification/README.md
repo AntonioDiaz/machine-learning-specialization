@@ -215,7 +215,9 @@ $J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + 
 <img width="1982" alt="Image" src="https://github.com/user-attachments/assets/86ed10a4-5735-49f1-acc1-1f51c6460af6" />
 
 ### Overfitting and regularization
-* `Overfitting` occurs when a machine learning model learns the training data too well, including the noise and outliers, which can lead to poor performance on new, unseen data. This happens when the model is too complex relative to the amount of training data available. To address overfitting, we can use a technique called `regularization`, which adds a penalty term to the cost function to discourage the model from fitting the noise in the training data. Regularization can help improve the generalization of the model and prevent it from overfitting.
+* `Overfitting` occurs when a machine learning model learns the training data too well, including the noise and outliers, which can lead to poor performance on new, unseen data. 
+* This happens when the model is too complex relative to the amount of training data available.  
+* To address overfitting, we can use a technique called `regularization`, which adds a penalty term to the cost function to discourage the model from fitting the noise in the training data. Regularization can help improve the generalization of the model and prevent it from overfitting.
 
 <img width="1952" alt="Image" src="https://github.com/user-attachments/assets/3897d115-92f2-4b08-9d35-fe9f824ba556" />
 &nbsp;
@@ -237,7 +239,7 @@ $J(w,b) = -\frac{1}{m} \sum_{i=0}^{m-1} \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + 
 
 * Cost function with regularization for linear regression  
 
-$J(w,b) = \frac{1}{2m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 + \frac{\lambda}{2m} \sum_{j=1}^{n} w_j^2$
+$$J(w,b) = \frac{1}{2m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 + \frac{\lambda}{2m} \sum_{j=1}^{n} w_j^2$$
 &nbsp;
 
 * Gradient descent with regularization for linear regression
