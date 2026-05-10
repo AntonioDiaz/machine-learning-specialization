@@ -22,6 +22,8 @@ Contents
   - [Evaluating a model](#evaluating-a-model)
   - [Week 3: Labs](#week-3-labs)
 - [Week 4: Decision trees](#week-4-decision-trees)
+  - [Decision Tree Model](#decision-tree-model)
+  - [Decision tree learning](#decision-tree-learning)
   - [Notes](#notes)
   - [Week 4: Labs](#week-4-labs)
 
@@ -263,9 +265,37 @@ __Learning Objectives__
 * Learn how to use multiple trees, "tree ensembles" such as random forests and boosted trees
 * Learn when to use decision trees or neural networks
 
+### Decision Tree Model
+* A decision tree is a __type of machine learning model__ that is used for classification and regression tasks. 
+* It is a tree-like structure where each internal node represents a decision based on a __feature__, each branch represents the outcome of the decision, and each leaf node represents a class label or a regression value. 
+* The decision tree learns from the __training data__ by recursively splitting the data based on the feature that provides the best separation of the classes or values. 
+* The goal of the decision tree is to create a model that can make accurate predictions on new, unseen data by following the path from the root node to a leaf node based on the features of the input data.
+
+* __Cat example__   
+Having this dataset with 3 features (ear shape, face shape and wiskers length) and 2 classes (cat or not cat), we can build a decision tree to classify new examples of cats based on these features. The decision tree would learn from the training data by finding the best feature to split the data at each node, and it would continue to split the data until it reaches a leaf node that represents a class label (cat or not cat).
+  
+<img width="1558" alt="Image" src="https://github.com/user-attachments/assets/99b99962-2f68-47a2-b3bd-32278e483a54" />
+
+* __Decision tree example__ 
+ 
+<img width="1582" alt="Image" src="https://github.com/user-attachments/assets/b81de9fa-a7fc-4ad7-9e5e-cf4c029483cb" />
+
+### Decision tree learning
+
+* There are 2 decisions to make when building a decision tree.  
+
+* Decision 1: Which feature to use for splitting the data at each node.  
+<img width="1580" alt="Image" src="https://github.com/user-attachments/assets/4dac03ba-41e4-4416-9b2f-a92dfb6279cf" />
+&nbsp;
+
+* Decision 2: When to stop splitting the data and create a leaf node.
+<img width="1572" alt="Image" src="https://github.com/user-attachments/assets/ce012659-3427-4aee-b0af-7b76d3372941" />
+
 ### Notes
 * __Entropy__ as measure of impurity.  
 $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
+&nbsp;
+
 <img width="400" alt="Image" src="https://github.com/user-attachments/assets/8b3677aa-b31e-4bf1-b9c5-c96443269cb0" />  
   
 
