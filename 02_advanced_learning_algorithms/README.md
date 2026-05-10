@@ -24,10 +24,15 @@ Contents
 - [Week 4: Decision trees](#week-4-decision-trees)
   - [Decision Tree Model](#decision-tree-model)
   - [Decision tree learning](#decision-tree-learning)
-  - [Entropy or measure of impurity](#entropy-or-measure-of-impurity)
+    - [Entropy or measure of impurity](#entropy-or-measure-of-impurity)
+    - [Information Gain](#information-gain)
     - [Decision tree learining algorithm](#decision-tree-learining-algorithm)
     - [One Hot Encoding](#one-hot-encoding)
     - [Continue Value features](#continue-value-features)
+  - [Tree Ensemble](#tree-ensemble)
+    - [Sampling with replacement](#sampling-with-replacement)
+    - [Random Forest Algorithm](#random-forest-algorithm)
+    - [XGBoost Algorithm](#xgboost-algorithm)
   - [Week 4: Labs](#week-4-labs)
 
 <hr>
@@ -300,7 +305,7 @@ Having this dataset with 3 features (ear shape, face shape and wiskers length) a
 
 
 
-### Entropy or measure of impurity
+#### Entropy or measure of impurity
 * The decision tree learning algorithm uses a measure of impurity called __entropy__ to determine which feature to use for splitting the data at each node. 
 * The feature that provides the greatest reduction in entropy (or the greatest information gain) is chosen as the feature to split the data.
 * __Entropy__ is a measure of impurity or disorder in a dataset. It is calculated using the formula:  
@@ -309,10 +314,15 @@ $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
 <img width="1574" height="774" alt="Image" src="https://github.com/user-attachments/assets/bd10af10-8023-4634-a446-10dd17389600" />
 &nbsp;
 
-* __Information Gain__ or reduction of entropy, use to choose a feature to split
+#### Information Gain
+* Information gain is a measure of the reduction in entropy that results from splitting a dataset based on a particular feature. 
+* It is calculated as the __difference__ between the entropy of the __parent node__ and the weighted average of the entropies of the __child nodes__.  
+* The feature that provides the highest information gain is chosen as the feature to split the data at each node in the decision tree.  
+* The formula for information gain is:
   
-$\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^\text{left}\right) + w^{\text{right}}H\left(p_1^\text{right}\right)\right)$
+$$\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^\text{left}\right) + w^{\text{right}}H\left(p_1^\text{right}\right)\right)$$
 
+* Cats dataset example:  
 <img width="2610" alt="Image" src="https://github.com/user-attachments/assets/376f662b-1c8c-4d06-b42e-930b7646cb83" />
 
 
@@ -353,22 +363,40 @@ solution when a feature can take more than two possible values. One Hot because 
 
 &nbsp;
 
-* __Tree Ensemble__  
-using branch of decision trees instead only one, the final decision is taken by mayority of each tree.  
+### Tree Ensemble  
+* Decision can be very sensitive to small changes in the training data, which can lead to overfitting.
+  
+* The idea is to use __multiple trees__ to make a prediction, instead of just one tree.
+* The prediction of the ensemble is typically made by aggregating the predictions of the individual trees, such as by taking a majority vote for classification tasks or averaging for regression tasks.
+
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/a2998729-de96-4888-82fc-b4f09a4cef31" />
 &nbsp;
 
 
-* __Sampling with replacement__  
-the idea is to build a new training set, similar from the original.
+#### Sampling with replacement
+* The idea is to create multiple different training datasets by sampling from the original training dataset with replacement.
+* Each example in the training dataset is __randomly selected__ to be included in the sample, and it can be __selected multiple__ times (replacement). This means that some examples may be included in the sample more than once, while others may not be included at all.
+* This technique is often used in ensemble learning methods, such as __random forests__, to create multiple different training datasets for each individual model in the ensemble. By sampling with replacement, we can create diverse training datasets that help to reduce overfitting and improve the generalization of the ensemble model.
+* For example, if we have a training dataset with 100 examples, we can create a sample of 100 examples by randomly selecting examples from the original dataset with replacement. This means that some examples may be selected multiple times, while others may not be selected at all. This process is repeated multiple times to create different training datasets for each model in the ensemble.
+* Sampling with replacement is a powerful technique that allows us to create diverse training datasets and improve the performance of ensemble models, such as random forests, by reducing overfitting and increasing generalization.
+* Example with tokens, of 4 colours:  
+<img width="1334" height="712" alt="Image" src="https://github.com/user-attachments/assets/f370312f-d3b5-4fcc-b5d3-7edb00181535" />
 
 
-* __Random Forest Algorithm__   
-algorithm to build tree ensemble.
-Idea: when choosing a feature to use split, if $n$ features are available, pick a `random` subset of features $(k < n)$ and allow the algorithm to only choose from that subset of features. Usually $k = \sqrt{n}$.
 
+#### Random Forest Algorithm   
+* Random Forest is an ensemble learning method that combines multiple decision trees to improve the accuracy and robustness of predictions. 
+* It works by creating a "forest" of decision trees, where each tree is trained on a __random subset__ of the __training data__ and a random subset of the __features__. 
+* The final prediction is made by aggregating the predictions from all the individual trees, typically through __majority voting__ for classification tasks or averaging for regression tasks. 
+* Random Forest helps to __reduce overfitting__ and increase generalization by introducing randomness into the training process, making it less likely for the model to memorize the training data and more likely to capture the underlying patterns in the data.
+  
+<img width="1024" height="559" alt="Image" src="https://github.com/user-attachments/assets/e9878ee6-7d78-490c-b8ab-a7252d48b21c" />
+&nbsp;
+
+#### XGBoost Algorithm
 * __XGBoost__   (eXtreme Gradient Boosting)
-Boosted trees, where each tree is trained to correct the errors of the previous tree. The final decision is taken by weighted mayority of each tree.
+* Boosting is an ensemble learning method that combines multiple weak learners (e.g., decision trees) to create a strong learner.
+* XGBoost is an optimized implementation of the gradient boosting algorithm that is designed to be efficient and scalable. It uses a combination of decision trees and gradient descent to iteratively improve the model's performance. XGBoost is known for its speed and performance, making it a popular choice for machine learning competitions and real-world applications. It can handle both regression and classification tasks and is particularly effective for large datasets with high dimensionality.
 
 
 ### Week 4: Labs
