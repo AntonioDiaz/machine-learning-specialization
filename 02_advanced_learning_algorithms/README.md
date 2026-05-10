@@ -385,7 +385,7 @@ solution when a feature can take more than two possible values. One Hot because 
 
 
 #### Random Forest Algorithm   
-* Random Forest is an ensemble learning method that combines multiple decision trees to improve the accuracy and robustness of predictions. 
+* Random Forest (also know as Bagged Decision Trees) is an ensemble learning method that combines multiple decision trees to improve the accuracy and robustness of predictions. 
 * It works by creating a "forest" of decision trees, where each tree is trained on a __random subset__ of the __training data__ and a random subset of the __features__. 
 * The final prediction is made by aggregating the predictions from all the individual trees, typically through __majority voting__ for classification tasks or averaging for regression tasks. 
 * Random Forest helps to __reduce overfitting__ and increase generalization by introducing randomness into the training process, making it less likely for the model to memorize the training data and more likely to capture the underlying patterns in the data.
@@ -394,9 +394,19 @@ solution when a feature can take more than two possible values. One Hot because 
 &nbsp;
 
 #### XGBoost Algorithm
+* Boosted Trees Intuition: boosting is an ensemble learning method that combines multiple weak learners (e.g., decision trees) to create a strong learner. The idea of __deliberate practice__ is behind boosting, where the model focuses on learning from the examples that are __misclassified__ by previous models in the ensemble.
+ 
+<img width="1932" height="762" alt="Image" src="https://github.com/user-attachments/assets/910361c5-6baa-448c-a7d1-e333ce26f911" />
+&nbsp;
+
 * __XGBoost__   (eXtreme Gradient Boosting)
-* Boosting is an ensemble learning method that combines multiple weak learners (e.g., decision trees) to create a strong learner.
-* XGBoost is an optimized implementation of the gradient boosting algorithm that is designed to be efficient and scalable. It uses a combination of decision trees and gradient descent to iteratively improve the model's performance. XGBoost is known for its speed and performance, making it a popular choice for machine learning competitions and real-world applications. It can handle both regression and classification tasks and is particularly effective for large datasets with high dimensionality.
+  * XGBoost is an optimized implementation of the gradient boosting algorithm that is designed to be efficient and scalable. 
+  * It uses a combination of decision trees and gradient descent to iteratively improve the model's performance. 
+  * XGBoost is known for its speed and performance, making it a popular choice for machine learning competitions and real-world applications. 
+  * It can handle both regression and classification tasks and is particularly effective for large datasets with high dimensionality.
+  * XGBoost includes features such as __regularization__, __parallel processing__, and handling of missing values, which contribute to its effectiveness and efficiency in training models.
+  * Using XGBoost  
+<img width="1948" height="660" alt="Image" src="https://github.com/user-attachments/assets/5428276a-bbea-4b9f-8731-02cd97fdd25b" />
 
 
 ### Week 4: Labs
