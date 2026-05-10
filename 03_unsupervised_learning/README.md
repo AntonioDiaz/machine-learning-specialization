@@ -41,28 +41,44 @@ __Learning Objectives__
   
 * __Clustering__ grouping data points into clusters of similar examples.
   
-### K-means clustering  
-  
-Algorithm for clustering data points into K clusters. The algorithm iteratively assigns each data point to the closest cluster centroid and then updates the centroids based on the mean of the assigned points.  
+### K-means clustering   
 
-K-means clustering algorithm:  
-  * Randomly initialize K centroids.
-  * Then, repeat the following steps until convergence:
+* K-means is the most popular clustering algorithm.
+* It is an iterative algorithm that tries to partition the dataset into K clusters, where each cluster is represented by its __centroid__ (the mean of the points in the cluster).
+* The algorithm iteratively assigns each data point to the closest cluster __centroid__ and then updates the centroids based on the mean of the assigned points.  
+* K-means clustering algorithm:  
+  * (1) Randomly initialize K centroids.
+  * (2) Then, repeat the following 2 steps until convergence:
     * Step 1: Assigng each point to its closest centroid to form K clusters.
     * Step 2: Recommpute the centroids.  
+&nbsp;
+
+* Step 1: Assigng each point to its closest centroid to form K clusters.
 <img width="2370" alt="Image" src="https://github.com/user-attachments/assets/2891c95d-9e63-42cd-b919-2635ef7b32c2" />
 &nbsp;
 
+* Step 2: Recomputing the centroids.
 <img width="2320" alt="Image" src="https://github.com/user-attachments/assets/8b21adf1-1603-4cbd-98da-03946260caae" />
 &nbsp;
 
-* __K_means algorithm__
+* __K-means algorithm__ 
+  * Edge case: if a centroid has no points assigned to it, we can choose a random data point as the new centroid or we can remove that centroid from the algorithm.
+  * Convergence: the K-means algorithm is guaranteed to converge to a local minimum, but it may not converge to the global minimum. Therefore, it is common to run the algorithm multiple times with different random initializations and choose the solution with the lowest cost function value.
 <img width="2338" alt="Image" src="https://github.com/user-attachments/assets/67f4f7c0-967e-45e2-b67f-bb5d96b8d8b5" />
 &nbsp;
 
 * __K-means optimization objective__
-  * The K-means algorithm is trying to minimize the following cost function, also called `distortion`:
+  * The K-means algorithm is trying to minimize the following cost function, also called `distortion`:     
 $J(c^{(1)}, \ldots, c^{(m)}, \mu_1, \ldots, \mu_K) = \frac{1}{m} \sum_{i=1}^m ||x^{(i)} - \mu_{c^{(i)}}||^2$
+  
+  * Where:
+    * $m$ is the number of training examples.
+    * $x^{(i)}$ is the i-th training example.
+    * $c^{(i)}$ is the index of the cluster to which the i-th training example is assigned.
+    * $\mu_k$ is the centroid of the k-th cluster.
+    * $||x^{(i)} - \mu_{c^{(i)}}||^2$ is the squared distance between the i-th training example and the centroid of the cluster to which it is assigned.  
+
+
 <img width="2316" alt="Image" src="https://github.com/user-attachments/assets/c48efe10-2eea-4cb7-bde7-8ad645a65462" />
 &nbsp;
 
