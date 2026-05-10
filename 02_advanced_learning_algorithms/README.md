@@ -24,6 +24,7 @@ Contents
 - [Week 4: Decision trees](#week-4-decision-trees)
   - [Decision Tree Model](#decision-tree-model)
   - [Decision tree learning](#decision-tree-learning)
+  - [Entropy or measure of impurity](#entropy-or-measure-of-impurity)
   - [Notes](#notes)
   - [Week 4: Labs](#week-4-labs)
 
@@ -286,18 +287,28 @@ Having this dataset with 3 features (ear shape, face shape and wiskers length) a
 * There are 2 decisions to make when building a decision tree.  
 
 * Decision 1: Which feature to use for splitting the data at each node.  
-<img width="1580" alt="Image" src="https://github.com/user-attachments/assets/4dac03ba-41e4-4416-9b2f-a92dfb6279cf" />
+<img width="1528" alt="Image" src="https://github.com/user-attachments/assets/cd6024b1-7bf1-4e0e-ab2e-1be53332ff1c" />
 &nbsp;
 
-* Decision 2: When to stop splitting the data and create a leaf node.
-<img width="1572" alt="Image" src="https://github.com/user-attachments/assets/ce012659-3427-4aee-b0af-7b76d3372941" />
+* Decision 2: When to stop splitting the data and create a leaf node, 4 criteria to stop splitting the data:
+  1 - When all examples in the node belong to the __same class__.
+  2 - When spliting a node will result in the tree exceeding a __maximum depth__ (e.g., more than 10 levels).
+  3 - When the __improvement in the impurity__ are below a threshold (e.g., less than 0.01).
+  4 - When the __number of examples__ in the node are below a threshold (e.g., less than 5 examples).
 
-### Notes
-* __Entropy__ as measure of impurity.  
+
+
+### Entropy or measure of impurity
+* The decision tree learning algorithm uses a measure of impurity called __entropy__ to determine which feature to use for splitting the data at each node. 
+* The feature that provides the greatest reduction in entropy (or the greatest information gain) is chosen as the feature to split the data.
+* __Entropy__ is a measure of impurity or disorder in a dataset. It is calculated using the formula:  
 $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
 &nbsp;
+<img width="1574" height="774" alt="Image" src="https://github.com/user-attachments/assets/bd10af10-8023-4634-a446-10dd17389600" />
 
-<img width="400" alt="Image" src="https://github.com/user-attachments/assets/8b3677aa-b31e-4bf1-b9c5-c96443269cb0" />  
+
+### Notes
+
   
 
 
