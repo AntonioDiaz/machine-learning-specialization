@@ -408,7 +408,10 @@ solution when a feature can take more than two possible values. One Hot because 
   * XGBoost includes features such as __regularization__, __parallel processing__, and handling of missing values, which contribute to its effectiveness and efficiency in training models.
   * Using XGBoost  
 <img width="1948" height="660" alt="Image" src="https://github.com/user-attachments/assets/5428276a-bbea-4b9f-8731-02cd97fdd25b" />
+&nbsp;
 
+<img width="2752" height="1536" alt="Image" src="https://github.com/user-attachments/assets/ca6b45b6-ca9e-461b-9715-70492e33e324" />
+&nbsp;
 
 ### When to use decision trees or neural networks
 * Decision Trees and Tree ensembles:
