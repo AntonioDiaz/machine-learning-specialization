@@ -111,7 +111,7 @@ $$J(w,b) = \frac{1}{2m} \sum_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})^2 $$
 \text{\}}
 ```
 
-Where the partial derivatives of the cost function with respect to $w$ and $b$ are given by:
+* Where the partial derivatives of the cost function with respect to $w$ and $b$ are given by:
 ```math
 \begin{aligned}
 \frac{\partial J(w,b)}{\partial w}  &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right) x^{(i)} \\
@@ -224,6 +224,7 @@ $$f_{w,b}(x) = \sigma(w^T x + b)$$
 * The position and shape of the decision boundary can be influenced by the weights and bias of the logistic regression model, as well as by the features used in the model.
 
 <img width="1974" alt="Image" src="https://github.com/user-attachments/assets/db9a0e4d-106c-43d0-9664-9d1ef5b83327" />
+&nbsp;
 
 * Non-linear decision boundary
   * By adding polynomial features to the logistic regression model, we can create a non-linear decision boundary that can capture more complex relationships between the features and the target variable. 
