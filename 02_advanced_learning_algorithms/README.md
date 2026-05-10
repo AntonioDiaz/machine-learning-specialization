@@ -25,7 +25,8 @@ Contents
   - [Decision Tree Model](#decision-tree-model)
   - [Decision tree learning](#decision-tree-learning)
   - [Entropy or measure of impurity](#entropy-or-measure-of-impurity)
-  - [Notes](#notes)
+    - [Decision tree learining algorithm](#decision-tree-learining-algorithm)
+    - [One Hot Encoding](#one-hot-encoding)
   - [Week 4: Labs](#week-4-labs)
 
 <hr>
@@ -305,26 +306,39 @@ Having this dataset with 3 features (ear shape, face shape and wiskers length) a
 $H(p_1) = -p_1 \text{log}_2(p_1) - (1- p_1) \text{log}_2(1- p_1)$
 &nbsp;
 <img width="1574" height="774" alt="Image" src="https://github.com/user-attachments/assets/bd10af10-8023-4634-a446-10dd17389600" />
-
-
-### Notes
-
-  
-
-
 &nbsp;
+
 * __Information Gain__ or reduction of entropy, use to choose a feature to split
   
 $\text{Information Gain} = H(p_1^\text{node})- \left(w^{\text{left}}H\left(p_1^\text{left}\right) + w^{\text{right}}H\left(p_1^\text{right}\right)\right)$
 
 <img width="2610" alt="Image" src="https://github.com/user-attachments/assets/376f662b-1c8c-4d06-b42e-930b7646cb83" />
 
+
+#### Decision tree learining algorithm
+1. Start with all examples at the root node
+2. Calculate information gain for all possible features, and pick the one with
+the highest information gain
+3. Split dataset according to selected feature, and create left and right
+branches of the tree
+4. Keep repeating splitting process until stopping criteria is met:
+   1. When a node is 100% one class
+   2. When splitting a node will result in the tree exceeding a maximum
+      depth
+   3. When information gain from additional splits is less than threshold
+   4. When the number of examples in a node is below a threshold
+
+
+* Recursive spliting process to build the decision tree:  
+<img width="1300" alt="Image" src="https://github.com/user-attachments/assets/0612767d-ec25-49f1-9df2-e6cf876e1799" />
 &nbsp;
-* __One Hot Encoding__  
+
+#### One Hot Encoding  
 solution when a feature can take more than two possible values. One Hot because only one feature is selected.  
 
+<img width="1578" height="402" alt="Image" src="https://github.com/user-attachments/assets/35489ceb-ffae-4a54-aa32-2c8f44dc9efd" />
+&nbsp;
 <img width="2500" alt="Image" src="https://github.com/user-attachments/assets/1a703253-6786-46a0-9319-d32c2651d583" />
-
 
 &nbsp;
   
