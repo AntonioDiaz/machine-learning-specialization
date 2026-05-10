@@ -291,10 +291,10 @@ Having this dataset with 3 features (ear shape, face shape and wiskers length) a
 &nbsp;
 
 * Decision 2: When to stop splitting the data and create a leaf node, 4 criteria to stop splitting the data:
-  1 - When all examples in the node belong to the __same class__.
-  2 - When spliting a node will result in the tree exceeding a __maximum depth__ (e.g., more than 10 levels).
-  3 - When the __improvement in the impurity__ are below a threshold (e.g., less than 0.01).
-  4 - When the __number of examples__ in the node are below a threshold (e.g., less than 5 examples).
+  * When all examples in the node belong to the __same class__.
+  * When spliting a node will result in the tree exceeding a __maximum depth__ (e.g., more than 10 levels).
+  * When the __improvement in the impurity__ are below a threshold (e.g., less than 0.01).
+  * When the __number of examples__ in the node are below a threshold (e.g., less than 5 examples).
 
 
 
