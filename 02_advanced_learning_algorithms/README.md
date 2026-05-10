@@ -27,6 +27,7 @@ Contents
   - [Entropy or measure of impurity](#entropy-or-measure-of-impurity)
     - [Decision tree learining algorithm](#decision-tree-learining-algorithm)
     - [One Hot Encoding](#one-hot-encoding)
+    - [Continue Value features](#continue-value-features)
   - [Week 4: Labs](#week-4-labs)
 
 <hr>
@@ -342,7 +343,12 @@ solution when a feature can take more than two possible values. One Hot because 
 
 &nbsp;
   
-* __Continue Value features__
+#### Continue Value features
+* When a feature can take on a continuous range of values, we can use a threshold to split the data. 
+* For example, if we have a feature "weight" that can take on any value, we can choose a threshold (e.g., weight <= 9 lbs) to split the data into two branches.
+* The decision tree learning algorithm will evaluate different thresholds for the continuous feature and choose the one that provides the best information gain for splitting the data. 
+* This allows the decision tree to handle both categorical and continuous features effectively.  
+  
 <img width="1244" height="547" alt="Image" src="https://github.com/user-attachments/assets/eda27b66-63b2-44ce-97bf-ac11e5ab53f2" />
 
 &nbsp;
