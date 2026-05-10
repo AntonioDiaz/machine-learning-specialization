@@ -275,6 +275,7 @@ __Learning Objectives__
 Having this dataset with 3 features (ear shape, face shape and wiskers length) and 2 classes (cat or not cat), we can build a decision tree to classify new examples of cats based on these features. The decision tree would learn from the training data by finding the best feature to split the data at each node, and it would continue to split the data until it reaches a leaf node that represents a class label (cat or not cat).
   
 <img width="1558" alt="Image" src="https://github.com/user-attachments/assets/99b99962-2f68-47a2-b3bd-32278e483a54" />
+&nbsp;
 
 * __Decision tree example__ 
  
