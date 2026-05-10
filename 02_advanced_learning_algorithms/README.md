@@ -33,6 +33,7 @@ Contents
     - [Sampling with replacement](#sampling-with-replacement)
     - [Random Forest Algorithm](#random-forest-algorithm)
     - [XGBoost Algorithm](#xgboost-algorithm)
+  - [When to use decision trees or neural networks](#when-to-use-decision-trees-or-neural-networks)
   - [Week 4: Labs](#week-4-labs)
 
 <hr>
@@ -408,6 +409,22 @@ solution when a feature can take more than two possible values. One Hot because 
   * Using XGBoost  
 <img width="1948" height="660" alt="Image" src="https://github.com/user-attachments/assets/5428276a-bbea-4b9f-8731-02cd97fdd25b" />
 
+
+### When to use decision trees or neural networks
+* Decision Trees and Tree ensembles:
+  * Works well with structured data (tabular data) where the features have clear relationships and decision boundaries.
+  * Not recomended for unstructured data such as images, audio, or text, where neural networks tend to perform better.
+  * Use when you need interpretable models and have structured data with clear decision boundaries.
+* Neural Networks:
+  * Works well with both structured and unstructured data such as images, audio, and text, where they can learn complex patterns and representations.
+  * May be slower to train and less interpretable than decision trees, but they can achieve higher accuracy on complex tasks with unstructured data. 
+  * Works well with transfer learning, where a pre-trained neural network can be fine-tuned on a new task with limited data.
+  * When building a system of multiple models working together, it might be easier to string together multiple neural networks.
+
+* In summary, the choice between decision trees and neural networks depends on the type of data you have, the complexity of the relationships in the data, and whether interpretability is a requirement for your model. Decision trees are often preferred for structured data with clear decision boundaries, while neural networks are more suitable for unstructured data and complex patterns.
+
+<img width="2752" height="1536" alt="Image" src="https://github.com/user-attachments/assets/8adb8bf1-6523-4908-b63f-71864c3b969d" />
+&nbsp;
 
 ### Week 4: Labs
 * Lab 01: [Decision Trees](04_week/C2_W4_Lab_01_Decision_Trees.ipynb)
