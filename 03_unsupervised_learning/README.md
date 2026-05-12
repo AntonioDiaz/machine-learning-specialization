@@ -43,6 +43,8 @@ __Learning Objectives__
   
 ### K-means clustering   
 
+<img width="2752" alt="Image" src="https://github.com/user-attachments/assets/b8ec847c-7e1f-4a7b-bdd1-baa725015e27" />
+
 * K-means is the most popular clustering algorithm.
 * It is an iterative algorithm that tries to partition the dataset into K clusters, where each cluster is represented by its __centroid__ (the mean of the points in the cluster).
 * The algorithm iteratively assigns each data point to the closest cluster __centroid__ and then updates the centroids based on the mean of the assigned points.  
