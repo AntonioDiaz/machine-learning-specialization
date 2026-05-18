@@ -115,7 +115,7 @@ A common approach to anomaly detection is to estimate the probability density fu
 &nbsp;
 
 * __Developing and evaluating an anomaly detection system__
-  * Split your data into a training set, a cross-validation set, and a test set.
+  * Split your data into 3 sets: __training set__, __cross-validation set__, and __test set__.
   * Use the training set to estimate the parameters of the Gaussian distribution.
   * Use the cross-validation set to select the threshold $\epsilon$ that gives you the desired false positive rate.
   * Use the test set to evaluate the performance of your anomaly detection system.
