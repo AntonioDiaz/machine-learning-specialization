@@ -207,7 +207,8 @@ Why is collaborative filtering called "collaborative"?
   * Because it learns both the parameters w and b for the users, and the features x for the items (e.g., movies) simultaneously. 
   * The cost function for learning both parameters w and b, and features x can be defined as follows:  
 
-$$J(w,b,x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2 + \frac{\lambda}{2} \sum_{i=1}^m (||w^{(i)}||^2 + b^{(i)2}) + \frac{\lambda}{2} \sum_{j=1}^n ||x^{(j)}||^2$$
+$$J(w,b,x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2 + \frac{\lambda}{2} \sum_{i=1}^m (||w^{(i)}||^2 + b^{(i)2}) + \frac{\lambda}{2} \sum_{j=1}^n ||x^{(j)}||^2$$  
+
 Where:  
 * $m$ is the number of users.
 * $n$ is the number of items (e.g., movies).
@@ -222,9 +223,9 @@ Where:
 #### Gradient descent for collaborative filtering  
 * To learn the parameters w and b for the users, and the features x for the items (e.g., movies) simultaneously, we can use gradient descent to minimize the cost function J(w,b,x). 
 * The update rules for the parameters w and b, and the features x can be derived from the cost function as follows:  
-$$w^{(i)} := w^{(i)} - \alpha \frac{\partial J(w,b,x)}{\partial w^{(i)}}$$
-$$b^{(i)} := b^{(i)} - \alpha \frac{\partial J(w,b,x)}{\partial b^{(i)}}$$
-$$x^{(j)} := x^{(j)} - \alpha \frac{\partial J(w,b,x)}{\partial x^{(j)}}$$
+$$w^{(i)} := w^{(i)} - \alpha \frac{\partial J(w,b,x)}{\partial w^{(i)}}$$  
+$$b^{(i)} := b^{(i)} - \alpha \frac{\partial J(w,b,x)}{\partial b^{(i)}}$$  
+$$x^{(j)} := x^{(j)} - \alpha \frac{\partial J(w,b,x)}{\partial x^{(j)}}$$  
 
 * Where: 
   * $\alpha$ is the learning rate.
