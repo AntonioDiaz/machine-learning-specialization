@@ -194,12 +194,24 @@ $$J(x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2
 <img width="2392" alt="Image" src="https://github.com/user-attachments/assets/12d2c7f0-0535-4464-90c4-7404a0725a9e" />
 &nbsp;
 
-* Function to learn both parameters w and b (users on the example), and features x (movies) for collaborative filtering  
+* Function to learn both parameters w and b (users on the example), and features x (movies) for __collaborative filtering__.  
+
+Why is collaborative filtering called "collaborative"? Because it learns both the parameters w and b for the users, and the features x for the items (e.g., movies) simultaneously. The cost function for learning both parameters w and b, and features x can be defined as follows:  
+
+$$J(w,b,x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2 + \frac{\lambda}{2} \sum_{i=1}^m (||w^{(i)}||^2 + b^{(i)2}) + \frac{\lambda}{2} \sum_{j=1}^n ||x^{(j)}||^2$$
+Where:
+* $m$ is the number of users.
+* $n$ is the number of items (e.g., movies).
+* $f_{w,b}(x^{(i)})$ is the predicted rating for user i and item j.
+* $y^{(i,j)}$ is the actual rating given by user i for movie j.
+* $\lambda$ is a regularization parameter to prevent overfitting.
+* The first term in the cost function measures the difference between the predicted ratings and the actual ratings, while the second and third terms add regularization penalties to prevent overfitting by encouraging smaller parameter values for both the users and the items.  
 
 <img width="2006" alt="Image" src="https://github.com/user-attachments/assets/20ed170c-3ce2-4054-affa-0c68fc708425" />
 &nbsp;
 
 * __Gradient descent__ for collaborative filtering  
+  
 <img width="1458" alt="Image" src="https://github.com/user-attachments/assets/127e838e-3688-44f7-94ee-7c3b93ace7d3" />
 &nbsp;
 
@@ -208,13 +220,14 @@ $$J(x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2
 
 * __Cost function for binary labels__   
 
-  $$J(w,b) = -\frac{1}{m} \sum_{i=1}^m \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$$  
+$$J(w,b) = -\frac{1}{m} \sum_{i=1}^m \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$$
 
   * Where $f_{w,b}(x^{(i)})$ is the predicted probability that user $i$ will like item $j$, and $y^{(i)}$ is the actual label (1 if the user liked the item, 0 otherwise). This cost function is known as the __binary cross-entropy loss__.  
   
-  * $f_{w,b}(x^{(i)})$ can be calculated using the sigmoid function, which maps the output of the linear model to a value between 0 and 1, representing the predicted probability of the user liking the item.
-  $$f_{w,b}(x^{(i)}) = \sigma(w^T x^{(i)} + b) = \frac{1}{1 + e^{-(w^T x^{(i)} + b)}}$$  
+  * $f_{w,b}(x^{(i)})$ can be calculated using the sigmoid function, which maps the output of the linear model to a value between 0 and 1, representing the predicted probability of the user liking the item.  
 
+  $$f_{w,b}(x^{(i)}) = \sigma(w^T x^{(i)} + b) = \frac{1}{1 + e^{-(w^T x^{(i)} + b)}}$$  
+&nbsp;
 <img width="1576" alt="Image" src="https://github.com/user-attachments/assets/a6ebcd20-9cb5-480a-987a-00ceef2fb92c" />
 
 ### Mean normalization for collaborative filtering
