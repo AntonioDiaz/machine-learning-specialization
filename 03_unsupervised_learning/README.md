@@ -10,6 +10,8 @@ Contents
   - [Labs](#labs)
 - [Week 2: Recommender systems](#week-2-recommender-systems)
   - [Colaborative filtering recommender systems](#colaborative-filtering-recommender-systems)
+    - [Collaborative filtering](#collaborative-filtering)
+    - [Cost function for collaborative filtering](#cost-function-for-collaborative-filtering)
     - [Gradient descent for collaborative filtering](#gradient-descent-for-collaborative-filtering)
     - [Binary labels for collaborative filtering](#binary-labels-for-collaborative-filtering)
   - [Mean normalization for collaborative filtering](#mean-normalization-for-collaborative-filtering)
@@ -153,14 +155,15 @@ __Learning Objectives__
 * Understand ethical considerations in building recommender systems.
 
 ### Colaborative filtering recommender systems
-* __Collaborative filtering__  
+#### Collaborative filtering
   * Is a method of making recommendations based on the preferences of similar users.  
  
   * The idea is to find users who have similar preferences and then recommend items that those similar users have liked.  
+
 <img width="1970" alt="Image" src="https://github.com/user-attachments/assets/edbd5367-6987-4782-ac1d-75004af73ce8" />
 &nbsp;
 
-* __Cost function for collaborative filtering__  
+#### Cost function for collaborative filtering
 
 To learn parameters w and b for collaborative filtering, we can use the following cost function.
 
@@ -168,13 +171,13 @@ To learn parameters w and b for collaborative filtering, we can use the followin
 &nbsp;
 
 * Function to learn features x for collaborative filtering, where x represents the features of the items (e.g., movies) that users interact with. In collaborative filtering, we want to learn both the parameters w and b for the users, as well as the features x for the items. 
-  * The cost function for learning features x can be defined as follows, where: 
-    * $m$ is the number of users. 
-    * $n$ is the number of items (e.g., movies). 
-    * $f_{w,b}(x^{(i)})$ is the predicted rating for user i and item j 
-    * $y^{(i,j)}$ is the actual rating given by user i for movie j.
-    * $\lambda$ is a regularization parameter to prevent overfitting. 
-    * The first term in the cost function measures the difference between the predicted ratings and the actual ratings, while the second term adds a regularization penalty to prevent overfitting by encouraging smaller feature values.  
+* The cost function for learning features x can be defined as follows, where: 
+  * $m$ is the number of users. 
+  * $n$ is the number of items (e.g., movies). 
+  * $f_{w,b}(x^{(i)})$ is the predicted rating for user i and item j 
+  * $y^{(i,j)}$ is the actual rating given by user i for movie j.
+  * $\lambda$ is a regularization parameter to prevent overfitting. 
+  * The first term in the cost function measures the difference between the predicted ratings and the actual ratings, while the second term adds a regularization penalty to prevent overfitting by encouraging smaller feature values.  
 
 $$J(x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2 + \frac{\lambda}{2} \sum_{j=1}^n ||x^{(j)}||^2$$
 
@@ -182,8 +185,11 @@ $$J(x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2
 &nbsp;
 
   
-* If we do not have features for the items (e.g., movies), we can learn them from the data using a similar cost function. In this case, we would learn the features x for the items, while keeping the parameters w and b fixed. The cost function for learning features x can be defined as follows: 
+* If we do not have features for the items (e.g., movies), we can learn them from the data using a similar cost function. 
+* In this case, we would learn the features x for the items, while keeping the parameters w and b fixed. The cost function for learning features x can be defined as follows:  
+  
 $$J(x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2 + \frac{\lambda}{2} \sum_{j=1}^n ||x^{(j)}||^2$$
+
 * Where:
   * $m$ is the number of users. 
   * $n$ is the number of items (e.g., movies). 
@@ -191,17 +197,18 @@ $$J(x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2
   * $y^{(i,j)}$ is the actual rating given by user i for movie j.
   * $\lambda$ is a regularization parameter to prevent overfitting. 
   * The first term in the cost function measures the difference between the predicted ratings and the actual ratings, while the second term adds a regularization penalty to prevent overfitting by encouraging smaller feature values. 
-  
 
 <img width="2392" alt="Image" src="https://github.com/user-attachments/assets/12d2c7f0-0535-4464-90c4-7404a0725a9e" />
 &nbsp;
 
 * Function to learn both parameters w and b (users on the example), and features x (movies) for __collaborative filtering__.  
 
-Why is collaborative filtering called "collaborative"? Because it learns both the parameters w and b for the users, and the features x for the items (e.g., movies) simultaneously. The cost function for learning both parameters w and b, and features x can be defined as follows:  
+Why is collaborative filtering called "collaborative"? 
+  * Because it learns both the parameters w and b for the users, and the features x for the items (e.g., movies) simultaneously. 
+  * The cost function for learning both parameters w and b, and features x can be defined as follows:  
 
 $$J(w,b,x) = \frac{1}{2m} \sum_{i=1}^m \sum_{j=1}^n (f_{w,b}(x^{(i)}) - y^{(i,j)})^2 + \frac{\lambda}{2} \sum_{i=1}^m (||w^{(i)}||^2 + b^{(i)2}) + \frac{\lambda}{2} \sum_{j=1}^n ||x^{(j)}||^2$$
-Where:
+Where:  
 * $m$ is the number of users.
 * $n$ is the number of items (e.g., movies).
 * $f_{w,b}(x^{(i)})$ is the predicted rating for user i and item j.
@@ -213,7 +220,17 @@ Where:
 &nbsp;
 
 #### Gradient descent for collaborative filtering  
-  
+* To learn the parameters w and b for the users, and the features x for the items (e.g., movies) simultaneously, we can use gradient descent to minimize the cost function J(w,b,x). 
+* The update rules for the parameters w and b, and the features x can be derived from the cost function as follows:  
+$$w^{(i)} := w^{(i)} - \alpha \frac{\partial J(w,b,x)}{\partial w^{(i)}}$$
+$$b^{(i)} := b^{(i)} - \alpha \frac{\partial J(w,b,x)}{\partial b^{(i)}}$$
+$$x^{(j)} := x^{(j)} - \alpha \frac{\partial J(w,b,x)}{\partial x^{(j)}}$$
+
+* Where: 
+  * $\alpha$ is the learning rate.
+  * The gradients can be computed using the cost function J(w,b,x) and the predicted ratings $f_{w,b}(x^{(i)})$. 
+  * The update rules will iteratively adjust the parameters w and b for the users, and the features x for the items until convergence, where the cost function J(w,b,x) is minimized.
+
 <img width="1458" alt="Image" src="https://github.com/user-attachments/assets/127e838e-3688-44f7-94ee-7c3b93ace7d3" />
 &nbsp;
 
@@ -233,9 +250,11 @@ $$f_{w,b}(x^{(i)}) = \sigma(w^T x^{(i)} + b) = \frac{1}{1 + e^{-(w^T x^{(i)} + b
 <img width="1576" alt="Image" src="https://github.com/user-attachments/assets/a6ebcd20-9cb5-480a-987a-00ceef2fb92c" />
 
 ### Mean normalization for collaborative filtering
-* __Mean normalization__  
-To improve the performance of collaborative filtering, we can apply mean normalization to the ratings. This involves subtracting the mean rating for each item from the ratings before training the model. This helps to account for differences in user preferences and can lead to better recommendations.  
+__Mean normalization__  
+* To improve the performance of collaborative filtering, we can apply mean normalization to the ratings. This involves subtracting the mean rating for each item from the ratings before training the model. This helps to account for differences in user preferences and can lead to better recommendations.  
+
 * Normalization by rows (users) or by columns (items), when new customer is added uses normalization by rows (example below) when added new movie use normalization by columns.  
+  
 <img width="1976" alt="Image" src="https://github.com/user-attachments/assets/419a6f25-ded4-4305-a782-e76ae12b1b09" />
 &nbsp;
 
