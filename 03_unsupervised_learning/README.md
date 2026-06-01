@@ -223,6 +223,7 @@ Where:
 #### Gradient descent for collaborative filtering  
 * To learn the parameters w and b for the users, and the features x for the items (e.g., movies) simultaneously, we can use gradient descent to minimize the cost function J(w,b,x). 
 * The update rules for the parameters w and b, and the features x can be derived from the cost function as follows:  
+  
 $$w^{(i)} := w^{(i)} - \alpha \frac{\partial J(w,b,x)}{\partial w^{(i)}}$$  
 $$b^{(i)} := b^{(i)} - \alpha \frac{\partial J(w,b,x)}{\partial b^{(i)}}$$  
 $$x^{(j)} := x^{(j)} - \alpha \frac{\partial J(w,b,x)}{\partial x^{(j)}}$$  
@@ -236,10 +237,11 @@ $$x^{(j)} := x^{(j)} - \alpha \frac{\partial J(w,b,x)}{\partial x^{(j)}}$$
 &nbsp;
 
 #### Binary labels for collaborative filtering
-* __Binary labels__: favs, likes and clicks   
-  * Previously, we have been working with ratings as labels, which are continuous values. However, in many cases, we only have binary labels, such as whether a user liked an item or not. In this case, we can use a different cost function that is more appropriate for binary labels.
+* __Binary labels__ are can be used in collaborative filtering when we only have information about whether a user liked an item or not, rather than the actual rating, e.g., 1 for liked and 0 for not liked.
+* Previously, we have been working with ratings as labels, which are continuous values. However, in many cases, we only have binary labels, such as whether a user liked an item or not. In this case, we can use a different cost function that is more appropriate for binary labels.
 
-* __Cost function for binary labels__   
+* Cost function for binary labels    
+  
 $$J(w,b) = -\frac{1}{m} \sum_{i=1}^m \left[ y^{(i)} \log(f_{w,b}(x^{(i)})) + (1 - y^{(i)}) \log(1 - f_{w,b}(x^{(i)})) \right]$$
 
   * Where $f_{w,b}(x^{(i)})$ is the predicted probability that user $i$ will like item $j$, and $y^{(i)}$ is the actual label (1 if the user liked the item, 0 otherwise). 
@@ -251,8 +253,7 @@ $$f_{w,b}(x^{(i)}) = \sigma(w^T x^{(i)} + b) = \frac{1}{1 + e^{-(w^T x^{(i)} + b
 <img width="1576" alt="Image" src="https://github.com/user-attachments/assets/a6ebcd20-9cb5-480a-987a-00ceef2fb92c" />
 
 ### Mean normalization for collaborative filtering
-__Mean normalization__  
-* To improve the performance of collaborative filtering, we can apply mean normalization to the ratings. This involves subtracting the mean rating for each item from the ratings before training the model. This helps to account for differences in user preferences and can lead to better recommendations.  
+* To improve the performance of collaborative filtering, we can apply __mean normalization__ to the ratings. This involves subtracting the mean rating for each item from the ratings before training the model. This helps to account for differences in user preferences and can lead to better recommendations.  
 
 * Normalization by rows (users) or by columns (items), when new customer is added uses normalization by rows (example below) when added new movie use normalization by columns.  
   
@@ -260,18 +261,37 @@ __Mean normalization__
 &nbsp;
 
 ### TensorFlow implementation of collaborative filtering
-* In TensorFlow, we can implement collaborative filtering using the Keras API. We can define a model that takes the user and item features as input and outputs the predicted rating. We can then compile the model with the appropriate loss function (e.g., binary cross-entropy for binary labels) and optimizer (e.g., Adam), and train the model on the training data. After training, we can use the model to make predictions for new user-item pairs and generate recommendations based on those predictions.
+* In TensorFlow, we can implement collaborative filtering using the __Keras__ API. 
+* We can define a model that takes the user and item features as input and outputs the predicted rating. 
+* We can then compile the model with the appropriate loss function (e.g., binary cross-entropy for binary labels) and optimizer (e.g., Adam), and train the model on the training data. 
+* After training, we can use the model to make predictions for new user-item pairs and generate recommendations based on those predictions.
 
 * Gradient decent reminder from previous weeks:  
+
 <img width="1982" alt="Image" src="https://github.com/user-attachments/assets/805af192-f9bd-4262-b296-ee1c983ae229" />
 &nbsp;
 
 * __Auto Diff__ in TensorFlow: automatically compute derivative for gradient descent.  
 <img width="1986" alt="Image" src="https://github.com/user-attachments/assets/2623b0a5-a71e-466d-8f48-1c98a9183efc" />
+&nbsp;
+
+* Finding related items  
+<img width="1546" alt="Image" src="https://github.com/user-attachments/assets/9a07d7ec-927a-4871-a91f-c251843a7476" />
+&nbsp;
+
+* __Limitation of collaborative filtering__
+  * __Cold start problem__: when a new user or item is added to the system, there is no historical data to make recommendations.
+  * __User side information__: collaborative filtering does not take into account the features of the users, such as their demographics or preferences, which can be useful for making recommendations.
+
 
 ### Content-based filtering  
-* __Collaborative filtering:__ makes recommendations based on the preferences of similar users.
-* __Content-based filtering:__ makes recommendations based on the features of the items themselves.  
+
+* Finding similar items based on the features of the items themselves, rather than the preferences of similar users.  
+  
+* Colaborative filtering vs content-based filtering:  
+  * __Collaborative filtering:__ makes recommendations based on the preferences of similar users.
+  * __Content-based filtering:__ makes recommendations based on the features of the items themselves.  
+  
 <img width="1942" alt="Image" src="https://github.com/user-attachments/assets/4a7e517e-0437-4e13-94e6-bea8754c841d" />  
 &nbsp;
 
