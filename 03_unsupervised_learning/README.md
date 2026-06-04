@@ -154,6 +154,8 @@ __Learning Objectives__
 * Implement deep learning __content based filtering__ using a neural network in TensorFlow.
 * Understand ethical considerations in building recommender systems.
 
+<img width="2752" alt="Image" src="https://github.com/user-attachments/assets/760dd57b-1830-4aa6-974e-5280429c267f" />
+
 ### Colaborative filtering recommender systems
 #### Collaborative filtering
   * Is a method of making recommendations based on the preferences of similar users.  
