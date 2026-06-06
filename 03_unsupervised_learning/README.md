@@ -11,11 +11,11 @@ Contents
 - [Week 2: Recommender systems](#week-2-recommender-systems)
   - [Colaborative filtering recommender systems](#colaborative-filtering-recommender-systems)
     - [Collaborative filtering](#collaborative-filtering)
-    - [Cost function for collaborative filtering](#cost-function-for-collaborative-filtering)
-    - [Gradient descent for collaborative filtering](#gradient-descent-for-collaborative-filtering)
-    - [Binary labels for collaborative filtering](#binary-labels-for-collaborative-filtering)
-  - [Mean normalization for collaborative filtering](#mean-normalization-for-collaborative-filtering)
-  - [TensorFlow implementation of collaborative filtering](#tensorflow-implementation-of-collaborative-filtering)
+    - [Cost function for CF](#cost-function-for-cf)
+    - [Gradient descent for CF](#gradient-descent-for-cf)
+    - [Binary labels for CF](#binary-labels-for-cf)
+    - [Mean normalization for CF](#mean-normalization-for-cf)
+    - [TensorFlow implementation of CF](#tensorflow-implementation-of-cf)
   - [Content-based filtering](#content-based-filtering)
   - [Labs](#labs-1)
 - [Week 3 Reinforcement Learning](#week-3-reinforcement-learning)
@@ -157,6 +157,7 @@ __Learning Objectives__
 <img width="2752" alt="Image" src="https://github.com/user-attachments/assets/760dd57b-1830-4aa6-974e-5280429c267f" />
 
 ### Colaborative filtering recommender systems
+
 #### Collaborative filtering
   * Is a method of making recommendations based on the preferences of similar users.  
  
@@ -165,7 +166,7 @@ __Learning Objectives__
 <img width="1970" alt="Image" src="https://github.com/user-attachments/assets/edbd5367-6987-4782-ac1d-75004af73ce8" />
 &nbsp;
 
-#### Cost function for collaborative filtering
+#### Cost function for CF
 
 To learn parameters w and b for collaborative filtering, we can use the following cost function.
 
@@ -222,7 +223,7 @@ Where:
 <img width="2006" alt="Image" src="https://github.com/user-attachments/assets/20ed170c-3ce2-4054-affa-0c68fc708425" />
 &nbsp;
 
-#### Gradient descent for collaborative filtering  
+#### Gradient descent for CF  
 * To learn the parameters w and b for the users, and the features x for the items (e.g., movies) simultaneously, we can use gradient descent to minimize the cost function J(w,b,x). 
 * The update rules for the parameters w and b, and the features x can be derived from the cost function as follows:  
   
@@ -238,7 +239,7 @@ $$x^{(j)} := x^{(j)} - \alpha \frac{\partial J(w,b,x)}{\partial x^{(j)}}$$
 <img width="1458" alt="Image" src="https://github.com/user-attachments/assets/127e838e-3688-44f7-94ee-7c3b93ace7d3" />
 &nbsp;
 
-#### Binary labels for collaborative filtering
+#### Binary labels for CF
 * __Binary labels__ are can be used in collaborative filtering when we only have information about whether a user liked an item or not, rather than the actual rating, e.g., 1 for liked and 0 for not liked.
 * Previously, we have been working with ratings as labels, which are continuous values. However, in many cases, we only have binary labels, such as whether a user liked an item or not. In this case, we can use a different cost function that is more appropriate for binary labels.
 
@@ -254,7 +255,7 @@ $$f_{w,b}(x^{(i)}) = \sigma(w^T x^{(i)} + b) = \frac{1}{1 + e^{-(w^T x^{(i)} + b
 
 <img width="1576" alt="Image" src="https://github.com/user-attachments/assets/a6ebcd20-9cb5-480a-987a-00ceef2fb92c" />
 
-### Mean normalization for collaborative filtering
+#### Mean normalization for CF
 * To improve the performance of collaborative filtering, we can apply __mean normalization__ to the ratings. This involves subtracting the mean rating for each item from the ratings before training the model. This helps to account for differences in user preferences and can lead to better recommendations.  
 
 * Normalization by rows (users) or by columns (items), when new customer is added uses normalization by rows (example below) when added new movie use normalization by columns.  
@@ -262,7 +263,7 @@ $$f_{w,b}(x^{(i)}) = \sigma(w^T x^{(i)} + b) = \frac{1}{1 + e^{-(w^T x^{(i)} + b
 <img width="1976" alt="Image" src="https://github.com/user-attachments/assets/419a6f25-ded4-4305-a782-e76ae12b1b09" />
 &nbsp;
 
-### TensorFlow implementation of collaborative filtering
+#### TensorFlow implementation of CF
 * In TensorFlow, we can implement collaborative filtering using the __Keras__ API. 
 * We can define a model that takes the user and item features as input and outputs the predicted rating. 
 * We can then compile the model with the appropriate loss function (e.g., binary cross-entropy for binary labels) and optimizer (e.g., Adam), and train the model on the training data. 
@@ -281,7 +282,7 @@ $$f_{w,b}(x^{(i)}) = \sigma(w^T x^{(i)} + b) = \frac{1}{1 + e^{-(w^T x^{(i)} + b
 <img width="1546" alt="Image" src="https://github.com/user-attachments/assets/9a07d7ec-927a-4871-a91f-c251843a7476" />
 &nbsp;
 
-* __Limitation of collaborative filtering__
+* __Limitation of CF__
   * __Cold start problem__: when a new user or item is added to the system, there is no historical data to make recommendations.
   * __User side information__: collaborative filtering does not take into account the features of the users, such as their demographics or preferences, which can be useful for making recommendations.
 
