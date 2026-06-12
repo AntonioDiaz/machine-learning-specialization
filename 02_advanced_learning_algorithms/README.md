@@ -251,6 +251,8 @@ the $i$-th training example, and $\text{softmax}(z_j^{(i)})$ is the predicted pr
 ## Week 3: Advice for applying machine learning
 >This week you'll learn best practices for training and evaluating your learning algorithms to improve performance. This will cover a wide range of useful advice about the machine learning lifecycle, tuning your model, and also improving your training data 
 
+<img width="2752" alt="Image" src="https://github.com/user-attachments/assets/490bf27d-0b21-4016-846c-27842ceea7ae" />
+
 __Learning Objectives__
 * Evaluate and then modify your learning algorithm or data to improve your model's performance
 * Evaluate your learning algorithm using cross validation and test datasets.
