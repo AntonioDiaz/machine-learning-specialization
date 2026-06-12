@@ -19,7 +19,19 @@ Contents
   - [Softmax function](#softmax-function)
   - [Week 2: Labs](#week-2-labs)
 - [Week 3: Advice for applying machine learning](#week-3-advice-for-applying-machine-learning)
+  - [Deciding what to try next](#deciding-what-to-try-next)
   - [Evaluating a model](#evaluating-a-model)
+  - [Model selection and cross validation](#model-selection-and-cross-validation)
+  - [Bias and variance](#bias-and-variance)
+  - [Regularization and bias/variance](#regularization-and-biasvariance)
+  - [Establishing a baseline level of performance](#establishing-a-baseline-level-of-performance)
+  - [Learning curves](#learning-curves)
+  - [Bias/variance and neural networks](#biasvariance-and-neural-networks)
+  - [Machine learning development process](#machine-learning-development-process)
+  - [Error analysis](#error-analysis)
+  - [Adding data](#adding-data)
+  - [Transfer learning](#transfer-learning)
+  - [Skewed datasets (optional)](#skewed-datasets-optional)
   - [Week 3: Labs](#week-3-labs)
 - [Week 4: Decision trees](#week-4-decision-trees)
   - [Decision Tree Model](#decision-tree-model)
@@ -253,12 +265,218 @@ __Learning Objectives__
 * Learn to include fairness and ethics in your machine learning model development
 * Measure precision and recall to work with skewed (imbalanced) datasets
 
-### Evaluating a model
-* In order to tell if your model is doing well, specially for applications where you have more than 1 or 2 features, you need to evaluate your model using a test set. 
-* The __test set__ is a separate dataset that is not used during the training of the model, and it allows you to evaluate how well your model generalizes to new, unseen data. 
-* By evaluating your model on a test set, you can get an estimate of its performance and identify any issues such as overfitting or underfitting. 
-* This is an important step in the machine learning process, as it helps you to ensure that your model is not just memorizing the training data but is able to make accurate predictions on new data.
+### Deciding what to try next
+* When a learning algorithm makes unacceptably large errors, there are several things you can try. Knowing which one to pick saves a lot of time:
 
+| Action | Fixes |
+|--------|-------|
+| Get more training examples | High **variance** |
+| Try smaller sets of features | High **variance** |
+| Try getting additional features | High **bias** |
+| Try adding polynomial features ($x_1^2, x_2^2, x_1 x_2$, etc.) | High **bias** |
+| Try decreasing $\lambda$ | High **bias** |
+| Try increasing $\lambda$ | High **variance** |
+
+* A **machine learning diagnostic** is a test you run to gain insight into what is/isn't working with a learning algorithm. Diagnostics can take time to implement, but they are a very good use of your time because they tell you which of the above actions is likely to help.
+
+### Evaluating a model
+* A model that fits the training data perfectly can still fail to generalize to new examples — the classic sign of overfitting.  
+* To measure generalization, split your dataset into a **training set** (~70 %) and a **test set** (~30 %):
+
+**Linear regression** (squared error cost):
+
+$$J_{test}(\vec{w},b) = \frac{1}{2m_{test}} \sum_{i=1}^{m_{test}} \left(f_{\vec{w},b}\!\left(\vec{x}_{test}^{(i)}\right) - y_{test}^{(i)}\right)^2$$
+
+$$J_{train}(\vec{w},b) = \frac{1}{2m_{train}} \sum_{i=1}^{m_{train}} \left(f_{\vec{w},b}\!\left(\vec{x}_{train}^{(i)}\right) - y_{train}^{(i)}\right)^2$$
+
+* A low $J_{train}$ and a high $J_{test}$ signals **overfitting** (high variance).
+
+**Classification** — an alternative to the logistic loss is the **misclassification error**:
+
+$$\hat{y} = \begin{cases} 1 & \text{if } f_{\vec{w},b}(\vec{x}^{(i)}) \ge 0.5 \\ 0 & \text{if } f_{\vec{w},b}(\vec{x}^{(i)}) < 0.5 \end{cases}$$
+
+* $J_{test}$ = fraction of the **test set** misclassified.  
+* $J_{train}$ = fraction of the **train set** misclassified.
+
+### Model selection and cross validation
+* If you use the test set to *choose* a model (e.g., the degree of polynomial $d$), the resulting $J_{test}$ is an **optimistic** (too low) estimate of true generalization error because an extra parameter was tuned on it.
+* Solution: use **three** splits:
+  * **Training set** (~60 %) — fit parameters $\vec{w}, b$.
+  * **Cross-validation (CV) set** (~20 %) — also called *validation set* or *dev set* — select the model (choose $d$, network architecture, $\lambda$, etc.).
+  * **Test set** (~20 %) — final, unbiased estimate of generalization error.
+
+**Cross-validation error:**
+
+$$J_{cv}(\vec{w},b) = \frac{1}{2m_{cv}} \sum_{i=1}^{m_{cv}} \left(f_{\vec{w},b}\!\left(\vec{x}_{cv}^{(i)}\right) - y_{cv}^{(i)}\right)^2$$
+
+**Workflow:**
+1. Train each candidate model on the training set.
+2. Evaluate every model on the CV set; pick the one with the lowest $J_{cv}$.
+3. Report the final performance using the test set $J_{test}$ of the chosen model.
+
+This procedure works equally well for choosing among polynomial degrees, regularization parameters $\lambda$, and neural network architectures.
+
+### Bias and variance
+* **High bias (underfit):** $J_{train}$ is high and $J_{cv} \approx J_{train}$.
+* **High variance (overfit):** $J_{train}$ is low but $J_{cv} \gg J_{train}$.
+* **High bias AND high variance:** $J_{train}$ is high AND $J_{cv} \gg J_{train}$ (can happen in neural networks, e.g., overfit on part of the input space and underfit on the rest).
+
+As the degree of polynomial increases, $J_{train}$ decreases monotonically while $J_{cv}$ has a U-shape with a sweet spot in the middle.
+
+### Regularization and bias/variance
+* For a high-degree polynomial with L2 regularization $J(\vec{w},b) = \frac{1}{2m}\sum(f-y)^2 + \frac{\lambda}{2m}\sum w_j^2$:
+  * **Large $\lambda$** → pushes weights to zero → model becomes too simple → **high bias**.
+  * **Small $\lambda$ (≈ 0)** → no regularization → model overfits → **high variance**.
+  * **Intermediate $\lambda$** → "just right."
+
+**Choosing $\lambda$:** try values $\{0, 0.01, 0.02, 0.04, \ldots, 10\}$, compute $J_{cv}$ for each, and pick the $\lambda$ with the lowest CV error; then report generalization using $J_{test}$.
+
+### Establishing a baseline level of performance
+* Before judging whether $J_{train}$ or $J_{cv}$ is too high, compare them to a **baseline** — the level of error you can reasonably hope to achieve:
+  * Human-level performance
+  * Performance of a competing algorithm
+  * Estimate based on prior experience
+
+* Example (speech recognition):
+
+| | Error |
+|---|---|
+| Human level performance | 10.6 % |
+| Training error $J_{train}$ | 10.8 % |
+| Cross-validation error $J_{cv}$ | 14.8 % |
+
+* Gap between baseline and $J_{train}$ → **bias** problem (0.2 % here, small).
+* Gap between $J_{train}$ and $J_{cv}$ → **variance** problem (4.0 % here, large).
+
+### Learning curves
+* A **learning curve** plots $J_{train}$ and $J_{cv}$ as a function of training set size $m_{train}$.
+  * As $m$ grows, $J_{train}$ tends to increase (harder to perfectly fit more data), while $J_{cv}$ tends to decrease.
+
+**High bias (underfit):**
+* Both $J_{train}$ and $J_{cv}$ plateau at a value well above the baseline.
+* **Getting more data will NOT help** — the model is too simple.
+
+**High variance (overfit):**
+* $J_{cv} \gg J_{train}$; there is still a large gap even with many examples.
+* **Getting more data is likely to help** — the gap between $J_{train}$ and $J_{cv}$ narrows as $m$ grows.
+
+### Bias/variance and neural networks
+* Large neural networks are **low-bias machines** — they can almost always fit the training set.
+* Recommended iterative recipe:
+
+```
+Does it do well on the training set (J_train ≈ baseline)?
+  No  → use a bigger network (more layers / units)
+  Yes → Does it do well on the CV set?
+          No  → get more data
+          Yes → done!
+```
+
+* **Key insight:** a larger neural network will usually do *at least as well* as a smaller one, as long as regularization is chosen appropriately — because a bigger net can always learn to approximately ignore extra parameters.
+
+**L2 regularization in Keras:**
+```python
+from tensorflow.keras.regularizers import L2
+
+layer_1 = Dense(units=25, activation="relu", kernel_regularizer=L2(0.01))
+layer_2 = Dense(units=15, activation="relu", kernel_regularizer=L2(0.01))
+layer_3 = Dense(units=1,  activation="sigmoid", kernel_regularizer=L2(0.01))
+model   = Sequential([layer_1, layer_2, layer_3])
+```
+
+### Machine learning development process
+The typical iterative loop of an ML project:
+
+```
+Choose architecture  →  Train model  →  Diagnostics (bias, variance, error analysis)
+        ↑______________________________________________↓
+```
+
+**Full cycle of an ML project:**
+
+| Phase | Activities |
+|-------|-----------|
+| **Scope project** | Define the problem and goals |
+| **Collect data** | Define and gather the training data |
+| **Train model** | Training, error analysis, iterative improvement |
+| **Deploy in production** | Deploy, monitor, and maintain the system |
+
+**Deployment (MLOps):** the inference server exposes an API that receives input $x$ and returns prediction $\hat{y}$. Software engineering is needed for reliable predictions, scaling, logging, monitoring, and model updates.
+
+**Fairness, bias, and ethics:** before and after deployment always:
+* Get a diverse team to brainstorm potential harms (especially to vulnerable groups).
+* Carry out a literature search on standards/guidelines for your industry.
+* Audit the system against possible harm prior to deployment.
+* Develop a mitigation plan and monitor for harm post-deployment.
+
+### Error analysis
+* Manually examine a sample of **misclassified** CV examples and categorize them by common traits. This reveals where the biggest opportunities for improvement lie.
+* Example (spam classifier, 100 misclassified emails out of 500):
+
+| Category | Count |
+|----------|-------|
+| Pharma spam | 21 |
+| Steal passwords (phishing) | 18 |
+| Unusual email routing | 7 |
+| Spam message in embedded image | 5 |
+| Deliberate misspellings | 3 |
+
+* Focusing effort on pharma spam (21) and phishing (18) would have the highest payoff compared to, say, misspellings (3).
+
+### Adding data
+* **Add data of everything** (e.g., "Honeypot" projects that collect real spam).
+* **Add data of targeted types** that error analysis shows would help.
+
+**Data augmentation** — modify existing examples to create new ones:
+* Images: flip, rotate, change contrast, add grid distortions.
+* Audio: add background crowd noise, car noise, bad cellphone connection.
+* Key rule: the distortions introduced should represent the kind of noise/distortions present in the **test set**. Purely random noise rarely helps.
+
+**Data synthesis** — create brand-new examples from scratch:
+* Photo OCR example: render text in many computer fonts on random backgrounds to generate synthetic character images that closely resemble real street photos.
+
+**Model-centric vs. data-centric AI:**
+* Conventional approach → fix the algorithm/model; hold the data constant.
+* Data-centric approach → systematically improve the data quality; the model stays roughly fixed.
+
+### Transfer learning
+When you have limited labeled data for your target task, leverage a model pre-trained on a large dataset with the **same input type**.
+
+**Steps:**
+1. **Supervised pre-training** — download (or train) a neural network on a large dataset (e.g., 1 M images, 1 000 classes).
+2. **Fine-tuning** — replace the output layer to match your task (e.g., 10 digit classes) and further train on your small dataset.
+   * **Option 1:** only train the parameters of the new output layer (fast, useful with very little data).
+   * **Option 2:** train **all** parameters (recommended when you have more data).
+
+**Why it works:** the early layers learn general features — edges, corners, curves — that are reusable across many vision tasks. The same principle applies to audio and text.
+
+### Skewed datasets (optional)
+When one class is very rare (e.g., 0.5 % of patients have a disease), plain accuracy is misleading — a classifier that always predicts "no disease" gets 99.5 % accuracy but is useless.
+
+**Confusion matrix:**
+
+|  | Actual 1 | Actual 0 |
+|--|----------|----------|
+| **Predicted 1** | True Positive (TP) | False Positive (FP) |
+| **Predicted 0** | False Negative (FN) | True Negative (TN) |
+
+**Precision** — of all predicted positive, what fraction is actually positive:
+
+$$\text{Precision} = \frac{TP}{TP + FP}$$
+
+**Recall** — of all actual positives, what fraction did we detect:
+
+$$\text{Recall} = \frac{TP}{TP + FN}$$
+
+**Precision–recall tradeoff:**
+* Raising the classification threshold → higher precision, lower recall (predict positive only when very confident).
+* Lowering the threshold → lower precision, higher recall (catch more true positives).
+
+**F1 score** — harmonic mean of precision and recall; penalizes heavily when either is very low:
+
+$$F_1 = \frac{2 \cdot P \cdot R}{P + R} = \frac{1}{\frac{1}{2}\!\left(\frac{1}{P} + \frac{1}{R}\right)}$$
+
+Use the F1 score (rather than plain average) to compare algorithms on skewed datasets.
 
 ### Week 3: Labs
 * Lab 01: [model evaluation and selection](03_week/C2W3_Lab_01_Model_Evaluation_and_Selection.ipynb)
