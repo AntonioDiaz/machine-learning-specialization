@@ -305,7 +305,7 @@ b &= b - \alpha \left( \frac{1}{m} \sum_{i=0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})
 ### Week 3: Labs 
 * Lab 01: [Classification](03_week/C1_W3_Lab01_Classification_Soln.ipynb)
 * Lab 02: [Logistic Regression](03_week/C1_W3_Lab02_Sigmoid_function_Soln.ipynb)
-* Lab 03: [Logistic Regression and Decision Boundary](02_week/C1_W2_Lab03_Feature_Scaling_and_Learning_Rate_Soln.ipynb)
+* Lab 03: [Logistic Regression and Decision Boundary](03_week/C1_W3_Lab03_Decision_Boundary_Soln.ipynb)
 * Lab 04: [Logistic Regression and Logistic Loss](03_week/C1_W3_Lab04_LogisticLoss_Soln.ipynb)
 * Lab 05: [Cost Function for Logistic Regression](03_week/C1_W3_Lab05_Cost_Function_Soln.ipynb)
 * Lab 06: [Gradient Descent for Logistic Regression](03_week/C1_W3_Lab06_Gradient_Descent_Soln.ipynb)
