@@ -159,24 +159,31 @@ flowchart TD
 * `Gradient Descent Algorithm`
 
 ```math
-\text{repeat until convergence: \{} \\
-\quad w := w - \alpha \frac{\partial J(w,b)}{\partial w} \\
-\quad b := b - \alpha \frac{\partial J(w,b)}{\partial b} \\
-\text{\}}
+\begin{aligned}
+& \text{repeat until convergence} \; \lbrace \\
+& \qquad w := w - \alpha \frac{\partial J(w,b)}{\partial w} \\
+& \qquad b := b - \alpha \frac{\partial J(w,b)}{\partial b} \\
+& \rbrace
+\end{aligned}
 ```
 
 * Where the partial derivatives of the cost function with respect to $w$ and $b$ are given by:
 
 ```math
 \begin{aligned}
-\frac{\partial J(w,b)}{\partial w}  &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right) x^{(i)} \\
-\frac{\partial J(w,b)}{\partial b}  &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right)
+\frac{\partial J(w,b)}{\partial w} &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right) x^{(i)} \\[8pt]
+\frac{\partial J(w,b)}{\partial b} &= \frac{1}{m} \sum_{i = 0}^{m-1} \left(f_{w,b}(x^{(i)}) - y^{(i)}\right)
 \end{aligned}
 ```
 
-* `Derivative term for` __$\omega$__
+* __Simultaneous update in code__ — the sequential version feeds the already-updated $w$ into the gradient for $b$, so it descends a slightly different surface than the one you meant to:
 
-$$\frac{\partial J(w,b)}{\partial w}$$
+| ✅ Correct — simultaneous | ❌ Wrong — sequential |
+|---|---|
+| `tmp_w = w - alpha * dj_dw` | `w = w - alpha * dj_dw` |
+| `tmp_b = b - alpha * dj_db` | `b = b - alpha * dj_db`&nbsp;← uses the **new** `w` |
+| `w = tmp_w` | |
+| `b = tmp_b` | |
 
 ### Week 1: Labs
 
