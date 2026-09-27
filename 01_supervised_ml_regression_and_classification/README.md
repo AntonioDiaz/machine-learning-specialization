@@ -11,26 +11,29 @@
 
 ## Contents
 
-- [Week 1: Introduction to Machine Learning](#week-1-introduction-to-machine-learning)
-  - [Definitions](#definitions)
-  - [Intro Supervised Learning](#intro-supervised-learning)
-  - [Intro to Unsupervised Learning](#intro-to-unsupervised-learning)
-  - [Linear regression](#linear-regression)
-  - [Squared Error Cost function](#squared-error-cost-function)
-  - [Gradient Descent](#gradient-descent)
-  - [Week 1: Labs](#week-1-labs)
-- [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
-  - [Multiple variable linear regression](#multiple-variable-linear-regression)
-  - [Vectorization](#vectorization)
-  - [Gradient Descent with multiple variables](#gradient-descent-with-multiple-variables)
-  - [Week 2: Labs](#week-2-labs)
-- [Week 3: Classification](#week-3-classification)
-  - [Classification with logistic regression](#classification-with-logistic-regression)
-  - [Decision boundary](#decision-boundary)
-  - [Cost function for logistic regression](#cost-function-for-logistic-regression)
-  - [Overfitting and regularization](#overfitting-and-regularization)
-  - [Regularization to address overfitting](#regularization-to-address-overfitting)
-  - [Week 3: Labs](#week-3-labs)
+- [01 — Supervised Machine Learning: Regression and Classification](#01--supervised-machine-learning-regression-and-classification)
+  - [Contents](#contents)
+  - [Week 1: Introduction to Machine Learning](#week-1-introduction-to-machine-learning)
+    - [Definitions](#definitions)
+    - [Intro Supervised Learning](#intro-supervised-learning)
+    - [Intro to Unsupervised Learning](#intro-to-unsupervised-learning)
+    - [Linear regression](#linear-regression)
+    - [Squared Error Cost function](#squared-error-cost-function)
+    - [Gradient Descent](#gradient-descent)
+    - [Week 1: Labs](#week-1-labs)
+  - [Week 2: Regression with multiple input variables](#week-2-regression-with-multiple-input-variables)
+    - [Multiple variable linear regression](#multiple-variable-linear-regression)
+    - [Vectorization](#vectorization)
+    - [Gradient Descent with multiple variables](#gradient-descent-with-multiple-variables)
+    - [Feature scaling](#feature-scaling)
+    - [Week 2: Labs](#week-2-labs)
+  - [Week 3: Classification](#week-3-classification)
+    - [Classification with logistic regression](#classification-with-logistic-regression)
+    - [Decision boundary](#decision-boundary)
+    - [Cost function for logistic regression](#cost-function-for-logistic-regression)
+    - [Overfitting and regularization](#overfitting-and-regularization)
+    - [Regularization to address overfitting](#regularization-to-address-overfitting)
+    - [Week 3: Labs](#week-3-labs)
 
 ---
 
@@ -273,6 +276,35 @@ b &= b - \alpha \frac{\partial J(w,b)}{\partial b} \\
   <img width="700" alt="Gradient descent update rules for multiple variable linear regression"
        src="https://github.com/user-attachments/assets/0c3e98c3-a320-4812-95ce-630079392ff6">
 </p>
+
+### Feature scaling
+
+* `Feature scaling` rescales the input features so they all take values in a similar range (e.g., roughly $-1 \le x_j \le 1$).
+* When features have very different ranges, e.g., size $x_1 \in [300, 2000]$ ft² vs. bedrooms $x_2 \in [0, 5]$:
+  * A small change in $w_1$ changes the prediction a lot, while $w_2$ needs large changes to have any effect.
+  * The contours of the cost $J(\vec{w}, b)$ become tall, narrow ellipses, and gradient descent bounces back and forth, taking many steps to reach the minimum.
+* After rescaling, the contours become close to circles and gradient descent can take a much more direct path to the minimum, so it __converges faster__.
+
+<p align="center">
+  <img width="700" alt="Unscaled features give elongated cost contours where gradient descent zig-zags; rescaled features give circular contours and a direct path to the minimum"
+       src="https://github.com/user-attachments/assets/f221668e-b03b-41fb-87f8-9e6b7e55c87a">
+</p>
+
+* Common ways to rescale a feature $x_j$:
+
+| Method | Formula | Resulting range |
+|--------|---------|-----------------|
+| Divide by the maximum | $x_j' = \dfrac{x_j}{\max(x_j)}$ | $0 \le x_j' \le 1$ (for positive features) |
+| Mean normalization | $x_j' = \dfrac{x_j - \mu_j}{\max(x_j) - \min(x_j)}$ | centered around $0$, roughly $-1 \le x_j' \le 1$ |
+| Z-score normalization | $x_j' = \dfrac{x_j - \mu_j}{\sigma_j}$ | mean $0$, standard deviation $1$ |
+
+* where $\mu_j$ is the mean and $\sigma_j$ the standard deviation of feature $j$ over the training set.
+
+> [!TIP]
+> Rule of thumb: ranges like $[-3, 3]$ or $[-0.3, 0.3]$ are fine; rescale when a feature is much larger (e.g., $[-100, 100]$) or much smaller (e.g., $[-0.001, 0.001]$) than the others. When in doubt, rescale, as it never hurts.
+
+> [!IMPORTANT]
+> Compute $\mu_j$ and $\sigma_j$ on the __training set__ and store them: new examples must be normalized with the same values before making a prediction.
 
 ### Week 2: Labs
 
