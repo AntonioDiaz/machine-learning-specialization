@@ -56,6 +56,8 @@
 
 </details>
 
+<img width="2752" height="1536" alt="Image" src="https://github.com/user-attachments/assets/3c86e4c6-0343-4860-9e58-36a3d32dff8b" />
+
 ### Definitions
 
 * __Machine Learning__ is the science of getting computers to act without being explicitly programmed. It is a subset of artificial intelligence (AI) that focuses on building systems that can learn from data, identify patterns, and make decisions with minimal human intervention.
