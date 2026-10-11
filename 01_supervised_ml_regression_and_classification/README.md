@@ -215,6 +215,8 @@ flowchart TD
 
 </details>
 
+<img width="2752" height="1536" alt="Image" src="https://github.com/user-attachments/assets/9959f182-21f6-4f19-8731-e8f78f8d15ef" />
+
 ### Multiple variable linear regression
 
 * `Multiple variable linear regression` is an extension of linear regression that allows for multiple input features.
@@ -334,6 +336,8 @@ b &= b - \alpha \frac{\partial J(w,b)}{\partial b} \\
 * Address overfitting using regularization, to improve model performance
 
 </details>
+
+<img width="2752" height="1536" alt="Image" src="https://github.com/user-attachments/assets/e42f7689-c1c6-485c-ac0f-8ada6c217f5c" />|
 
 ### Classification with logistic regression
 
